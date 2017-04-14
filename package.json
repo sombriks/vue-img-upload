@@ -1,0 +1,39 @@
+{
+  "name": "vue-img-upload",
+  "version": "1.0.0",
+  "description": "yet another vue image upload component",
+  "main": "dist/build.js",
+  "scripts": {
+    "dev": "budo src/docs.js:docs/build.js -o -l -d docs",
+    "build": "browserify src/main.js -o dist/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sombriks/vue-img-upload.git"
+  },
+  "keywords": [
+    "vue",
+    "img",
+    "upload"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sombriks/vue-img-upload/issues"
+  },
+  "homepage": "https://github.com/sombriks/vue-img-upload#readme",
+  "devDependencies": {
+    "browserify": "^14.3.0",
+    "budo": "^9.4.7",
+    "make": "^0.8.1",
+    "vueify": "^9.4.1"
+  },
+  "dependencies": {
+    "vue": "^2.2.6"
+  },
+  "browserify":{
+    "transforms":[
+      "vueify"
+    ]
+  }
+}
