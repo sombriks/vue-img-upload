@@ -3,5 +3,5 @@
 yet another vue image upload component
 
 - preview image
+- single image per tag
 - offer resize options
-- html5 upload (i.e. forget about form/multipart)

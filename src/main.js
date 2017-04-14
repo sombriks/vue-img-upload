@@ -1,9 +1,9 @@
 
-const VueImgUpload = require(__dirname + "/vue-img-upload.vue")
+const VueImgUpload = require("./vue-img-upload.vue")
 
 module.exports = {
-  install(vue, opts) {
-    vue.component(VueImgUpload)
+  install(Vue, opts) {
+    Vue.component("vue-img-upload", VueImgUpload)
   },
-  VueImgUpload
+  component: VueImgUpload
 }

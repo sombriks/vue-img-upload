@@ -1,10 +1,10 @@
 <template>
   <div>
-    <input type="file" accept="image/*"/>
+    <h1>Image upload</h1>
   </div>
 </template>
 <script>
 module.exports = {
-  name: "VueImgUpload"
+  name:"DocRoot"
 }
 </script>
