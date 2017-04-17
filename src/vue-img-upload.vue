@@ -9,6 +9,12 @@
            class="theinput"
            accept="image/*"
            @change="changefile" />
+  <div>
+    <small>{{name}}</small>
+  </div>
+  <div>
+    <small>{{legenda}}</small>
+  </div>
   </div>
 </template>
 <style scoped>
@@ -29,10 +35,16 @@ module.exports = {
     height: {
       type: String,
       default: "150px"
+    },
+    legenda: {
+      type: String,
+      default: "Toque a imagem para alterar"
     }
   },
   data() {
     return {
+      name: "",
+      dataimg: undefined,
       noimg: "data:image/svg+xml;base64," + fs.readFileSync(__dirname + "/ic_account_circle_black_24px.svg", "base64")
     }
   },
@@ -46,6 +58,11 @@ module.exports = {
     },
     changefile() {
       console.log("changefile")
+      let file = this.$refs["input"].files[0]
+      this.dataimg = URL.createObjectURL(file)
+      this.$refs["image"].src = this.dataimg
+      this.name=file.name
+      console.log(this.$refs["image"])
     }
   }
 }

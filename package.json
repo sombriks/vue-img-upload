@@ -5,7 +5,8 @@
   "main": "dist/build.js",
   "scripts": {
     "dev": "budo docs/index.js:build.js -o -l -d docs",
-    "build": "browserify src/main.js -o dist/build.js"
+    "build": "make build",
+    "clean": "make clean"
   },
   "repository": {
     "type": "git",

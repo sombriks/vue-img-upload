@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-xs-6">
         <div class="box">
-          <vue-img-upload width="100px"></vue-img-upload>
+          <vue-img-upload width="100px" height="100px"></vue-img-upload>
         </div>
       </div>
       <div class="col-xs-6">
