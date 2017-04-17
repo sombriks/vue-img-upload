@@ -1,6 +1,6 @@
 {
   "name": "vue-img-upload",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "yet another vue image upload component",
   "main": "dist/build.js",
   "scripts": {
@@ -17,8 +17,8 @@
     "img",
     "upload"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Leonardo Silveira <sombriks@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sombriks/vue-img-upload/issues"
   },
