@@ -30,15 +30,19 @@ module.exports = {
   props: {
     width: {
       type: String,
-      default: "150px"
+      default: "auto"
     },
     height: {
       type: String,
-      default: "150px"
+      default: "auto"
     },
     legenda: {
       type: String,
       default: "Toque a imagem para alterar"
+    },
+    url: {
+      type: String,
+      required: true
     }
   },
   data() {
@@ -49,7 +53,9 @@ module.exports = {
     }
   },
   mounted() {
-    this.$refs["imgconainer"].style = `width:${this.width};height:${this.height}`
+    let attr = document.createAttribute("style")
+    attr.value = `width:${this.width};height:${this.height}`
+    this.$refs["imgconainer"].setAttributeNode(attr)
     this.$refs["image"].src = this.noimg
   },
   methods: {

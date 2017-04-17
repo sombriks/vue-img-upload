@@ -33,6 +33,7 @@
     "vueify": "^9.4.1"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "vue": "^2.2.6"
   },
   "browserify": {
