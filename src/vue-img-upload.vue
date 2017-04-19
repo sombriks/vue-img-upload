@@ -9,12 +9,12 @@
            class="theinput"
            accept="image/*"
            @change="changefile" />
-  <div>
-    <small>{{name}}</small>
-  </div>
-  <div>
-    <small>{{legenda}}</small>
-  </div>
+    <div>
+      <small>{{name}}</small>
+    </div>
+    <div>
+      <small>{{legenda}}</small>
+    </div>
   </div>
 </template>
 <style scoped>
@@ -24,6 +24,7 @@ input.theinput {
 </style>
 <script>
 const fs = require("fs")
+const axios = require("axios")
 module.exports = {
   // vue-img-upload
   name: "VueImgUpload",
@@ -43,7 +44,12 @@ module.exports = {
     url: {
       type: String,
       required: true
-    }
+    },
+    method: {
+      type: String,
+      default: "post"
+    },
+    resize: String
   },
   data() {
     return {
@@ -63,12 +69,22 @@ module.exports = {
       this.$refs["input"].click()
     },
     changefile() {
-      console.log("changefile")
+      let file = this.$refs["input"].files[0]
+      this.name = file.name
+      this.$emit("onchangefile", file)
+      if (this.resize)
+        this.resizefile()
+      else 
+        this.previewimg()
+    },
+    resizefile() {
+      let file = this.$refs["input"].files[0]
+
+    },
+    previewimg() {
       let file = this.$refs["input"].files[0]
       this.dataimg = URL.createObjectURL(file)
       this.$refs["image"].src = this.dataimg
-      this.name=file.name
-      console.log(this.$refs["image"])
     }
   }
 }
