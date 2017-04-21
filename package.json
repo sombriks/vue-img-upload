@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "budo docs/index.js:build.js -o -l -d docs",
     "build": "make build",
-    "clean": "make clean"
+    "clean": "make clean",
+    "docs": "make docs",
+    "dev-static": "http-server docs"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
     "browserify-css": "^0.10.0",
     "budo": "^9.4.7",
     "flexboxgrid": "^6.3.1",
+    "http-server": "^0.9.0",
     "make": "^0.8.1",
     "vueify": "^9.4.1"
   },
