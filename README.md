@@ -2,6 +2,7 @@
 
 yet another vue image upload component
 
+- [preview](https://sombriks.github.io/vue-img-upload/)
 - preview image
 - single image per tag
 - offer resize options
@@ -13,4 +14,3 @@ yet another vue image upload component
 ## Copyright
 
 - MIT license
-  - All rights reserverd to the original author regarding this part of the code
