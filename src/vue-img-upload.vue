@@ -1,14 +1,7 @@
 <template>
   <div ref="imgconainer">
-    <img ref="image"
-         width="100%"
-         height="100%"
-         @click="loadimg" />
-    <input type="file"
-           ref="input"
-           class="theinput"
-           accept="image/*"
-           @change="changefile" />
+    <img ref="image" width="100%" height="100%" @click="loadimg" />
+    <input type="file" ref="input" class="theinput" accept="image/*" @change="changefile" />
     <div>
       <small>{{name}}</small>
     </div>
@@ -25,6 +18,7 @@ input.theinput {
 <script>
 const fs = require("fs")
 const axios = require("axios")
+const resizetool = require("./resizetool")
 module.exports = {
   // vue-img-upload
   name: "VueImgUpload",
@@ -74,11 +68,12 @@ module.exports = {
       this.$emit("onchangefile", file)
       if (this.resize)
         this.resizefile()
-      else 
+      else
         this.previewimg()
     },
     resizefile() {
       let file = this.$refs["input"].files[0]
+      resizetool.resize(file, this.resize).then((ret) => this.$refs["image"].src = ret)
 
     },
     previewimg() {
