@@ -14,7 +14,7 @@ yet another vue image upload component
 - understand why the dist/build.js seems useless
 - see how to make it dance well with browserify and webpack. just browserify for the moment
 - make it even simpler
-- server side project to test upload capabilities
+- ~server side project to test upload capabilities~ see https://github.com/sombriks/viu-up-tester
 
 ## Copyright
 
