@@ -33,7 +33,6 @@ const guessresize = (resize, width, height) => {
       rheight = rheight.replace(/\D/g, "")
       rheight = parseFloat(rheight)
       rheight *= 0.01
-      rheight = rheight * height
     } else {
       rheight = rwidth
     }
@@ -86,8 +85,6 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
     cnv.setAttributeNode(h)
     let ctx = cnv.getContext("2d")
     ctx.drawImage(img, 0, 0, w.value, h.value)
-    console.log(ctx)
-    console.log(cnv)
     // dammit safari!
     // cnv.toBlob(blob => {
     //   resolve(URL.createObjectURL(blob))
@@ -96,3 +93,21 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
   }
   img.src = URL.createObjectURL(file)
 })
+
+/*
+ * given a dataURI we'll bring the blob back. somehow.
+ * 
+ * http://caniuse.com/#search=Blob
+ * 
+ * http://stackoverflow.com/questions/6850276/how-to-convert-dataurl-to-file-object-in-javascript
+ * 
+ */
+exports.mkjpeg = (dataURI) => {
+  const byteString = atob(dataURI.split(',')[1]);
+  const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+  const ab = new ArrayBuffer(byteString.length);
+  const dw = new DataView(ab);
+  for (let i = 0; i < byteString.length; i++)
+    dw.setUint8(i, byteString.charCodeAt(i));
+  return new Blob([ab], { type: mimeString });
+}

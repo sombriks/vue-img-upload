@@ -35,14 +35,12 @@ module.exports = {
       type: String,
       default: "Toque a imagem para alterar"
     },
-    url: {
-      type: String,
-      required: true
-    },
     method: {
       type: String,
       default: "post"
     },
+    url: String,
+    headers: Object,
     resize: String
   },
   data() {
@@ -78,7 +76,8 @@ module.exports = {
     resizefile() {
       let file = this.$refs["input"].files[0]
       resizetool.resize(file, this.resize).then((ret) => {
-        this.$refs["image"].src = ret // preview
+        this.dataimg = ret // preview
+        this.$refs["image"].src = this.dataimg
         this.dotheupload()
         this.$emit("onresizefile", { file, image: this.$refs["image"] })
       })
@@ -90,12 +89,22 @@ module.exports = {
       this.dotheupload()
     },
     dotheupload() {
-      // le's trust the image, not the file
-      let img = this.$refs["image"]
-      console.log(img)
-
-      // this.$emit("onupload", { file, image: this.$refs["image"], response })
-
+      if (this.url) {
+        // le's trust the image, not the file
+        let img = this.$refs["image"]
+        let file = this.$refs["input"].files[0]
+        const headers = {
+          "Content-Type": "image/jpeg",
+          "X-Filename": file.name
+        }
+        if (this.headers) {
+          for (let k in this.headers)
+            headers[k] = this.headers[k]
+        }
+        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
+          this.$emit("onupload", { file, image: this.$refs["image"], ret })
+        })
+      }
     }
   }
 }
