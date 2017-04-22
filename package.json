@@ -2,7 +2,7 @@
   "name": "vue-img-upload",
   "version": "0.1.0",
   "description": "yet another vue image upload component",
-  "main": "dist/build.js",
+  "main": "src/main.js",
   "scripts": {
     "dev": "budo docs/index.js:build.js -o -l -d docs",
     "build": "make build",
@@ -16,8 +16,9 @@
   },
   "keywords": [
     "vue",
+    "upload",
     "img",
-    "upload"
+    "resize"
   ],
   "author": "Leonardo Silveira <sombriks@gmail.com>",
   "license": "MIT",

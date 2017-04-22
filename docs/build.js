@@ -20,9 +20,20 @@
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 module.exports = {
   name: "DocRoot",
+  data(){
+    return {
+      url:"http://localhost:3000/upimage"
+    }
+  },
   methods: {
     onup(ret) {
       console.log("up!")
@@ -39,7 +50,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xs-12 col-sm-6 col-md-4"},[_c('div',{staticClass:"box"},[_c('h1',[_vm._v("Image upload, no resize")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","url":"/upload"},on:{"onchangefile":_vm.onchg,"onupload":_vm.onup}})],1)]),_vm._v(" "),_c('div',{staticClass:"col-xs-12 col-sm-6 col-md-4"},[_c('h1',[_vm._v("Image upload, resize to 100px")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"100px","url":"/upload"},on:{"onchangefile":_vm.onchg,"onupload":_vm.onup}})],1),_vm._v(" "),_c('div',{staticClass:"col-xs-12 col-sm-6 col-md-4"},[_c('h1',[_vm._v("Image upload, resize 50%")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"50%","url":"/upload"},on:{"onchangefile":_vm.onchg,"onupload":_vm.onup}})],1)])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xs-12 col-sm-6 col-md-4"},[_c('div',{staticClass:"box"},[_c('h1',[_vm._v("Image preview, no resize")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px"},on:{"onchangefile":_vm.onchg}})],1)]),_vm._v(" "),_c('div',{staticClass:"col-xs-12 col-sm-6 col-md-4"},[_c('h1',[_vm._v("Image preview, resize to 100px")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"100px"},on:{"onchangefile":_vm.onchg}})],1),_vm._v(" "),_c('div',{staticClass:"col-xs-12 col-sm-6 col-md-4"},[_c('h1',[_vm._v("Image review, resize 50%")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"50%"},on:{"onchangefile":_vm.onchg}})],1),_vm._v(" "),_c('div',{staticClass:"col-xs-12 col-sm-6 col-md-4"},[_c('h1',[_vm._v("Image upoad, resize 10%,10%")]),_vm._v(" "),_c('label',[_vm._v("provide http upload link")]),_c('br'),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.url),expression:"url"}],staticStyle:{"width":"100%"},domProps:{"value":(_vm.url)},on:{"input":function($event){if($event.target.composing){ return; }_vm.url=$event.target.value}}}),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"10%,10%","url":_vm.url},on:{"onupload":_vm.onup}})],1)])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -16312,7 +16323,6 @@ const guessresize = (resize, width, height) => {
       rheight = rheight.replace(/\D/g, "")
       rheight = parseFloat(rheight)
       rheight *= 0.01
-      rheight = rheight * height
     } else {
       rheight = rwidth
     }
@@ -16365,8 +16375,6 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
     cnv.setAttributeNode(h)
     let ctx = cnv.getContext("2d")
     ctx.drawImage(img, 0, 0, w.value, h.value)
-    console.log(ctx)
-    console.log(cnv)
     // dammit safari!
     // cnv.toBlob(blob => {
     //   resolve(URL.createObjectURL(blob))
@@ -16375,6 +16383,24 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
   }
   img.src = URL.createObjectURL(file)
 })
+
+/*
+ * given a dataURI we'll bring the blob back. somehow.
+ * 
+ * http://caniuse.com/#search=Blob
+ * 
+ * http://stackoverflow.com/questions/6850276/how-to-convert-dataurl-to-file-object-in-javascript
+ * 
+ */
+exports.mkjpeg = (dataURI) => {
+  const byteString = atob(dataURI.split(',')[1]);
+  const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+  const ab = new ArrayBuffer(byteString.length);
+  const dw = new DataView(ab);
+  for (let i = 0; i < byteString.length; i++)
+    dw.setUint8(i, byteString.charCodeAt(i));
+  return new Blob([ab], { type: mimeString });
+}
 },{"bluebird":29}],40:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("input.theinput[data-v-2753df54] {\n  display: none\n}")
 ;(function(){
@@ -16415,14 +16441,12 @@ module.exports = {
       type: String,
       default: "Toque a imagem para alterar"
     },
-    url: {
-      type: String,
-      required: true
-    },
     method: {
       type: String,
       default: "post"
     },
+    url: String,
+    headers: Object,
     resize: String
   },
   data() {
@@ -16458,7 +16482,8 @@ module.exports = {
     resizefile() {
       let file = this.$refs["input"].files[0]
       resizetool.resize(file, this.resize).then((ret) => {
-        this.$refs["image"].src = ret // preview
+        this.dataimg = ret // preview
+        this.$refs["image"].src = this.dataimg
         this.dotheupload()
         this.$emit("onresizefile", { file, image: this.$refs["image"] })
       })
@@ -16470,12 +16495,22 @@ module.exports = {
       this.dotheupload()
     },
     dotheupload() {
-      // le's trust the image, not the file
-      let img = this.$refs["image"]
-      console.log(img)
-
-      // this.$emit("onupload", { file, image: this.$refs["image"], response })
-
+      if (this.url) {
+        // le's trust the image, not the file
+        let img = this.$refs["image"]
+        let file = this.$refs["input"].files[0]
+        const headers = {
+          "Content-Type": "image/jpeg",
+          "X-Filename": file.name
+        }
+        if (this.headers) {
+          for (let k in this.headers)
+            headers[k] = this.headers[k]
+        }
+        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
+          this.$emit("onupload", { file, image: this.$refs["image"], ret })
+        })
+      }
     }
   }
 }

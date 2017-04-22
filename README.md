@@ -7,7 +7,7 @@ yet another vue image upload component
 - single image per tag
 - offer resize options
 - offer direct upload options
-- accepting PR's
+- **accepting PR's**
 
 ## TODO 
 
