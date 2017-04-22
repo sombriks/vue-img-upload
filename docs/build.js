@@ -16,6 +16,10 @@
 //
 //
 //
+//
+//
+//
+//
 
 module.exports = {
   name: "DocRoot",
@@ -35,7 +39,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xs-12 col-md-6"},[_c('div',{staticClass:"box"},[_c('h1',[_vm._v("Image upload, no resize")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","url":"/upload"},on:{"onchangefile":_vm.onchg,"onupload":_vm.onup}})],1)]),_vm._v(" "),_c('div',{staticClass:"col-xs-12 col-md-6"},[_c('h1',[_vm._v("Image upload, resize 100px")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"100px","url":"/upload"},on:{"onchangefile":_vm.onchg,"onupload":_vm.onup}})],1)])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xs-12 col-sm-6 col-md-4"},[_c('div',{staticClass:"box"},[_c('h1',[_vm._v("Image upload, no resize")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","url":"/upload"},on:{"onchangefile":_vm.onchg,"onupload":_vm.onup}})],1)]),_vm._v(" "),_c('div',{staticClass:"col-xs-12 col-sm-6 col-md-4"},[_c('h1',[_vm._v("Image upload, resize to 100px")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"100px","url":"/upload"},on:{"onchangefile":_vm.onchg,"onupload":_vm.onup}})],1),_vm._v(" "),_c('div',{staticClass:"col-xs-12 col-sm-6 col-md-4"},[_c('h1',[_vm._v("Image upload, resize 50%")]),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"50%","url":"/upload"},on:{"onchangefile":_vm.onchg,"onupload":_vm.onup}})],1)])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -16273,6 +16277,62 @@ exports.insert = function (css) {
 // component installation entry point
 exports.install = (Vue, opts) => Vue.component("vue-img-upload", require("./vue-img-upload.vue"))
 },{"./vue-img-upload.vue":40}],39:[function(require,module,exports){
+// resizetool.js
+const Promise = require("bluebird")
+
+/*
+ * guessresize
+ * 
+ * here we already have an image and now we'll guess how we shall resize this thing
+ * 
+ * @param resize
+ *   resize info received from the dude
+ * @param width
+ *   the actual image width from the image
+ * @param height
+ *   the actual image height from the image
+ * @returns
+ *   the new width and new height based on what we figured out
+ */
+const guessresize = (resize, width, height) => {
+  // we'll do our best to figure out how to resize it
+  let rwidth = resize
+  let rheight = 0
+  if (resize.indexOf(",") > -1)
+    [rwidth, rheight] = resize.split(",")
+  if (rwidth == "")
+    throw new Error(`Dude, give something like '20%' or '10%,15%'. 
+      Even '100,300'. don't give me ${resize} plz.`)
+  if (rwidth.indexOf("%") > -1) {
+    // the dude gave us percentage
+    rwidth = rwidth.replace("%", "")
+    rwidth = parseFloat(rwidth)
+    rwidth *= 0.01
+    if (rheight) {
+      rheight = rheight.replace(/\D/g, "")
+      rheight = parseFloat(rheight)
+      rheight *= 0.01
+      rheight = rheight * height
+    } else {
+      rheight = rwidth
+    }
+    width *= rwidth
+    height *= rheight
+  } else {
+    // dude gave us pixels. what? em? pt? nope nope nope
+    rwidth = rwidth.replace(/\D/g, "")
+    if (rheight) {
+      rheight = rheight.replace(/\D/g, "")
+    } else {
+      let pct = parseFloat(rwidth) / parseFloat(width)
+      rheight = height * pct
+    }
+    width = rwidth
+    height = rheight
+  }
+  return [width, height]
+}
+
 /*
  * resize tool
  * here we'll force the friendship and resize the thing based on many naive beliefs.
@@ -16281,12 +16341,10 @@ exports.install = (Vue, opts) => Vue.component("vue-img-upload", require("./vue-
  *   the file from form input
  * @param rezie
  *   the resize information we'll need to work on this file
- * @return
+ * @returns
  *   the promise containing the canvas.toBlob() return. kinda trippy.
  * 
  */
-const Promise = require("bluebird")
-
 exports.resize = (file, resize) => new Promise((resolve, reject) => {
 
   if (!resize) {
@@ -16294,19 +16352,19 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
     return
   }
 
-  // we'll do our best to figure out how to resize it
-
   let img = document.createElement("img")
   img.onload = _ => {
     let cnv = document.createElement("canvas")
     let w = document.createAttribute("width")
     let h = document.createAttribute("height")
-    w.value = "100px"
-    h.value = "100px"
+
+    let wh = guessresize(resize, img.width, img.height)
+    w.value = wh[0]
+    h.value = wh[1]
     cnv.setAttributeNode(w)
     cnv.setAttributeNode(h)
     let ctx = cnv.getContext("2d")
-    ctx.drawImage(img, 0, 0, 100, 100)
+    ctx.drawImage(img, 0, 0, w.value, h.value)
     console.log(ctx)
     console.log(cnv)
     // dammit safari!
@@ -16386,12 +16444,12 @@ module.exports = {
     },
     changefile() {
       let file = this.$refs["input"].files[0]
-      if(!file){
+      if (!file) {
         // silent frenche exit
         return
       }
       this.name = file.name
-      this.$emit("onchangefile", file)
+      this.$emit("onchangefile", { file, image: this.$refs["image"] })
       if (this.resize)
         this.resizefile()
       else
@@ -16400,8 +16458,9 @@ module.exports = {
     resizefile() {
       let file = this.$refs["input"].files[0]
       resizetool.resize(file, this.resize).then((ret) => {
-        this.$refs["image"].src = ret
+        this.$refs["image"].src = ret // preview
         this.dotheupload()
+        this.$emit("onresizefile", { file, image: this.$refs["image"] })
       })
     },
     previewimg() {
@@ -16410,12 +16469,12 @@ module.exports = {
       this.$refs["image"].src = this.dataimg
       this.dotheupload()
     },
-    dotheupload(){
+    dotheupload() {
       // le's trust the image, not the file
       let img = this.$refs["image"]
       console.log(img)
 
-      // this.$emit("onupload", ret)
+      // this.$emit("onupload", { file, image: this.$refs["image"], response })
 
     }
   }
