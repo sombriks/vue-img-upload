@@ -11,6 +11,10 @@
         <h1>Image upload, resize 100px</h1>
         <vue-img-upload width="300px" resize="100px" url="/upload" @onchangefile="onchg" @onupload="onup"></vue-img-upload>
       </div>
+      <div class="col-xs-12 col-md-6">
+        <h1>Image upload, resize 50%</h1>
+        <vue-img-upload width="300px" resize="50%" url="/upload" @onchangefile="onchg" @onupload="onup"></vue-img-upload>
+      </div>
     </div>
   </div>
 </template>

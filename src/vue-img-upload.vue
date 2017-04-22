@@ -64,12 +64,12 @@ module.exports = {
     },
     changefile() {
       let file = this.$refs["input"].files[0]
-      if(!file){
+      if (!file) {
         // silent frenche exit
         return
       }
       this.name = file.name
-      this.$emit("onchangefile", file)
+      this.$emit("onchangefile", { file, image: this.$refs["image"] })
       if (this.resize)
         this.resizefile()
       else
@@ -78,8 +78,9 @@ module.exports = {
     resizefile() {
       let file = this.$refs["input"].files[0]
       resizetool.resize(file, this.resize).then((ret) => {
-        this.$refs["image"].src = ret
+        this.$refs["image"].src = ret // preview
         this.dotheupload()
+        this.$emit("onresizefile", { file, image: this.$refs["image"] })
       })
     },
     previewimg() {
@@ -88,12 +89,12 @@ module.exports = {
       this.$refs["image"].src = this.dataimg
       this.dotheupload()
     },
-    dotheupload(){
+    dotheupload() {
       // le's trust the image, not the file
       let img = this.$refs["image"]
       console.log(img)
 
-      // this.$emit("onupload", ret)
+      // this.$emit("onupload", { file, image: this.$refs["image"], response })
 
     }
   }
