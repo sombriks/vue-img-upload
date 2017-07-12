@@ -41,7 +41,11 @@ module.exports = {
     },
     url: String,
     headers: Object,
-    resize: String
+    resize: String,
+    initimg: {
+      type: String,
+      default: this.noimg
+    }
   },
   data() {
     return {
@@ -52,9 +56,12 @@ module.exports = {
   },
   mounted() {
     let attr = document.createAttribute("style")
-    attr.value = `width:${this.width};height:${this.height}`
-    this.$refs["imgconainer"].setAttributeNode(attr)
-    this.$refs["image"].src = this.noimg
+    attr.value = `width:${this.width};height:${this.height};`;
+    this.$refs["imgconainer"].setAttributeNode(attr);
+    if(this.initimg != null)
+      this.$refs["image"].src = this.initimg;
+    else
+      this.$refs["image"].src = this.noimg ;
   },
   methods: {
     loadimg() {
@@ -102,7 +109,8 @@ module.exports = {
             headers[k] = this.headers[k]
         }
         axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
-          this.$emit("onupload", { file, image: this.$refs["image"], ret })
+          this.$emit("onupload", { file, image: this.$refs["image"], ret });
+          this.initimg = image;
         })
       }
     }
