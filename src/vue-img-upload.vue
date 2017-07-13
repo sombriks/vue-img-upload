@@ -42,7 +42,7 @@ module.exports = {
     url: String,
     headers: Object,
     resize: String,
-    initimg: {
+    img: {
       type: String,
       default: this.noimg
     }
@@ -58,8 +58,8 @@ module.exports = {
     let attr = document.createAttribute("style")
     attr.value = `width:${this.width};height:${this.height};`;
     this.$refs["imgconainer"].setAttributeNode(attr);
-    if(this.initimg != null)
-      this.$refs["image"].src = this.initimg;
+    if(this.img != null)
+      this.$refs["image"].src = this.img;
     else
       this.$refs["image"].src = this.noimg ;
   },
@@ -110,7 +110,6 @@ module.exports = {
         }
         axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
           this.$emit("onupload", { file, image: this.$refs["image"], ret });
-          this.initimg = image;
         })
       }
     }
