@@ -1,8 +1,6 @@
 
 clean:
 	rm -rf docs/build.js
-	rm -rf dist
-	mkdir dist
 
 docs: clean
 	browserify docs/index.js -o docs/build.js
