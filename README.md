@@ -3,9 +3,10 @@
 yet another vue image upload component
 
 - [preview](https://sombriks.github.io/vue-img-upload/)
-- preview image
+- [available on npm](https://www.npmjs.com/package/vue-img-upload)
 - single image per tag
 - offer resize options
+- offer basic portrait/landscape support
 - offer direct upload options
 - **accepting PR's**
 
