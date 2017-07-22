@@ -114,6 +114,13 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 module.exports = {
   name: "Start",
@@ -134,8 +141,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h3',[_vm._v("Introduction")]),_vm._v(" "),_c('p',[_vm._v("Vue Image Upload is yet another vue.js lib to preview/upload images.")]),_vm._v(" "),_c('h3',[_vm._v("Dependencies")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Vue.js 2.2+")]),_vm._v(" "),_c('li',[_vm._v("Axios 0.16+")]),_vm._v(" "),_c('li',[_vm._v("Bluebird 3.5+")])]),_vm._v(" "),_c('p',[_vm._v("Your project must provide that in order to get things working.")]),_vm._v(" "),_c('h3',[_vm._v("Installation")]),_vm._v(" "),_c('pre',[_vm._v("npm install vue-img-upload --save")]),_vm._v(" "),_c('p',[_vm._v("After that you have to register it with Vue:")]),_vm._v(" "),_c('pre',[_vm._v("const VueImgUpload = require(\"../src/main\")\nVue.use(VueImgUpload)")])])}]
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h3',[_vm._v("Introduction")]),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('h3',[_vm._v("Dependencies")]),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('p',[_vm._v("Your project must provide that in order to get things working.")]),_vm._v(" "),_c('h3',[_vm._v("Installation")]),_vm._v(" "),_c('pre',[_vm._v("    npm install vue-img-upload --save\n  ")]),_vm._v(" "),_c('p',[_vm._v("After that you have to register it with Vue:")]),_vm._v(" "),_c('pre',[_vm._v("    const VueImgUpload = require(\"vue-img-upload\")\n    Vue.use(VueImgUpload)")]),_vm._v(" "),_c('h3',[_vm._v("Roadmap")]),_vm._v(" "),_c('p',[_vm._v("See\n    "),_c('router-link',{attrs:{"to":"/99-roadmap"}},[_vm._v("here")]),_vm._v(".")],1)])}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_vm._v("Vue Image Upload is yet another\n    "),_c('a',{attrs:{"href":"https://vuejs.org/","target":"vuejs"}},[_vm._v("vue.js")]),_vm._v(" lib to preview/upload images.")])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_vm._v("Vue.js 2.2+")]),_vm._v(" "),_c('li',[_vm._v("Axios 0.16+")]),_vm._v(" "),_c('li',[_vm._v("Bluebird 3.5+")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -154,6 +161,28 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 module.exports = {
   name: "Basic",
@@ -165,8 +194,10 @@ module.exports = {
 
     };
   },
-  methods: {
-
+  methods:{
+    gotchange(img){
+      console.log(img)
+    }
   }
 };
 
@@ -174,8 +205,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div')}
-__vue__options__.staticRenderFns = []
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px"},on:{"onchangefile":_vm.gotchange}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-upload width=\"200px\" @onchangefile=\"gotchange\"></vue-img-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"Basic\",\n  methods:{\n    gotchange(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image preview, no resize")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -194,6 +225,31 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 module.exports = {
   name: "ResizePx",
@@ -205,8 +261,13 @@ module.exports = {
 
     };
   },
-  methods: {
-
+  methods:{
+    gotchange(img){
+      console.log(img)
+    },
+    gotresize(img){
+      console.log(img)
+    }
   }
 };
 
@@ -214,8 +275,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div')}
-__vue__options__.staticRenderFns = []
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"resize":"100px","width":"200px"},on:{"onchangefile":_vm.gotchange,"onresizefile":_vm.gotresize}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-upload resize=\"100px\" width=\"200px\" @onchangefile=\"gotchange\" @onresizefile=\"gotresize\"></vue-img-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"ResizePx\",\n  methods:{\n    gotchange(img){\n      console.log(img)\n    },\n    gotresize(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image preview, resize to 100px")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -234,6 +295,28 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 module.exports = {
   name: "ResizePct",
@@ -245,8 +328,10 @@ module.exports = {
 
     };
   },
-  methods: {
-
+  methods:{
+    gotchange(img){
+      console.log(img)
+    }
   }
 };
 
@@ -254,8 +339,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div')}
-__vue__options__.staticRenderFns = []
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"resize":"50%","width":"200px"},on:{"onchangefile":_vm.gotchange}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-upload resize=\"50%\" width=\"200px\" @onchangefile=\"gotchange\"></vue-img-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"ResizePx\",\n  methods:{\n    gotchange(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image preview, resize  50%")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -274,19 +359,62 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 module.exports = {
   name: "Upload",
-  created() {
-
-  },
   data() {
     return {
-
+      url:"http://localhost:3000/upimage"
     };
   },
   methods: {
-
+    gotchange(img){
+      console.log(img)
+    },
+    gotupload(ret){
+      console.log(ret)
+    },
+    goterror(ret){
+      console.log(ret)
+    }
   }
 };
 
@@ -294,8 +422,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div')}
-__vue__options__.staticRenderFns = []
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('label',{attrs:{"for":"theinput"}},[_vm._v("provide http upload link")]),_c('br'),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.url),expression:"url"}],staticStyle:{"width":"100%"},attrs:{"id":"theinput"},domProps:{"value":(_vm.url)},on:{"input":function($event){if($event.target.composing){ return; }_vm.url=$event.target.value}}}),_vm._v(" "),_c('br'),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"10%,10%","url":_vm.url},on:{"onupload":_vm.gotupload,"onuploaderror":_vm.goterror}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <div>\n    <label for=\"theinput\">provide http upload link</label><br/>\n    <input id=\"theinput\" v-model=\"url\" style=\"width:100%\"/> <br/>\n    <vue-img-upload width=\"300px\" resize=\"10%,10%\" :url=\"url\" @onupload=\"gotupload\" @onuploaderror=\"goterror\"></vue-img-upload>\n  </div>\n</template>\n<script>\nmodule.exports = {\n  name: \"Upload\",\n  data(){\n    return {\n      url:\"http://localhost:3000/upimage\"\n    };\n  }\n  methods:{\n    gotchange(img){\n      console.log(img)\n    },\n    gotupload(ret){\n      console.log(ret)\n    },\n    goterror(ret){\n      console.log(ret)\n    }\n  }\n}\n</script>\n      ")])])],1)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image upoad, resize 10%,10%")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -314,19 +442,49 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 module.exports = {
   name: "Orientation",
-  created() {
-
-  },
-  data() {
+  data(){
     return {
-
-    };
+      ori:"portrait"
+    }
   },
-  methods: {
-
+  methods:{
+    gotchange(img){
+      console.log(img)
+    }
   }
 };
 
@@ -334,8 +492,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div')}
-__vue__options__.staticRenderFns = []
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","orientation":_vm.ori},on:{"onchangefile":_vm.gotchange}}),_vm._v("\n        Next image will be "),_c('button',{on:{"click":function($event){_vm.ori = _vm.ori == 'landscape' ? 'portrait' : 'landscape'}}},[_vm._v(_vm._s(_vm.ori))])],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <div>\n    <vue-img-upload width=\"200px\" :orientation=\"ori\" legenda=\"Landscape Only\" @onchangefile=\"gotchange\"></vue-img-upload>\n    Next image will be <button @click=\"ori = ori == 'landscape' ? 'portrait' : 'landscape'\">{ {ori}}</button>\n  </div>\n</template>\n<script>\nmodule.exports = {\n  name: \"Orientation\",\n  data(){\n    return {\n      ori:\"portrait\"\n    }\n  },\n  methods:{\n    gotchange(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image orientation")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -348,6 +506,19 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 })()}
 },{"vue":44,"vue-hot-reload-api":42}],9:[function(require,module,exports){
 ;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -374,8 +545,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div')}
-__vue__options__.staticRenderFns = []
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -457,20 +628,6 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#root[da
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 module.exports = {
   name: "DocRoot",
@@ -495,7 +652,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"row",attrs:{"id":"root"}},[_c('div',{staticClass:"col-xs-4"},[_c('h3',[_vm._v("Vue Image Upload")]),_vm._v(" "),_c('doc-menu')],1),_vm._v(" "),_c('div',{staticClass:"col-xs-8"},[_c('router-view')],1)])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"row",attrs:{"id":"root"}},[_c('div',{staticClass:"col-xs-3"},[_c('h3',[_vm._v("Vue Image Upload")]),_vm._v(" "),_c('doc-menu')],1),_vm._v(" "),_c('div',{staticClass:"col-xs-9"},[_c('router-view')],1)])])}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('a',{staticClass:"github-button",attrs:{"href":"https://github.com/sombriks/vue-img-upload","data-icon":"octicon-star","data-count-href":"/sombriks/vue-img-upload/stargazers","data-show-count":"true","data-count-aria-label":"# stargazers on GitHub","aria-label":"Star sombriks/vue-img-upload on GitHub"}},[_vm._v("Star")]),_vm._v(" "),_c('a',{staticClass:"github-button",attrs:{"href":"https://github.com/sombriks/vue-img-upload/issues","data-icon":"octicon-issue-opened","data-show-count":"true","data-count-aria-label":"# issues on GitHub","aria-label":"Issue sombriks/vue-img-upload on GitHub"}},[_vm._v("Issue")]),_vm._v(" "),_c('a',{staticClass:"github-button",attrs:{"href":"https://github.com/sombriks","data-count-href":"/sombriks/followers","data-show-count":"true","data-count-aria-label":"# followers on GitHub","aria-label":"Follow @sombriks on GitHub"}},[_vm._v("Follow @sombriks")]),_vm._v(" "),_c('a',{attrs:{"href":"https://www.patreon.com/user?u=4566034","target":"patreon","title":"Buy me a beer"}},[_c('img',{attrs:{"src":"imgs/patreon-medium-button.png","alt":"patreon"}})]),_vm._v(" "),_c('hr')])}]
 __vue__options__._scopeId = "data-v-b8feb288"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -18015,7 +18172,7 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
     return
   }
 
-  let img = document.createElement("img")
+  const img = document.createElement("img")
   img.onload = _ => {
     let cnv = document.createElement("canvas")
     let w = document.createAttribute("width")
@@ -18046,14 +18203,71 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
  * 
  */
 exports.mkjpeg = (dataURI) => {
-  const byteString = atob(dataURI.split(',')[1]);
-  const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
-  const ab = new ArrayBuffer(byteString.length);
-  const dw = new DataView(ab);
+  const byteString = atob(dataURI.split(',')[1])
+  const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+  const ab = new ArrayBuffer(byteString.length)
+  const dw = new DataView(ab)
   for (let i = 0; i < byteString.length; i++)
-    dw.setUint8(i, byteString.charCodeAt(i));
-  return new Blob([ab], { type: mimeString });
+    dw.setUint8(i, byteString.charCodeAt(i))
+  return new Blob([ab], { type: mimeString })
 }
+
+exports.dolandscape = dataimg => new Promise((resolve, reject) => {
+
+  const img = document.createElement("img")
+  img.onload = _ => {
+    let w = img.width
+    let h = img.height
+    if (h > w) { // this is portrait, let's fix it
+      let cnv = document.createElement("canvas")
+      let aw = document.createAttribute("width")
+      let ah = document.createAttribute("height")
+      aw.value = h
+      ah.value = w
+      cnv.setAttributeNode(aw)
+      cnv.setAttributeNode(ah)
+      let ctx = cnv.getContext("2d")
+      ctx.translate(h / 2, w / 2)
+      ctx.rotate(Math.PI / 2)
+      ctx.drawImage(img, -w / 2, -h / 2, w, h)
+      resolve(cnv.toDataURL("image/jpeg", 0.9))
+    } else {
+      resolve(dataimg)
+    }
+  }
+  if (dataimg instanceof Blob)
+    img.src = URL.createObjectURL(dataimg)
+  else
+    img.src = dataimg
+})
+
+exports.doportrait = dataimg => new Promise((resolve, reject) => {
+  const img = document.createElement("img")
+  img.onload = _ => {
+    let w = img.width
+    let h = img.height
+    if (w > h) { // this is landscape, let's fix it
+      let cnv = document.createElement("canvas")
+      let aw = document.createAttribute("width")
+      let ah = document.createAttribute("height")
+      aw.value = h
+      ah.value = w
+      cnv.setAttributeNode(aw)
+      cnv.setAttributeNode(ah)
+      let ctx = cnv.getContext("2d")
+      ctx.translate(h / 2, w / 2)
+      ctx.rotate(Math.PI / 2)
+      ctx.drawImage(img, -w / 2, -h / 2, w, h)
+      resolve(cnv.toDataURL("image/jpeg", 0.9))
+    } else {
+      resolve(dataimg)
+    }
+  }
+  if (dataimg instanceof Blob)
+    img.src = URL.createObjectURL(dataimg)
+  else
+    img.src = dataimg
+})
 },{"bluebird":38}],48:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("input.theinput[data-v-68c1fb96] {\r\n  display: none\r\n}")
 ;(function(){
@@ -18101,6 +18315,10 @@ module.exports = {
     url: String,
     headers: Object,
     resize: String,
+    orientation: {
+      type: String,
+      default: "any"
+    },
     img: {
       type: String,
       default: this.noimg
@@ -18115,12 +18333,12 @@ module.exports = {
   },
   mounted() {
     let attr = document.createAttribute("style")
-    attr.value = `width:${this.width};height:${this.height};`;
-    this.$refs["imgconainer"].setAttributeNode(attr);
-    if(this.img != null)
-      this.$refs["image"].src = this.img;
+    attr.value = `width:${this.width};height:${this.height};`
+    this.$refs["imgconainer"].setAttributeNode(attr)
+    if (this.img != null)
+      this.$refs["image"].src = this.img
     else
-      this.$refs["image"].src = this.noimg ;
+      this.$refs["image"].src = this.noimg
   },
   methods: {
     loadimg() {
@@ -18129,7 +18347,7 @@ module.exports = {
     changefile() {
       let file = this.$refs["input"].files[0]
       if (!file) {
-        // silent frenche exit
+        // silent french exit
         return
       }
       this.name = file.name
@@ -18143,16 +18361,35 @@ module.exports = {
       let file = this.$refs["input"].files[0]
       resizetool.resize(file, this.resize).then((ret) => {
         this.dataimg = ret // preview
-        this.$refs["image"].src = this.dataimg
-        this.dotheupload()
+        this.checkorientation()
         this.$emit("onresizefile", { file, image: this.$refs["image"] })
       })
     },
     previewimg() {
       let file = this.$refs["input"].files[0]
       this.dataimg = URL.createObjectURL(file)
-      this.$refs["image"].src = this.dataimg
-      this.dotheupload()
+      this.checkorientation()
+    },
+    checkorientation() {
+      let file = this.$refs["input"].files[0]
+      if (this.orientation == "landscape") {
+        resizetool.dolandscape(this.dataimg).then(dataimg => {
+          this.dataimg = dataimg;
+          this.$refs["image"].src = this.dataimg
+          this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
+          this.dotheupload();
+        })
+      } else if (this.orientation == "portrait") {
+        resizetool.doportrait(this.dataimg).then(dataimg => {
+          this.dataimg = dataimg;
+          this.$refs["image"].src = this.dataimg
+          this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
+          this.dotheupload();
+        })
+      } else {
+        this.$refs["image"].src = this.dataimg
+        this.dotheupload();
+      }
     },
     dotheupload() {
       if (this.url) {
@@ -18160,7 +18397,7 @@ module.exports = {
         let img = this.$refs["image"]
         let file = this.$refs["input"].files[0]
         const headers = {
-          "Content-Type": "image/jpeg",
+          "Content-Type": file.type || "image/jpeg",
           "X-Filename": file.name
         }
         if (this.headers) {
@@ -18168,7 +18405,9 @@ module.exports = {
             headers[k] = this.headers[k]
         }
         axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
-          this.$emit("onupload", { file, image: this.$refs["image"], ret });
+          this.$emit("onupload", { file, image: this.$refs["image"], ret })
+        }).catch(err => {
+          this.$emit("onuploaderror", { file, image: this.$refs["image"], err })
         })
       }
     }

@@ -72,7 +72,7 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
     return
   }
 
-  let img = document.createElement("img")
+  const img = document.createElement("img")
   img.onload = _ => {
     let cnv = document.createElement("canvas")
     let w = document.createAttribute("width")
@@ -103,11 +103,68 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
  * 
  */
 exports.mkjpeg = (dataURI) => {
-  const byteString = atob(dataURI.split(',')[1]);
-  const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
-  const ab = new ArrayBuffer(byteString.length);
-  const dw = new DataView(ab);
+  const byteString = atob(dataURI.split(',')[1])
+  const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+  const ab = new ArrayBuffer(byteString.length)
+  const dw = new DataView(ab)
   for (let i = 0; i < byteString.length; i++)
-    dw.setUint8(i, byteString.charCodeAt(i));
-  return new Blob([ab], { type: mimeString });
+    dw.setUint8(i, byteString.charCodeAt(i))
+  return new Blob([ab], { type: mimeString })
 }
+
+exports.dolandscape = dataimg => new Promise((resolve, reject) => {
+
+  const img = document.createElement("img")
+  img.onload = _ => {
+    let w = img.width
+    let h = img.height
+    if (h > w) { // this is portrait, let's fix it
+      let cnv = document.createElement("canvas")
+      let aw = document.createAttribute("width")
+      let ah = document.createAttribute("height")
+      aw.value = h
+      ah.value = w
+      cnv.setAttributeNode(aw)
+      cnv.setAttributeNode(ah)
+      let ctx = cnv.getContext("2d")
+      ctx.translate(h / 2, w / 2)
+      ctx.rotate(Math.PI / 2)
+      ctx.drawImage(img, -w / 2, -h / 2, w, h)
+      resolve(cnv.toDataURL("image/jpeg", 0.9))
+    } else {
+      resolve(dataimg)
+    }
+  }
+  if (dataimg instanceof Blob)
+    img.src = URL.createObjectURL(dataimg)
+  else
+    img.src = dataimg
+})
+
+exports.doportrait = dataimg => new Promise((resolve, reject) => {
+  const img = document.createElement("img")
+  img.onload = _ => {
+    let w = img.width
+    let h = img.height
+    if (w > h) { // this is landscape, let's fix it
+      let cnv = document.createElement("canvas")
+      let aw = document.createAttribute("width")
+      let ah = document.createAttribute("height")
+      aw.value = h
+      ah.value = w
+      cnv.setAttributeNode(aw)
+      cnv.setAttributeNode(ah)
+      let ctx = cnv.getContext("2d")
+      ctx.translate(h / 2, w / 2)
+      ctx.rotate(Math.PI / 2)
+      ctx.drawImage(img, -w / 2, -h / 2, w, h)
+      resolve(cnv.toDataURL("image/jpeg", 0.9))
+    } else {
+      resolve(dataimg)
+    }
+  }
+  if (dataimg instanceof Blob)
+    img.src = URL.createObjectURL(dataimg)
+  else
+    img.src = dataimg
+})

@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-xs-12">
-        <h1>Image preview, no resize</h1>
+        <h3>Image preview, no resize</h3>
     </div>
     <code-preview class="col-xs-12">
       <div slot="example">

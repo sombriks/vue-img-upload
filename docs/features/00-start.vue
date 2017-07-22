@@ -11,10 +11,13 @@
     </ul>
     <p>Your project must provide that in order to get things working.</p>
     <h3>Installation</h3>
-    <pre>npm install vue-img-upload --save</pre>
+    <pre>
+      npm install vue-img-upload --save
+    </pre>
     <p>After that you have to register it with Vue:</p>
-    <pre>const VueImgUpload = require("vue-img-upload")
-    Vue.use(VueImgUpload)</pre>
+    <pre>
+      const VueImgUpload = require("vue-img-upload")
+      Vue.use(VueImgUpload)</pre>
     <h3>Roadmap</h3>
     <p>See
       <router-link to="/99-roadmap">here</router-link>.</p>

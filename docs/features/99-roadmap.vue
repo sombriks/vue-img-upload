@@ -1,9 +1,14 @@
 <template>
   <div>
+    <h2>1.0.0 (not released yet)</h2>
+    <ul>
+      <li>Implement the crop/rotate dialog</li>
+      <li>Improve mobile usability</li>
+    </ul>
     <h2>0.2.0</h2>
     <ul>
       <li>Project docs under construction</li>
-      <li>Added EXIF photo orientation</li>
+      <li>Added photo orientation</li>
     </ul>
     <h2>0.1.0</h2>
     <ul>

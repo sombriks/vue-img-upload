@@ -42,6 +42,10 @@ module.exports = {
     url: String,
     headers: Object,
     resize: String,
+    orientation: {
+      type: String,
+      default: "any"
+    },
     img: {
       type: String,
       default: this.noimg
@@ -56,12 +60,12 @@ module.exports = {
   },
   mounted() {
     let attr = document.createAttribute("style")
-    attr.value = `width:${this.width};height:${this.height};`;
-    this.$refs["imgconainer"].setAttributeNode(attr);
-    if(this.img != null)
-      this.$refs["image"].src = this.img;
+    attr.value = `width:${this.width};height:${this.height};`
+    this.$refs["imgconainer"].setAttributeNode(attr)
+    if (this.img != null)
+      this.$refs["image"].src = this.img
     else
-      this.$refs["image"].src = this.noimg ;
+      this.$refs["image"].src = this.noimg
   },
   methods: {
     loadimg() {
@@ -70,7 +74,7 @@ module.exports = {
     changefile() {
       let file = this.$refs["input"].files[0]
       if (!file) {
-        // silent frenche exit
+        // silent french exit
         return
       }
       this.name = file.name
@@ -84,16 +88,35 @@ module.exports = {
       let file = this.$refs["input"].files[0]
       resizetool.resize(file, this.resize).then((ret) => {
         this.dataimg = ret // preview
-        this.$refs["image"].src = this.dataimg
-        this.dotheupload()
+        this.checkorientation()
         this.$emit("onresizefile", { file, image: this.$refs["image"] })
       })
     },
     previewimg() {
       let file = this.$refs["input"].files[0]
       this.dataimg = URL.createObjectURL(file)
-      this.$refs["image"].src = this.dataimg
-      this.dotheupload()
+      this.checkorientation()
+    },
+    checkorientation() {
+      let file = this.$refs["input"].files[0]
+      if (this.orientation == "landscape") {
+        resizetool.dolandscape(this.dataimg).then(dataimg => {
+          this.dataimg = dataimg;
+          this.$refs["image"].src = this.dataimg
+          this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
+          this.dotheupload();
+        })
+      } else if (this.orientation == "portrait") {
+        resizetool.doportrait(this.dataimg).then(dataimg => {
+          this.dataimg = dataimg;
+          this.$refs["image"].src = this.dataimg
+          this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
+          this.dotheupload();
+        })
+      } else {
+        this.$refs["image"].src = this.dataimg
+        this.dotheupload();
+      }
     },
     dotheupload() {
       if (this.url) {
@@ -101,7 +124,7 @@ module.exports = {
         let img = this.$refs["image"]
         let file = this.$refs["input"].files[0]
         const headers = {
-          "Content-Type": "image/jpeg",
+          "Content-Type": file.type || "image/jpeg",
           "X-Filename": file.name
         }
         if (this.headers) {
@@ -109,7 +132,9 @@ module.exports = {
             headers[k] = this.headers[k]
         }
         axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
-          this.$emit("onupload", { file, image: this.$refs["image"], ret });
+          this.$emit("onupload", { file, image: this.$refs["image"], ret })
+        }).catch(err => {
+          this.$emit("onuploaderror", { file, image: this.$refs["image"], err })
         })
       }
     }
