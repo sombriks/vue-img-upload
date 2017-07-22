@@ -1,7 +1,8 @@
 <template>
   <div>
     <h3>Introduction</h3>
-    <p>Vue Image Upload is yet another vue.js lib to preview/upload images.</p>
+    <p>Vue Image Upload is yet another
+      <a href="https://vuejs.org/" target="vuejs">vue.js</a> lib to preview/upload images.</p>
     <h3>Dependencies</h3>
     <ul>
       <li>Vue.js 2.2+</li>
@@ -12,8 +13,11 @@
     <h3>Installation</h3>
     <pre>npm install vue-img-upload --save</pre>
     <p>After that you have to register it with Vue:</p>
-    <pre>const VueImgUpload = require("../src/main")
-Vue.use(VueImgUpload)</pre>
+    <pre>const VueImgUpload = require("vue-img-upload")
+    Vue.use(VueImgUpload)</pre>
+    <h3>Roadmap</h3>
+    <p>See
+      <router-link to="/99-roadmap">here</router-link>.</p>
   </div>
 </template>
 

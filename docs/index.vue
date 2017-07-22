@@ -14,22 +14,16 @@
       <hr/>
     </div>
     <div class="row" id="root">
-      <div class="col-xs-4">
+      <div class="col-xs-3">
         <h3>Vue Image Upload</h3>
         <doc-menu></doc-menu>
       </div>
-      <div class="col-xs-8">
+      <div class="col-xs-9">
         <router-view></router-view>
       </div>
     </div>
   </div>
   <!--     <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                      <div class="box center">
-                        <h1>Image preview, no resize</h1>
-                        <vue-img-upload width="300px" @onchangefile="onchg"></vue-img-upload>
-                      </div>
-                    </div>
                     <div class="col-xs-12 col-sm-6 col-md-4">
                       <h1>Image preview, resize to 100px</h1>
                       <vue-img-upload width="300px" resize="100px" @onchangefile="onchg"></vue-img-upload>
