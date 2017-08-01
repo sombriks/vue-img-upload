@@ -14,9 +14,34 @@
         <span v-show="changed">Once a file is selected, default image isn't needed anymore</span>
       </div>
       <div slot="source">
-        &lt;template> &lt;vue-img-upload width="200px" @onchangefile="gotchange">&lt;/vue-img-upload>
-        &lt;/template> &lt;script> module.exports = { name: "Basic", methods:{ gotchange(img){
-        console.log(img) } } } &lt;/script>
+        &lt;template> 
+          &lt;vue-img-upload width="200px" 
+            :img="oneimg" @onchangefile="gotchange">&lt;/vue-img-upload>
+          &lt;span v-show="!changed">Default img is&lt;/span> 
+          &lt;button v-show="!changed"
+            @click="oneimg = oneimg == 'imgs/star.png' ? 'imgs/wolf-moon.png' : 'imgs/star.png'">
+              { {oneimg}}
+            &lt;/button> 
+          &lt;span v-show="changed">
+            Once a file is selected, default image isn't needed anymore&lt;/span> 
+        &lt;/template> 
+        &lt;script> 
+        module.exports = { 
+          name: "DefaultImg", 
+          data() {
+            return {
+              oneimg: "imgs/star.png",
+              changed: false
+            };
+          },
+          methods:{ 
+            gotchange(img){ 
+              console.log(img)
+              this.changed = true;
+            } 
+          } 
+        } 
+        &lt;/script>
       </div>
     </code-preview>
   </div>
@@ -25,9 +50,6 @@
 <script>
 module.exports = {
   name: "DefaultImg",
-  created() {
-
-  },
   data() {
     return {
       oneimg: "imgs/star.png",

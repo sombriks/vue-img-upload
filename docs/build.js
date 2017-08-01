@@ -509,12 +509,34 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 module.exports = {
   name: "DefaultImg",
-  created() {
-
-  },
   data() {
     return {
       oneimg: "imgs/star.png",
@@ -533,7 +555,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","img":_vm.oneimg},on:{"onchangefile":_vm.gotchange}}),_vm._v(" "),_c('span',{directives:[{name:"show",rawName:"v-show",value:(!_vm.changed),expression:"!changed"}]},[_vm._v("Default img is")]),_vm._v(" "),_c('button',{directives:[{name:"show",rawName:"v-show",value:(!_vm.changed),expression:"!changed"}],on:{"click":function($event){_vm.oneimg = _vm.oneimg == 'imgs/star.png' ? 'imgs/wolf-moon.png' : 'imgs/star.png'}}},[_vm._v(_vm._s(_vm.oneimg))]),_vm._v(" "),_c('span',{directives:[{name:"show",rawName:"v-show",value:(_vm.changed),expression:"changed"}]},[_vm._v("Once a file is selected, default image isn't needed anymore")])],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n      <template> <vue-img-upload width=\"200px\" @onchangefile=\"gotchange\"></vue-img-upload>\n      </template> <script> module.exports = { name: \"Basic\", methods:{ gotchange(img){\n      console.log(img) } } } </script>\n    ")])])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","img":_vm.oneimg},on:{"onchangefile":_vm.gotchange}}),_vm._v(" "),_c('span',{directives:[{name:"show",rawName:"v-show",value:(!_vm.changed),expression:"!changed"}]},[_vm._v("Default img is")]),_vm._v(" "),_c('button',{directives:[{name:"show",rawName:"v-show",value:(!_vm.changed),expression:"!changed"}],on:{"click":function($event){_vm.oneimg = _vm.oneimg == 'imgs/star.png' ? 'imgs/wolf-moon.png' : 'imgs/star.png'}}},[_vm._v(_vm._s(_vm.oneimg))]),_vm._v(" "),_c('span',{directives:[{name:"show",rawName:"v-show",value:(_vm.changed),expression:"changed"}]},[_vm._v("Once a file is selected, default image isn't needed anymore")])],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n      <template> \n        <vue-img-upload width=\"200px\" \n          :img=\"oneimg\" @onchangefile=\"gotchange\"></vue-img-upload>\n        <span v-show=\"!changed\">Default img is</span> \n        <button v-show=\"!changed\"\n          @click=\"oneimg = oneimg == 'imgs/star.png' ? 'imgs/wolf-moon.png' : 'imgs/star.png'\">\n            { {oneimg}}\n          </button> \n        <span v-show=\"changed\">\n          Once a file is selected, default image isn't needed anymore</span> \n      </template> \n      <script> \n      module.exports = { \n        name: \"DefaultImg\", \n        data() {\n          return {\n            oneimg: \"imgs/star.png\",\n            changed: false\n          };\n        },\n        methods:{ \n          gotchange(img){ \n            console.log(img)\n            this.changed = true;\n          } \n        } \n      } \n      </script>\n    ")])])],1)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Change default img")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
