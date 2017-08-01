@@ -35,20 +35,21 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xs-6"},[_c('h5',[_vm._v("Example")]),_vm._v(" "),_vm._t("example")],2),_vm._v(" "),_c('div',{staticClass:"col-xs-6"},[_c('h5',[_vm._v("Source")]),_vm._v(" "),_c('pre',[_vm._v("      "),_vm._t("source"),_vm._v("\n    ")],2)])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xs-4"},[_c('h5',[_vm._v("Example")]),_vm._v(" "),_vm._t("example")],2),_vm._v(" "),_c('div',{staticClass:"col-xs-8"},[_c('h5',[_vm._v("Source")]),_vm._v(" "),_c('pre',[_vm._v("      "),_vm._t("source"),_vm._v("\n    ")],2)])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-30779e58", __vue__options__)
+    hotAPI.createRecord("data-v-e84fe046", __vue__options__)
   } else {
-    hotAPI.reload("data-v-30779e58", __vue__options__)
+    hotAPI.reload("data-v-e84fe046", __vue__options__)
   }
 })()}
-},{"vue":44,"vue-hot-reload-api":42}],2:[function(require,module,exports){
+},{"vue":45,"vue-hot-reload-api":43}],2:[function(require,module,exports){
 ;(function(){
+//
 //
 //
 //
@@ -64,37 +65,27 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 
 module.exports = {
   name: "DocMenu",
-  created() {
-
-  },
-  data() {
-    return {
-
-    };
-  },
-  methods: {
-
-  }
 };
 
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_c('router-link',{attrs:{"to":"/00-start"}},[_vm._v("Start")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/01-basic"}},[_vm._v("Basic Usage")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/02-resize-px"}},[_vm._v("Resize (px)")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/03-resize-pct"}},[_vm._v("Resize (%)")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/04-upload"}},[_vm._v("Upload")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/05-orientation"}},[_vm._v("Orientation")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/99-roadmap"}},[_vm._v("Roadmap")])],1)])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_c('router-link',{attrs:{"to":"/00-start"}},[_vm._v("Start")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/01-basic"}},[_vm._v("Basic Usage")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/02-resize-px"}},[_vm._v("Resize (px)")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/03-resize-pct"}},[_vm._v("Resize (%)")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/04-upload"}},[_vm._v("Upload")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/05-orientation"}},[_vm._v("Orientation")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/06-default-img"}},[_vm._v("Default img")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/99-roadmap"}},[_vm._v("Roadmap")])],1)])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3e48404f", __vue__options__)
+    hotAPI.createRecord("data-v-1c4106d4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-3e48404f", __vue__options__)
+    hotAPI.reload("data-v-1c4106d4", __vue__options__)
   }
 })()}
-},{"vue":44,"vue-hot-reload-api":42}],3:[function(require,module,exports){
+},{"vue":45,"vue-hot-reload-api":43}],3:[function(require,module,exports){
 ;(function(){
+//
 //
 //
 //
@@ -142,18 +133,18 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h3',[_vm._v("Introduction")]),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('h3',[_vm._v("Dependencies")]),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('p',[_vm._v("Your project must provide that in order to get things working.")]),_vm._v(" "),_c('h3',[_vm._v("Installation")]),_vm._v(" "),_c('pre',[_vm._v("    npm install vue-img-upload --save\n  ")]),_vm._v(" "),_c('p',[_vm._v("After that you have to register it with Vue:")]),_vm._v(" "),_c('pre',[_vm._v("    const VueImgUpload = require(\"vue-img-upload\")\n    Vue.use(VueImgUpload)")]),_vm._v(" "),_c('h3',[_vm._v("Roadmap")]),_vm._v(" "),_c('p',[_vm._v("See\n    "),_c('router-link',{attrs:{"to":"/99-roadmap"}},[_vm._v("here")]),_vm._v(".")],1)])}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_vm._v("Vue Image Upload is yet another\n    "),_c('a',{attrs:{"href":"https://vuejs.org/","target":"vuejs"}},[_vm._v("vue.js")]),_vm._v(" lib to preview/upload images.")])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_vm._v("Vue.js 2.2+")]),_vm._v(" "),_c('li',[_vm._v("Axios 0.16+")]),_vm._v(" "),_c('li',[_vm._v("Bluebird 3.5+")])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_vm._v("Vue Image Upload is yet another\n    "),_c('a',{attrs:{"href":"https://vuejs.org/","target":"vuejs"}},[_vm._v("vue.js")]),_vm._v(" lib to preview/upload images.")])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_vm._v("Vue.js 2.2+")]),_vm._v(" "),_c('li',[_vm._v("Axios 0.16+")]),_vm._v(" "),_c('li',[_vm._v("Bluebird 3.5+")]),_vm._v(" "),_c('li',[_vm._v("brfs 1.4.3+")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-080f1604", __vue__options__)
+    hotAPI.createRecord("data-v-7e04f583", __vue__options__)
   } else {
-    hotAPI.reload("data-v-080f1604", __vue__options__)
+    hotAPI.reload("data-v-7e04f583", __vue__options__)
   }
 })()}
-},{"vue":44,"vue-hot-reload-api":42}],4:[function(require,module,exports){
+},{"vue":45,"vue-hot-reload-api":43}],4:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -212,12 +203,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-aaff1cea", __vue__options__)
+    hotAPI.createRecord("data-v-2c8cf210", __vue__options__)
   } else {
-    hotAPI.reload("data-v-aaff1cea", __vue__options__)
+    hotAPI.reload("data-v-2c8cf210", __vue__options__)
   }
 })()}
-},{"vue":44,"vue-hot-reload-api":42}],5:[function(require,module,exports){
+},{"vue":45,"vue-hot-reload-api":43}],5:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -282,12 +273,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-dc59ed42", __vue__options__)
+    hotAPI.createRecord("data-v-40f1bf64", __vue__options__)
   } else {
-    hotAPI.reload("data-v-dc59ed42", __vue__options__)
+    hotAPI.reload("data-v-40f1bf64", __vue__options__)
   }
 })()}
-},{"vue":44,"vue-hot-reload-api":42}],6:[function(require,module,exports){
+},{"vue":45,"vue-hot-reload-api":43}],6:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -346,12 +337,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6a03f3f9", __vue__options__)
+    hotAPI.createRecord("data-v-c28802d8", __vue__options__)
   } else {
-    hotAPI.reload("data-v-6a03f3f9", __vue__options__)
+    hotAPI.reload("data-v-c28802d8", __vue__options__)
   }
 })()}
-},{"vue":44,"vue-hot-reload-api":42}],7:[function(require,module,exports){
+},{"vue":45,"vue-hot-reload-api":43}],7:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -429,25 +420,13 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-187761de", __vue__options__)
+    hotAPI.createRecord("data-v-997041a8", __vue__options__)
   } else {
-    hotAPI.reload("data-v-187761de", __vue__options__)
+    hotAPI.reload("data-v-997041a8", __vue__options__)
   }
 })()}
-},{"vue":44,"vue-hot-reload-api":42}],8:[function(require,module,exports){
+},{"vue":45,"vue-hot-reload-api":43}],8:[function(require,module,exports){
 ;(function(){
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -476,13 +455,13 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 
 module.exports = {
   name: "Orientation",
-  data(){
+  data() {
     return {
-      ori:"portrait"
+      ori: "portrait"
     }
   },
-  methods:{
-    gotchange(img){
+  methods: {
+    gotchange(img) {
       console.log(img)
     }
   }
@@ -492,20 +471,86 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","orientation":_vm.ori},on:{"onchangefile":_vm.gotchange}}),_vm._v("\n        Next image will be "),_c('button',{on:{"click":function($event){_vm.ori = _vm.ori == 'landscape' ? 'portrait' : 'landscape'}}},[_vm._v(_vm._s(_vm.ori))])],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <div>\n    <vue-img-upload width=\"200px\" :orientation=\"ori\" legenda=\"Landscape Only\" @onchangefile=\"gotchange\"></vue-img-upload>\n    Next image will be <button @click=\"ori = ori == 'landscape' ? 'portrait' : 'landscape'\">{ {ori}}</button>\n  </div>\n</template>\n<script>\nmodule.exports = {\n  name: \"Orientation\",\n  data(){\n    return {\n      ori:\"portrait\"\n    }\n  },\n  methods:{\n    gotchange(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","orientation":_vm.ori},on:{"onchangefile":_vm.gotchange}}),_vm._v("\n      Next image will be\n      "),_c('button',{on:{"click":function($event){_vm.ori = _vm.ori == 'landscape' ? 'portrait' : 'landscape'}}},[_vm._v(_vm._s(_vm.ori))])],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n      <template> <div> <vue-img-upload width=\"200px\" :orientation=\"ori\" legenda=\"Landscape\n      Only\" @onchangefile=\"gotchange\"></vue-img-upload> Next image will be <button\n      @click=\"ori = ori == 'landscape' ? 'portrait' : 'landscape'\">{ {ori}}</button>\n      </div> </template> <script> module.exports = { name: \"Orientation\",\n      data(){ return { ori:\"portrait\" } }, methods:{ gotchange(img){ console.log(img)\n      } } } </script>\n    ")])])],1)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image orientation")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-84457b1e", __vue__options__)
+    hotAPI.createRecord("data-v-20268b36", __vue__options__)
   } else {
-    hotAPI.reload("data-v-84457b1e", __vue__options__)
+    hotAPI.reload("data-v-20268b36", __vue__options__)
   }
 })()}
-},{"vue":44,"vue-hot-reload-api":42}],9:[function(require,module,exports){
+},{"vue":45,"vue-hot-reload-api":43}],9:[function(require,module,exports){
 ;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = {
+  name: "DefaultImg",
+  created() {
+
+  },
+  data() {
+    return {
+      oneimg: "imgs/star.png",
+      changed: false
+    };
+  },
+  methods: {
+    gotchange(img) {
+      console.log(img)
+      this.changed = true;
+    }
+  }
+};
+
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","img":_vm.oneimg},on:{"onchangefile":_vm.gotchange}}),_vm._v(" "),_c('span',{directives:[{name:"show",rawName:"v-show",value:(!_vm.changed),expression:"!changed"}]},[_vm._v("Default img is")]),_vm._v(" "),_c('button',{directives:[{name:"show",rawName:"v-show",value:(!_vm.changed),expression:"!changed"}],on:{"click":function($event){_vm.oneimg = _vm.oneimg == 'imgs/star.png' ? 'imgs/wolf-moon.png' : 'imgs/star.png'}}},[_vm._v(_vm._s(_vm.oneimg))]),_vm._v(" "),_c('span',{directives:[{name:"show",rawName:"v-show",value:(_vm.changed),expression:"changed"}]},[_vm._v("Once a file is selected, default image isn't needed anymore")])],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n      <template> <vue-img-upload width=\"200px\" @onchangefile=\"gotchange\"></vue-img-upload>\n      </template> <script> module.exports = { name: \"Basic\", methods:{ gotchange(img){\n      console.log(img) } } } </script>\n    ")])])],1)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Change default img")])])}]
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-60cc7bc4", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-60cc7bc4", __vue__options__)
+  }
+})()}
+},{"vue":45,"vue-hot-reload-api":43}],10:[function(require,module,exports){
+;(function(){
+//
+//
+//
+//
 //
 //
 //
@@ -546,20 +591,20 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.3.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Added 'default image' example")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0eb925f8", __vue__options__)
+    hotAPI.createRecord("data-v-3fa7993d", __vue__options__)
   } else {
-    hotAPI.reload("data-v-0eb925f8", __vue__options__)
+    hotAPI.reload("data-v-3fa7993d", __vue__options__)
   }
 })()}
-},{"vue":44,"vue-hot-reload-api":42}],10:[function(require,module,exports){
-var css = "/* Uncomment and set these variables to customize the grid. */\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-right: 2rem;\n  padding-left: 2rem;\n}\n.row {\n  box-sizing: border-box;\n  display: -ms-flexbox;\n  display: -webkit-box;\n  display: flex;\n  -ms-flex: 0 1 auto;\n  -webkit-box-flex: 0;\n  flex: 0 1 auto;\n  -ms-flex-direction: row;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  flex-direction: row;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n  margin-right: -1rem;\n  margin-left: -1rem;\n}\n.row.reverse {\n  -ms-flex-direction: row-reverse;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: reverse;\n  flex-direction: row-reverse;\n}\n.col.reverse {\n  -ms-flex-direction: column-reverse;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n  flex-direction: column-reverse;\n}\n.col-xs,\n.col-xs-1,\n.col-xs-2,\n.col-xs-3,\n.col-xs-4,\n.col-xs-5,\n.col-xs-6,\n.col-xs-7,\n.col-xs-8,\n.col-xs-9,\n.col-xs-10,\n.col-xs-11,\n.col-xs-12 {\n  box-sizing: border-box;\n  -ms-flex: 0 0 auto;\n  -webkit-box-flex: 0;\n  flex: 0 0 auto;\n  padding-right: 1rem;\n  padding-left: 1rem;\n}\n.col-xs {\n  -webkit-flex-grow: 1;\n  -ms-flex-positive: 1;\n  -webkit-box-flex: 1;\n  flex-grow: 1;\n  -ms-flex-preferred-size: 0;\n  flex-basis: 0;\n  max-width: 100%;\n}\n.col-xs-1 {\n  -ms-flex-preferred-size: 8.333%;\n  flex-basis: 8.333%;\n  max-width: 8.333%;\n}\n.col-xs-2 {\n  -ms-flex-preferred-size: 16.667%;\n  flex-basis: 16.667%;\n  max-width: 16.667%;\n}\n.col-xs-3 {\n  -ms-flex-preferred-size: 25%;\n  flex-basis: 25%;\n  max-width: 25%;\n}\n.col-xs-4 {\n  -ms-flex-preferred-size: 33.333%;\n  flex-basis: 33.333%;\n  max-width: 33.333%;\n}\n.col-xs-5 {\n  -ms-flex-preferred-size: 41.667%;\n  flex-basis: 41.667%;\n  max-width: 41.667%;\n}\n.col-xs-6 {\n  -ms-flex-preferred-size: 50%;\n  flex-basis: 50%;\n  max-width: 50%;\n}\n.col-xs-7 {\n  -ms-flex-preferred-size: 58.333%;\n  flex-basis: 58.333%;\n  max-width: 58.333%;\n}\n.col-xs-8 {\n  -ms-flex-preferred-size: 66.667%;\n  flex-basis: 66.667%;\n  max-width: 66.667%;\n}\n.col-xs-9 {\n  -ms-flex-preferred-size: 75%;\n  flex-basis: 75%;\n  max-width: 75%;\n}\n.col-xs-10 {\n  -ms-flex-preferred-size: 83.333%;\n  flex-basis: 83.333%;\n  max-width: 83.333%;\n}\n.col-xs-11 {\n  -ms-flex-preferred-size: 91.667%;\n  flex-basis: 91.667%;\n  max-width: 91.667%;\n}\n.col-xs-12 {\n  -ms-flex-preferred-size: 100%;\n  flex-basis: 100%;\n  max-width: 100%;\n}\n.col-xs-offset-1 {\n  margin-left: 8.333%;\n}\n.col-xs-offset-2 {\n  margin-left: 16.667%;\n}\n.col-xs-offset-3 {\n  margin-left: 25%;\n}\n.col-xs-offset-4 {\n  margin-left: 33.333%;\n}\n.col-xs-offset-5 {\n  margin-left: 41.667%;\n}\n.col-xs-offset-6 {\n  margin-left: 50%;\n}\n.col-xs-offset-7 {\n  margin-left: 58.333%;\n}\n.col-xs-offset-8 {\n  margin-left: 66.667%;\n}\n.col-xs-offset-9 {\n  margin-left: 75%;\n}\n.col-xs-offset-10 {\n  margin-left: 83.333%;\n}\n.col-xs-offset-11 {\n  margin-left: 91.667%;\n}\n.start-xs {\n  -ms-flex-pack: start;\n  -webkit-box-pack: start;\n  justify-content: flex-start;\n  text-align: start;\n}\n.center-xs {\n  -ms-flex-pack: center;\n  -webkit-box-pack: center;\n  justify-content: center;\n  text-align: center;\n}\n.end-xs {\n  -ms-flex-pack: end;\n  -webkit-box-pack: end;\n  justify-content: flex-end;\n  text-align: end;\n}\n.top-xs {\n  -ms-flex-align: start;\n  -webkit-box-align: start;\n  align-items: flex-start;\n}\n.middle-xs {\n  -ms-flex-align: center;\n  -webkit-box-align: center;\n  align-items: center;\n}\n.bottom-xs {\n  -ms-flex-align: end;\n  -webkit-box-align: end;\n  align-items: flex-end;\n}\n.around-xs {\n  -ms-flex-pack: distribute;\n  justify-content: space-around;\n}\n.between-xs {\n  -ms-flex-pack: justify;\n  -webkit-box-pack: justify;\n  justify-content: space-between;\n}\n.first-xs {\n  -ms-flex-order: -1;\n  -webkit-box-ordinal-group: 0;\n  order: -1;\n}\n.last-xs {\n  -ms-flex-order: 1;\n  -webkit-box-ordinal-group: 2;\n  order: 1;\n}\n@media only screen and (min-width: 48em) {\n  .container {\n    width: 46rem;\n  }\n\n  .col-sm,\n  .col-sm-1,\n  .col-sm-2,\n  .col-sm-3,\n  .col-sm-4,\n  .col-sm-5,\n  .col-sm-6,\n  .col-sm-7,\n  .col-sm-8,\n  .col-sm-9,\n  .col-sm-10,\n  .col-sm-11,\n  .col-sm-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-sm {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-sm-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-sm-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-sm-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-sm-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-sm-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-sm-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-sm-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-sm-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-sm-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-sm-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-sm-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-sm-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-sm-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-sm-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-sm-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-sm-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-sm-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-sm-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-sm-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-sm-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-sm-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-sm-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-sm-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-sm {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-sm {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-sm {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-sm {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-sm {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-sm {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-sm {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-sm {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-sm {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-sm {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n@media only screen and (min-width: 62em) {\n  .container {\n    width: 61rem;\n  }\n\n  .col-md,\n  .col-md-1,\n  .col-md-2,\n  .col-md-3,\n  .col-md-4,\n  .col-md-5,\n  .col-md-6,\n  .col-md-7,\n  .col-md-8,\n  .col-md-9,\n  .col-md-10,\n  .col-md-11,\n  .col-md-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-md {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-md-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-md-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-md-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-md-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-md-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-md-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-md-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-md-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-md-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-md-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-md-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-md-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-md-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-md-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-md-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-md-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-md-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-md-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-md-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-md-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-md-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-md-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-md-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-md {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-md {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-md {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-md {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-md {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-md {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-md {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-md {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-md {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-md {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n@media only screen and (min-width: 75em) {\n  .container {\n    width: 71rem;\n  }\n\n  .col-lg,\n  .col-lg-1,\n  .col-lg-2,\n  .col-lg-3,\n  .col-lg-4,\n  .col-lg-5,\n  .col-lg-6,\n  .col-lg-7,\n  .col-lg-8,\n  .col-lg-9,\n  .col-lg-10,\n  .col-lg-11,\n  .col-lg-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-lg {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-lg-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-lg-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-lg-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-lg-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-lg-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-lg-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-lg-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-lg-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-lg-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-lg-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-lg-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-lg-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-lg-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-lg-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-lg-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-lg-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-lg-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-lg-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-lg-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-lg-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-lg-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-lg-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-lg-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-lg {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-lg {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-lg {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-lg {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-lg {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-lg {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-lg {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-lg {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-lg {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-lg {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n"; (require("browserify-css").createStyle(css, { "href": "docs\\index.css" }, { "insertAt": "bottom" })); module.exports = css;
-},{"browserify-css":39}],11:[function(require,module,exports){
+},{"vue":45,"vue-hot-reload-api":43}],11:[function(require,module,exports){
+var css = "/* Uncomment and set these variables to customize the grid. */\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-right: 2rem;\n  padding-left: 2rem;\n}\n.row {\n  box-sizing: border-box;\n  display: -ms-flexbox;\n  display: -webkit-box;\n  display: flex;\n  -ms-flex: 0 1 auto;\n  -webkit-box-flex: 0;\n  flex: 0 1 auto;\n  -ms-flex-direction: row;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  flex-direction: row;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n  margin-right: -1rem;\n  margin-left: -1rem;\n}\n.row.reverse {\n  -ms-flex-direction: row-reverse;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: reverse;\n  flex-direction: row-reverse;\n}\n.col.reverse {\n  -ms-flex-direction: column-reverse;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n  flex-direction: column-reverse;\n}\n.col-xs,\n.col-xs-1,\n.col-xs-2,\n.col-xs-3,\n.col-xs-4,\n.col-xs-5,\n.col-xs-6,\n.col-xs-7,\n.col-xs-8,\n.col-xs-9,\n.col-xs-10,\n.col-xs-11,\n.col-xs-12 {\n  box-sizing: border-box;\n  -ms-flex: 0 0 auto;\n  -webkit-box-flex: 0;\n  flex: 0 0 auto;\n  padding-right: 1rem;\n  padding-left: 1rem;\n}\n.col-xs {\n  -webkit-flex-grow: 1;\n  -ms-flex-positive: 1;\n  -webkit-box-flex: 1;\n  flex-grow: 1;\n  -ms-flex-preferred-size: 0;\n  flex-basis: 0;\n  max-width: 100%;\n}\n.col-xs-1 {\n  -ms-flex-preferred-size: 8.333%;\n  flex-basis: 8.333%;\n  max-width: 8.333%;\n}\n.col-xs-2 {\n  -ms-flex-preferred-size: 16.667%;\n  flex-basis: 16.667%;\n  max-width: 16.667%;\n}\n.col-xs-3 {\n  -ms-flex-preferred-size: 25%;\n  flex-basis: 25%;\n  max-width: 25%;\n}\n.col-xs-4 {\n  -ms-flex-preferred-size: 33.333%;\n  flex-basis: 33.333%;\n  max-width: 33.333%;\n}\n.col-xs-5 {\n  -ms-flex-preferred-size: 41.667%;\n  flex-basis: 41.667%;\n  max-width: 41.667%;\n}\n.col-xs-6 {\n  -ms-flex-preferred-size: 50%;\n  flex-basis: 50%;\n  max-width: 50%;\n}\n.col-xs-7 {\n  -ms-flex-preferred-size: 58.333%;\n  flex-basis: 58.333%;\n  max-width: 58.333%;\n}\n.col-xs-8 {\n  -ms-flex-preferred-size: 66.667%;\n  flex-basis: 66.667%;\n  max-width: 66.667%;\n}\n.col-xs-9 {\n  -ms-flex-preferred-size: 75%;\n  flex-basis: 75%;\n  max-width: 75%;\n}\n.col-xs-10 {\n  -ms-flex-preferred-size: 83.333%;\n  flex-basis: 83.333%;\n  max-width: 83.333%;\n}\n.col-xs-11 {\n  -ms-flex-preferred-size: 91.667%;\n  flex-basis: 91.667%;\n  max-width: 91.667%;\n}\n.col-xs-12 {\n  -ms-flex-preferred-size: 100%;\n  flex-basis: 100%;\n  max-width: 100%;\n}\n.col-xs-offset-1 {\n  margin-left: 8.333%;\n}\n.col-xs-offset-2 {\n  margin-left: 16.667%;\n}\n.col-xs-offset-3 {\n  margin-left: 25%;\n}\n.col-xs-offset-4 {\n  margin-left: 33.333%;\n}\n.col-xs-offset-5 {\n  margin-left: 41.667%;\n}\n.col-xs-offset-6 {\n  margin-left: 50%;\n}\n.col-xs-offset-7 {\n  margin-left: 58.333%;\n}\n.col-xs-offset-8 {\n  margin-left: 66.667%;\n}\n.col-xs-offset-9 {\n  margin-left: 75%;\n}\n.col-xs-offset-10 {\n  margin-left: 83.333%;\n}\n.col-xs-offset-11 {\n  margin-left: 91.667%;\n}\n.start-xs {\n  -ms-flex-pack: start;\n  -webkit-box-pack: start;\n  justify-content: flex-start;\n  text-align: start;\n}\n.center-xs {\n  -ms-flex-pack: center;\n  -webkit-box-pack: center;\n  justify-content: center;\n  text-align: center;\n}\n.end-xs {\n  -ms-flex-pack: end;\n  -webkit-box-pack: end;\n  justify-content: flex-end;\n  text-align: end;\n}\n.top-xs {\n  -ms-flex-align: start;\n  -webkit-box-align: start;\n  align-items: flex-start;\n}\n.middle-xs {\n  -ms-flex-align: center;\n  -webkit-box-align: center;\n  align-items: center;\n}\n.bottom-xs {\n  -ms-flex-align: end;\n  -webkit-box-align: end;\n  align-items: flex-end;\n}\n.around-xs {\n  -ms-flex-pack: distribute;\n  justify-content: space-around;\n}\n.between-xs {\n  -ms-flex-pack: justify;\n  -webkit-box-pack: justify;\n  justify-content: space-between;\n}\n.first-xs {\n  -ms-flex-order: -1;\n  -webkit-box-ordinal-group: 0;\n  order: -1;\n}\n.last-xs {\n  -ms-flex-order: 1;\n  -webkit-box-ordinal-group: 2;\n  order: 1;\n}\n@media only screen and (min-width: 48em) {\n  .container {\n    width: 46rem;\n  }\n\n  .col-sm,\n  .col-sm-1,\n  .col-sm-2,\n  .col-sm-3,\n  .col-sm-4,\n  .col-sm-5,\n  .col-sm-6,\n  .col-sm-7,\n  .col-sm-8,\n  .col-sm-9,\n  .col-sm-10,\n  .col-sm-11,\n  .col-sm-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-sm {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-sm-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-sm-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-sm-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-sm-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-sm-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-sm-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-sm-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-sm-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-sm-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-sm-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-sm-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-sm-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-sm-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-sm-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-sm-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-sm-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-sm-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-sm-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-sm-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-sm-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-sm-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-sm-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-sm-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-sm {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-sm {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-sm {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-sm {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-sm {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-sm {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-sm {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-sm {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-sm {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-sm {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n@media only screen and (min-width: 62em) {\n  .container {\n    width: 61rem;\n  }\n\n  .col-md,\n  .col-md-1,\n  .col-md-2,\n  .col-md-3,\n  .col-md-4,\n  .col-md-5,\n  .col-md-6,\n  .col-md-7,\n  .col-md-8,\n  .col-md-9,\n  .col-md-10,\n  .col-md-11,\n  .col-md-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-md {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-md-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-md-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-md-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-md-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-md-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-md-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-md-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-md-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-md-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-md-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-md-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-md-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-md-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-md-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-md-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-md-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-md-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-md-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-md-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-md-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-md-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-md-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-md-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-md {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-md {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-md {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-md {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-md {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-md {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-md {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-md {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-md {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-md {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n@media only screen and (min-width: 75em) {\n  .container {\n    width: 71rem;\n  }\n\n  .col-lg,\n  .col-lg-1,\n  .col-lg-2,\n  .col-lg-3,\n  .col-lg-4,\n  .col-lg-5,\n  .col-lg-6,\n  .col-lg-7,\n  .col-lg-8,\n  .col-lg-9,\n  .col-lg-10,\n  .col-lg-11,\n  .col-lg-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-lg {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-lg-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-lg-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-lg-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-lg-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-lg-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-lg-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-lg-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-lg-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-lg-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-lg-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-lg-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-lg-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-lg-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-lg-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-lg-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-lg-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-lg-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-lg-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-lg-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-lg-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-lg-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-lg-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-lg-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-lg {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-lg {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-lg {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-lg {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-lg {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-lg {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-lg {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-lg {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-lg {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-lg {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n"; (require("browserify-css").createStyle(css, { "href": "docs/index.css" }, { "insertAt": "bottom" })); module.exports = css;
+},{"browserify-css":40}],12:[function(require,module,exports){
 
 require("./index.css")
 
@@ -586,14 +631,27 @@ const vm = new Vue({
       { path: "/03-resize-pct", component: require("./features/03-resize-pct.vue") },
       { path: "/04-upload", component: require("./features/04-upload.vue") },
       { path: "/05-orientation", component: require("./features/05-orientation.vue") },
+      { path: "/06-default-img", component: require("./features/06-default-img.vue") },
       { path: "/99-roadmap", component: require("./features/99-roadmap.vue") },
     ]
   }),
 })
 
-},{"../src/main":46,"./components/code-preview.vue":1,"./components/menu.vue":2,"./features/00-start.vue":3,"./features/01-basic.vue":4,"./features/02-resize-px.vue":5,"./features/03-resize-pct.vue":6,"./features/04-upload.vue":7,"./features/05-orientation.vue":8,"./features/99-roadmap.vue":9,"./index.css":10,"./index.vue":12,"vue":44,"vue-router":43}],12:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#root[data-v-b8feb288] {\r\n  position: absolute;\r\n  top: 50px;\r\n  bottom: 0px;\r\n  left: 0px;\r\n  right: 0px;\r\n}")
+},{"../src/main":47,"./components/code-preview.vue":1,"./components/menu.vue":2,"./features/00-start.vue":3,"./features/01-basic.vue":4,"./features/02-resize-px.vue":5,"./features/03-resize-pct.vue":6,"./features/04-upload.vue":7,"./features/05-orientation.vue":8,"./features/06-default-img.vue":9,"./features/99-roadmap.vue":10,"./index.css":11,"./index.vue":13,"vue":45,"vue-router":44}],13:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#root[data-v-73e3f224] {\n  position: absolute;\n  top: 50px;\n  bottom: 0px;\n  left: 0px;\n  right: 0px;\n}")
 ;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -630,22 +688,7 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#root[da
 //
 
 module.exports = {
-  name: "DocRoot",
-  data() {
-    return {
-      url: "http://localhost:3000/upimage"
-    }
-  },
-  methods: {
-    onup(ret) {
-      console.log("up!")
-      console.log(ret)
-    },
-    onchg(file) {
-      console.log("changefile")
-      console.log(file)
-    }
-  }
+  name: "DocRoot"
 }
 
 })()
@@ -654,21 +697,21 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"row",attrs:{"id":"root"}},[_c('div',{staticClass:"col-xs-3"},[_c('h3',[_vm._v("Vue Image Upload")]),_vm._v(" "),_c('doc-menu')],1),_vm._v(" "),_c('div',{staticClass:"col-xs-9"},[_c('router-view')],1)])])}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('a',{staticClass:"github-button",attrs:{"href":"https://github.com/sombriks/vue-img-upload","data-icon":"octicon-star","data-count-href":"/sombriks/vue-img-upload/stargazers","data-show-count":"true","data-count-aria-label":"# stargazers on GitHub","aria-label":"Star sombriks/vue-img-upload on GitHub"}},[_vm._v("Star")]),_vm._v(" "),_c('a',{staticClass:"github-button",attrs:{"href":"https://github.com/sombriks/vue-img-upload/issues","data-icon":"octicon-issue-opened","data-show-count":"true","data-count-aria-label":"# issues on GitHub","aria-label":"Issue sombriks/vue-img-upload on GitHub"}},[_vm._v("Issue")]),_vm._v(" "),_c('a',{staticClass:"github-button",attrs:{"href":"https://github.com/sombriks","data-count-href":"/sombriks/followers","data-show-count":"true","data-count-aria-label":"# followers on GitHub","aria-label":"Follow @sombriks on GitHub"}},[_vm._v("Follow @sombriks")]),_vm._v(" "),_c('a',{attrs:{"href":"https://www.patreon.com/user?u=4566034","target":"patreon","title":"Buy me a beer"}},[_c('img',{attrs:{"src":"imgs/patreon-medium-button.png","alt":"patreon"}})]),_vm._v(" "),_c('hr')])}]
-__vue__options__._scopeId = "data-v-b8feb288"
+__vue__options__._scopeId = "data-v-73e3f224"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-b8feb288", __vue__options__)
+    hotAPI.createRecord("data-v-73e3f224", __vue__options__)
   } else {
-    hotAPI.reload("data-v-b8feb288", __vue__options__)
+    hotAPI.reload("data-v-73e3f224", __vue__options__)
   }
 })()}
-},{"vue":44,"vue-hot-reload-api":42,"vueify/lib/insert-css":45}],13:[function(require,module,exports){
+},{"vue":45,"vue-hot-reload-api":43,"vueify/lib/insert-css":46}],14:[function(require,module,exports){
 module.exports = require('./lib/axios');
-},{"./lib/axios":15}],14:[function(require,module,exports){
+},{"./lib/axios":16}],15:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -852,7 +895,7 @@ module.exports = function xhrAdapter(config) {
 };
 
 }).call(this,require('_process'))
-},{"../core/createError":21,"./../core/settle":24,"./../helpers/btoa":28,"./../helpers/buildURL":29,"./../helpers/cookies":31,"./../helpers/isURLSameOrigin":33,"./../helpers/parseHeaders":35,"./../utils":37,"_process":41}],15:[function(require,module,exports){
+},{"../core/createError":22,"./../core/settle":25,"./../helpers/btoa":29,"./../helpers/buildURL":30,"./../helpers/cookies":32,"./../helpers/isURLSameOrigin":34,"./../helpers/parseHeaders":36,"./../utils":38,"_process":42}],16:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -906,7 +949,7 @@ module.exports = axios;
 // Allow use of default import syntax in TypeScript
 module.exports.default = axios;
 
-},{"./cancel/Cancel":16,"./cancel/CancelToken":17,"./cancel/isCancel":18,"./core/Axios":19,"./defaults":26,"./helpers/bind":27,"./helpers/spread":36,"./utils":37}],16:[function(require,module,exports){
+},{"./cancel/Cancel":17,"./cancel/CancelToken":18,"./cancel/isCancel":19,"./core/Axios":20,"./defaults":27,"./helpers/bind":28,"./helpers/spread":37,"./utils":38}],17:[function(require,module,exports){
 'use strict';
 
 /**
@@ -927,7 +970,7 @@ Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 'use strict';
 
 var Cancel = require('./Cancel');
@@ -986,14 +1029,14 @@ CancelToken.source = function source() {
 
 module.exports = CancelToken;
 
-},{"./Cancel":16}],18:[function(require,module,exports){
+},{"./Cancel":17}],19:[function(require,module,exports){
 'use strict';
 
 module.exports = function isCancel(value) {
   return !!(value && value.__CANCEL__);
 };
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 var defaults = require('./../defaults');
@@ -1081,7 +1124,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = Axios;
 
-},{"./../defaults":26,"./../helpers/combineURLs":30,"./../helpers/isAbsoluteURL":32,"./../utils":37,"./InterceptorManager":20,"./dispatchRequest":22}],20:[function(require,module,exports){
+},{"./../defaults":27,"./../helpers/combineURLs":31,"./../helpers/isAbsoluteURL":33,"./../utils":38,"./InterceptorManager":21,"./dispatchRequest":23}],21:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1135,7 +1178,7 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 
 module.exports = InterceptorManager;
 
-},{"./../utils":37}],21:[function(require,module,exports){
+},{"./../utils":38}],22:[function(require,module,exports){
 'use strict';
 
 var enhanceError = require('./enhanceError');
@@ -1155,7 +1198,7 @@ module.exports = function createError(message, config, code, request, response) 
   return enhanceError(error, config, code, request, response);
 };
 
-},{"./enhanceError":23}],22:[function(require,module,exports){
+},{"./enhanceError":24}],23:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1236,7 +1279,7 @@ module.exports = function dispatchRequest(config) {
   });
 };
 
-},{"../cancel/isCancel":18,"../defaults":26,"./../utils":37,"./transformData":25}],23:[function(require,module,exports){
+},{"../cancel/isCancel":19,"../defaults":27,"./../utils":38,"./transformData":26}],24:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1259,7 +1302,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
   return error;
 };
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 'use strict';
 
 var createError = require('./createError');
@@ -1287,7 +1330,7 @@ module.exports = function settle(resolve, reject, response) {
   }
 };
 
-},{"./createError":21}],25:[function(require,module,exports){
+},{"./createError":22}],26:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1309,7 +1352,7 @@ module.exports = function transformData(data, headers, fns) {
   return data;
 };
 
-},{"./../utils":37}],26:[function(require,module,exports){
+},{"./../utils":38}],27:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -1405,7 +1448,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = defaults;
 
 }).call(this,require('_process'))
-},{"./adapters/http":14,"./adapters/xhr":14,"./helpers/normalizeHeaderName":34,"./utils":37,"_process":41}],27:[function(require,module,exports){
+},{"./adapters/http":15,"./adapters/xhr":15,"./helpers/normalizeHeaderName":35,"./utils":38,"_process":42}],28:[function(require,module,exports){
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -1418,7 +1461,7 @@ module.exports = function bind(fn, thisArg) {
   };
 };
 
-},{}],28:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 'use strict';
 
 // btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
@@ -1456,7 +1499,7 @@ function btoa(input) {
 
 module.exports = btoa;
 
-},{}],29:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1526,7 +1569,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
   return url;
 };
 
-},{"./../utils":37}],30:[function(require,module,exports){
+},{"./../utils":38}],31:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1542,7 +1585,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
     : baseURL;
 };
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1597,7 +1640,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":37}],32:[function(require,module,exports){
+},{"./../utils":38}],33:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1613,7 +1656,7 @@ module.exports = function isAbsoluteURL(url) {
   return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
 };
 
-},{}],33:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1683,7 +1726,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":37}],34:[function(require,module,exports){
+},{"./../utils":38}],35:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -1697,7 +1740,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
   });
 };
 
-},{"../utils":37}],35:[function(require,module,exports){
+},{"../utils":38}],36:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1736,7 +1779,7 @@ module.exports = function parseHeaders(headers) {
   return parsed;
 };
 
-},{"./../utils":37}],36:[function(require,module,exports){
+},{"./../utils":38}],37:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1765,7 +1808,7 @@ module.exports = function spread(callback) {
   };
 };
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 'use strict';
 
 var bind = require('./helpers/bind');
@@ -2070,7 +2113,7 @@ module.exports = {
   trim: trim
 };
 
-},{"./helpers/bind":27,"is-buffer":40}],38:[function(require,module,exports){
+},{"./helpers/bind":28,"is-buffer":41}],39:[function(require,module,exports){
 (function (process,global){
 /* @preserve
  * The MIT License (MIT)
@@ -7692,7 +7735,7 @@ module.exports = ret;
 },{"./es5":13}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":41}],39:[function(require,module,exports){
+},{"_process":42}],40:[function(require,module,exports){
 'use strict';
 // For more information about browser field, check out the browser field at https://github.com/substack/browserify-handbook#browser-field.
 
@@ -7769,7 +7812,7 @@ module.exports = {
     }
 };
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -7792,7 +7835,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -7978,7 +8021,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = window.__VUE_HOT_MAP__ = Object.create(null)
@@ -8124,7 +8167,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],43:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 (function (process){
 /**
   * vue-router v2.7.0
@@ -10635,7 +10678,7 @@ if (inBrowser && window.Vue) {
 module.exports = VueRouter;
 
 }).call(this,require('_process'))
-},{"_process":41}],44:[function(require,module,exports){
+},{"_process":42}],45:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.4.2
@@ -18068,7 +18111,7 @@ setTimeout(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":41}],45:[function(require,module,exports){
+},{"_process":42}],46:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -18093,11 +18136,11 @@ exports.insert = function (css) {
   }
 }
 
-},{}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 // component installation entry point
 exports.install = (Vue, opts) => 
   Vue.component("vue-img-upload", require("./vue-img-upload.vue"))
-},{"./vue-img-upload.vue":48}],47:[function(require,module,exports){
+},{"./vue-img-upload.vue":49}],48:[function(require,module,exports){
 // resizetool.js
 const Promise = require("bluebird")
 
@@ -18268,9 +18311,16 @@ exports.doportrait = dataimg => new Promise((resolve, reject) => {
   else
     img.src = dataimg
 })
-},{"bluebird":38}],48:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("input.theinput[data-v-68c1fb96] {\r\n  display: none\r\n}")
+},{"bluebird":39}],49:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("input.theinput[data-v-16dba0ed] {\n  display: none\n}")
 ;(function(){
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -18328,7 +18378,7 @@ module.exports = {
     return {
       name: "",
       dataimg: undefined,
-      noimg: "data:image/svg+xml;base64," + "PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAzYzEuNjYgMCAzIDEuMzQgMyAzcy0xLjM0IDMtMyAzLTMtMS4zNC0zLTMgMS4zNC0zIDMtM3ptMCAxNC4yYy0yLjUgMC00LjcxLTEuMjgtNi0zLjIyLjAzLTEuOTkgNC0zLjA4IDYtMy4wOCAxLjk5IDAgNS45NyAxLjA5IDYgMy4wOC0xLjI5IDEuOTQtMy41IDMuMjItNiAzLjIyeiIvPg0KICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4NCjwvc3ZnPg=="
+      noimg: "data:image/svg+xml;base64," + "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiICB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMyw5SDE4LjVMMTMsMy41VjlNNiwySDE0TDIwLDhWMjBBMiwyIDAgMCwxIDE4LDIySDZDNC44OSwyMiA0LDIxLjEgNCwyMFY0QzQsMi44OSA0Ljg5LDIgNiwyTTYsMjBIMTVMMTgsMjBWMTJMMTQsMTZMMTIsMTRMNiwyME04LDlBMiwyIDAgMCwwIDYsMTFBMiwyIDAgMCwwIDgsMTNBMiwyIDAgMCwwIDEwLDExQTIsMiAwIDAsMCA4LDlaIiAvPgo8L3N2Zz4="
     }
   },
   mounted() {
@@ -18374,21 +18424,21 @@ module.exports = {
       let file = this.$refs["input"].files[0]
       if (this.orientation == "landscape") {
         resizetool.dolandscape(this.dataimg).then(dataimg => {
-          this.dataimg = dataimg;
+          this.dataimg = dataimg
           this.$refs["image"].src = this.dataimg
           this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
-          this.dotheupload();
+          this.dotheupload()
         })
       } else if (this.orientation == "portrait") {
         resizetool.doportrait(this.dataimg).then(dataimg => {
           this.dataimg = dataimg;
           this.$refs["image"].src = this.dataimg
           this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
-          this.dotheupload();
+          this.dotheupload()
         })
       } else {
         this.$refs["image"].src = this.dataimg
-        this.dotheupload();
+        this.dotheupload()
       }
     },
     dotheupload() {
@@ -18411,6 +18461,14 @@ module.exports = {
         })
       }
     }
+  },
+  watch: {
+    img(val) {
+      if (!this.dataimg) {
+        this.$refs["image"].src = val
+        this.$emit("onchangeimg", val)
+      }
+    }
   }
 }
 
@@ -18420,16 +18478,16 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"imgconainer"},[_c('img',{ref:"image",attrs:{"width":"100%","height":"100%"},on:{"click":_vm.loadimg}}),_vm._v(" "),_c('input',{ref:"input",staticClass:"theinput",attrs:{"type":"file","accept":"image/*"},on:{"change":_vm.changefile}}),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.name))])]),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.legenda))])])])}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-68c1fb96"
+__vue__options__._scopeId = "data-v-16dba0ed"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-68c1fb96", __vue__options__)
+    hotAPI.createRecord("data-v-16dba0ed", __vue__options__)
   } else {
-    hotAPI.reload("data-v-68c1fb96", __vue__options__)
+    hotAPI.reload("data-v-16dba0ed", __vue__options__)
   }
 })()}
-},{"./resizetool":47,"axios":13,"vue":44,"vue-hot-reload-api":42,"vueify/lib/insert-css":45}]},{},[11]);
+},{"./resizetool":48,"axios":14,"vue":45,"vue-hot-reload-api":43,"vueify/lib/insert-css":46}]},{},[12]);

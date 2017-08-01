@@ -8,6 +8,7 @@
       <li>Vue.js 2.2+</li>
       <li>Axios 0.16+</li>
       <li>Bluebird 3.5+</li>
+      <li>brfs 1.4.3+</li>
     </ul>
     <p>Your project must provide that in order to get things working.</p>
     <h3>Installation</h3>

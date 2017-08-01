@@ -24,6 +24,7 @@ const vm = new Vue({
       { path: "/03-resize-pct", component: require("./features/03-resize-pct.vue") },
       { path: "/04-upload", component: require("./features/04-upload.vue") },
       { path: "/05-orientation", component: require("./features/05-orientation.vue") },
+      { path: "/06-default-img", component: require("./features/06-default-img.vue") },
       { path: "/99-roadmap", component: require("./features/99-roadmap.vue") },
     ]
   }),

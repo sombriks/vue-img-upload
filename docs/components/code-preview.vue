@@ -1,10 +1,10 @@
 <template>
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-4">
       <h5>Example</h5>
       <slot name="example"></slot>
     </div>
-    <div class="col-xs-6">
+    <div class="col-xs-8">
       <h5>Source</h5>
       <pre>
         <slot name="source"></slot>

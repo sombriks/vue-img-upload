@@ -5,6 +5,10 @@
       <li>Implement the crop/rotate dialog</li>
       <li>Improve mobile usability</li>
     </ul>
+    <h2>0.3.0</h2>
+    <ul>
+      <li>Added 'default image' example</li>
+    </ul>
     <h2>0.2.0</h2>
     <ul>
       <li>Project docs under construction</li>

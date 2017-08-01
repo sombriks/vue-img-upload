@@ -1,7 +1,14 @@
 <template>
   <div ref="imgconainer">
-    <img ref="image" width="100%" height="100%" @click="loadimg" />
-    <input type="file" ref="input" class="theinput" accept="image/*" @change="changefile" />
+    <img ref="image"
+         width="100%"
+         height="100%"
+         @click="loadimg" />
+    <input type="file"
+           ref="input"
+           class="theinput"
+           accept="image/*"
+           @change="changefile" />
     <div>
       <small>{{name}}</small>
     </div>
@@ -55,7 +62,7 @@ module.exports = {
     return {
       name: "",
       dataimg: undefined,
-      noimg: "data:image/svg+xml;base64," + fs.readFileSync(__dirname + "/ic_account_circle_black_24px.svg", "base64")
+      noimg: "data:image/svg+xml;base64," + fs.readFileSync(__dirname + "/no-img.svg", "base64")
     }
   },
   mounted() {
@@ -101,21 +108,21 @@ module.exports = {
       let file = this.$refs["input"].files[0]
       if (this.orientation == "landscape") {
         resizetool.dolandscape(this.dataimg).then(dataimg => {
-          this.dataimg = dataimg;
+          this.dataimg = dataimg
           this.$refs["image"].src = this.dataimg
           this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
-          this.dotheupload();
+          this.dotheupload()
         })
       } else if (this.orientation == "portrait") {
         resizetool.doportrait(this.dataimg).then(dataimg => {
           this.dataimg = dataimg;
           this.$refs["image"].src = this.dataimg
           this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
-          this.dotheupload();
+          this.dotheupload()
         })
       } else {
         this.$refs["image"].src = this.dataimg
-        this.dotheupload();
+        this.dotheupload()
       }
     },
     dotheupload() {
@@ -136,6 +143,14 @@ module.exports = {
         }).catch(err => {
           this.$emit("onuploaderror", { file, image: this.$refs["image"], err })
         })
+      }
+    }
+  },
+  watch: {
+    img(val) {
+      if (!this.dataimg) {
+        this.$refs["image"].src = val
+        this.$emit("onchangeimg", val)
       }
     }
   }
