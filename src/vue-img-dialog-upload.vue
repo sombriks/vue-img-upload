@@ -18,7 +18,11 @@
     <div ref="updialog"
          class="thedialog">
       <button class="fecha"
-              @click="fechadialog">X</button>
+              @click="canceladialog">
+        <h1>X</h1>
+      </button>
+      <canvas ref="thecanvas"
+              class="thecanvas"></canvas>
     </div>
   </div>
 </template>
@@ -84,17 +88,35 @@ module.exports = {
       }
       this.name = file.name
       this.dataimg = URL.createObjectURL(file)
-      this.$emit("onchangefile", { file, image: this.$refs["image"] })
       this.ajustaimagem()
-      this.opendialog()
+      this.$emit("onchangefile", { file, image: this.$refs["image"] })
+      this.preparedialog()
     },
-    opendialog() {
-      console.log("opendialog")
-      this.$refs["updialog"].style.display = "block";
+    preparedialog() {
+
+      this.$refs["updialog"].style.display = "block"
+
+      const w = window.innerWidth
+      const h = window.innerHeight
+      const cw = document.createAttribute("width")
+      const ch = document.createAttribute("height")
+      // always draw a square
+      cw.value = ch.value = w < h ? w : h
+      this.$refs["thecanvas"].setAttributeNode(cw)
+      this.$refs["thecanvas"].setAttributeNode(ch)
+
+      this.desenhaimg()
     },
-    fechadialog() {
-      $refs['updialog'].style.display='none';
-      
+    desenhaimg() {
+      const ctx = this.$refs["thecanvas"].getContext("2d")
+      ctx.drawImage(this.$refs["image"], 0, 0)
+
+      console.log("foo")
+    },
+    canceladialog() {
+      this.$refs['updialog'].style.display = 'none'
+      this.dataimg = this.noimg
+      this.ajustaimagem()
     }
   }
 };
@@ -109,12 +131,19 @@ module.exports = {
   bottom: 0px;
   left: 0px;
   right: 0px;
+  z-index: 9999;
+  overflow: hidden;
 }
 
 .thedialog>button.fecha {
   position: fixed;
   right: 20px;
   top: 20px;
+}
+
+.thedialog>canvas.thecanvas {
+  position: fixed;
+  border: 1px groove black;
 }
 
 input.theinput {
