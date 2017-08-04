@@ -109,7 +109,7 @@ module.exports = {
     },
     desenhaimg() {
       const ctx = this.$refs["thecanvas"].getContext("2d")
-      ctx.drawImage(this.$refs["image"], 0, 0)
+      ctx.drawImage(this.dataimg, 0, 0)
 
       console.log("foo")
     },
