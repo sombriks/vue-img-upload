@@ -17,12 +17,32 @@
     </div>
     <div ref="updialog"
          class="thedialog">
-      <button class="fecha"
-              @click="canceladialog">
-        <h1>X</h1>
-      </button>
       <canvas ref="thecanvas"
               class="thecanvas"></canvas>
+      <button class="fecha"
+              @click="canceladialog">
+        X
+      </button>
+      <button class="aproxima"
+              @click="aproxima">
+        +
+      </button>
+      <button class="afasta"
+              @click="afasta">
+        -
+      </button>
+      <button class="giraesquerda"
+              @click="giraesquerda">
+        &#8634;
+      </button>
+      <button class="giradireita"
+              @click="giradireita">
+        &#8635;
+      </button>
+      <button class="aceita"
+              @click="aceita">
+        &#10003;
+      </button>
     </div>
   </div>
 </template>
@@ -108,16 +128,26 @@ module.exports = {
       this.desenhaimg()
     },
     desenhaimg() {
-      const ctx = this.$refs["thecanvas"].getContext("2d")
-      ctx.drawImage(this.dataimg, 0, 0)
-
-      console.log("foo")
+      const theimg = new Image()
+      theimg.onload = _ => {
+        const cnv = this.$refs["thecanvas"]
+        const iw = theimg.width
+        const ih = theimg.height
+        const ctx = cnv.getContext("2d")
+        ctx.drawImage(theimg, 0, 0, cnv.width, cnv.height, 0, 0, cnv.width, cnv.height)
+      }
+      theimg.src = this.dataimg
     },
     canceladialog() {
       this.$refs['updialog'].style.display = 'none'
       this.dataimg = this.noimg
       this.ajustaimagem()
-    }
+    },
+    aproxima() { },
+    afasta() { },
+    giraesquerda() { },
+    giradireita() { },
+    aceita() { },
   }
 };
 </script>
@@ -135,10 +165,44 @@ module.exports = {
   overflow: hidden;
 }
 
-.thedialog>button.fecha {
+.thedialog>button.fecha,
+.thedialog>button.aproxima,
+.thedialog>button.afasta,
+.thedialog>button.giraesquerda,
+.thedialog>button.giradireita,
+.thedialog>button.aceita {
   position: fixed;
-  right: 20px;
-  top: 20px;
+  width: 2em;
+}
+
+.thedialog>button.aproxima,
+.thedialog>button.afasta,
+.thedialog>button.giraesquerda,
+.thedialog>button.giradireita,
+.thedialog>button.aceita {
+  left: 0.5em;
+  top: 0.5em;
+}
+
+.thedialog>button.fecha {
+  right: 2.5em;
+  top: 0.5em;
+}
+
+.thedialog>button.afasta {
+  top: 4em;
+}
+
+.thedialog>button.giraesquerda {
+  top: 7.5em;
+}
+
+.thedialog>button.giradireita {
+  top: 11em;
+}
+
+.thedialog>button.aceita {
+  top: 14.5em;
 }
 
 .thedialog>canvas.thecanvas {
