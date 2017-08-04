@@ -7,6 +7,7 @@
     <li><router-link to="/04-upload">Upload</router-link></li>
     <li><router-link to="/05-orientation">Orientation</router-link></li>
     <li><router-link to="/06-default-img">Default img</router-link></li>
+    <li><router-link to="/07-dialog">Dialog</router-link></li>
     <li><router-link to="/99-roadmap">Roadmap</router-link></li>
   </ul>
 </template>
