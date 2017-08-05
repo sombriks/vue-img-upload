@@ -79,6 +79,9 @@ module.exports = {
   },
   data() {
     return {
+      sx: 0,
+      sy: 0,
+      zoom: 1,
       name: "",
       dataimg: undefined,
       noimg: "data:image/svg+xml;base64," + fs.readFileSync(__dirname + "/no-img.svg", "base64")
@@ -88,9 +91,22 @@ module.exports = {
     this.dataimg = this.img
     if (this.dataimg == null)
       this.dataimg = this.noimg
+    const cnv = this.$refs["thecanvas"]
+    cnv.addEventListener("touchstart", this.touchstart)
+    cnv.addEventListener("touchmove", this.touchmove)
+    cnv.addEventListener("touchend", this.touchend)
+    cnv.addEventListener("mousedown", this.mousedown)
+    cnv.addEventListener("mousemove", this.mousemove)
+    cnv.addEventListener("mouseup", this.mouseup)
     this.ajustaimagem()
   },
   methods: {
+    touchstart(ev) { console.log(ev) },
+    touchmove(ev) { console.log(ev) },
+    touchend(ev) { console.log(ev) },
+    mousedown(ev) { console.log(ev) },
+    mousemove(ev) { console.log(ev) },
+    mouseup(ev) { console.log(ev) },
     ajustaimagem() {
       const attr = document.createAttribute("style")
       attr.value = `width:${this.width};height:${this.height};`
@@ -115,16 +131,19 @@ module.exports = {
     preparedialog() {
 
       this.$refs["updialog"].style.display = "block"
-
+      const cnv = this.$refs["thecanvas"];
       const w = window.innerWidth
       const h = window.innerHeight
       const cw = document.createAttribute("width")
       const ch = document.createAttribute("height")
+      const isportrait = w < h
       // always draw a square
-      cw.value = ch.value = w < h ? w : h
-      this.$refs["thecanvas"].setAttributeNode(cw)
-      this.$refs["thecanvas"].setAttributeNode(ch)
-
+      cw.value = ch.value = isportrait ? w : h
+      cnv.setAttributeNode(cw)
+      cnv.setAttributeNode(ch)
+      cnv.style[isportrait ? "top" : "left"] = (isportrait ? (h - w) / 2 : (w - h) / 2) + "px"
+      cnv.style[isportrait ? "left" : "top"] = "0px"
+      // always put it in the very middle
       this.desenhaimg()
     },
     desenhaimg() {
@@ -134,7 +153,9 @@ module.exports = {
         const iw = theimg.width
         const ih = theimg.height
         const ctx = cnv.getContext("2d")
-        ctx.drawImage(theimg, 0, 0, cnv.width, cnv.height, 0, 0, cnv.width, cnv.height)
+        ctx.fillStyle = "white"
+        ctx.fillRect(0, 0, cnv.width, cnv.height)
+        ctx.drawImage(theimg, this.sx, this.sy, cnv.width * this.zoom, cnv.height * this.zoom, 0, 0, cnv.width, cnv.height)
       }
       theimg.src = this.dataimg
     },
@@ -143,8 +164,14 @@ module.exports = {
       this.dataimg = this.noimg
       this.ajustaimagem()
     },
-    aproxima() { },
-    afasta() { },
+    aproxima() {
+      this.zoom -= 0.1
+      this.desenhaimg()
+    },
+    afasta() {
+      this.zoom += 0.1
+      this.desenhaimg()
+    },
     giraesquerda() { },
     giradireita() { },
     aceita() { },
