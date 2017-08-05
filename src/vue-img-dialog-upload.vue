@@ -81,9 +81,13 @@ module.exports = {
     return {
       sx: 0,
       sy: 0,
+      rot: 0,
       zoom: 1,
       name: "",
+      dragging: false,
       dataimg: undefined,
+      lastmouse: undefined,
+      lasttouch: undefined,
       noimg: "data:image/svg+xml;base64," + fs.readFileSync(__dirname + "/no-img.svg", "base64")
     }
   },
@@ -95,18 +99,44 @@ module.exports = {
     cnv.addEventListener("touchstart", this.touchstart)
     cnv.addEventListener("touchmove", this.touchmove)
     cnv.addEventListener("touchend", this.touchend)
-    cnv.addEventListener("mousedown", this.mousedown)
+    cnv.addEventListener("mousedown", this.touchstart)
     cnv.addEventListener("mousemove", this.mousemove)
-    cnv.addEventListener("mouseup", this.mouseup)
+    cnv.addEventListener("mouseup", this.touchend)
     this.ajustaimagem()
   },
   methods: {
-    touchstart(ev) { console.log(ev) },
-    touchmove(ev) { console.log(ev) },
-    touchend(ev) { console.log(ev) },
-    mousedown(ev) { console.log(ev) },
-    mousemove(ev) { console.log(ev) },
-    mouseup(ev) { console.log(ev) },
+    touchstart(ev) {
+      this.dragging = true
+    },
+    touchmove(ev) {
+      if (this.dragging) {
+        if (!this.lasttouch) {
+          this.lasttouch = ev
+        } else {
+
+        }
+      }
+    },
+    mousemove(ev) {
+      if (this.dragging) {
+        if (!this.lastmouse) {
+          this.lastmouse = ev
+        } {
+          const dx = this.lastmouse.clientX - ev.clientX
+          const dy = this.lastmouse.clientY - ev.clientY
+          console.log("dx: %s, dy: %s", dx, dy)
+          this.sx += dx
+          this.sy += dy
+          this.lastmouse = ev
+          this.desenhaimg()
+        }
+      }
+    },
+    touchend(ev) {
+      this.dragging = false
+      this.lastmouse = null
+      this.lasttouch = null
+    },
     ajustaimagem() {
       const attr = document.createAttribute("style")
       attr.value = `width:${this.width};height:${this.height};`
@@ -143,19 +173,22 @@ module.exports = {
       cnv.setAttributeNode(ch)
       cnv.style[isportrait ? "top" : "left"] = (isportrait ? (h - w) / 2 : (w - h) / 2) + "px"
       cnv.style[isportrait ? "left" : "top"] = "0px"
-      // always put it in the very middle
       this.desenhaimg()
     },
     desenhaimg() {
       const theimg = new Image()
       theimg.onload = _ => {
         const cnv = this.$refs["thecanvas"]
-        const iw = theimg.width
-        const ih = theimg.height
         const ctx = cnv.getContext("2d")
+        const cw2 = cnv.width / 2
+        const ch2 = cnv.height / 2
         ctx.fillStyle = "white"
-        ctx.fillRect(0, 0, cnv.width, cnv.height)
-        ctx.drawImage(theimg, this.sx, this.sy, cnv.width * this.zoom, cnv.height * this.zoom, 0, 0, cnv.width, cnv.height)
+        ctx.save()
+        ctx.translate(cw2, ch2)
+        ctx.rotate(this.rot * Math.PI)
+        ctx.fillRect(-cw2, -ch2, cnv.width, cnv.height)
+        ctx.drawImage(theimg, this.sx + cw2, this.sy + ch2, cnv.width * this.zoom, cnv.height * this.zoom, -cw2, -ch2, cnv.width, cnv.height)
+        ctx.restore()
       }
       theimg.src = this.dataimg
     },
@@ -172,9 +205,17 @@ module.exports = {
       this.zoom += 0.1
       this.desenhaimg()
     },
-    giraesquerda() { },
-    giradireita() { },
-    aceita() { },
+    giraesquerda() {
+      this.rot = (this.rot + 0.5) % 2;
+      this.desenhaimg()
+    },
+    giradireita() {
+      this.rot = (this.rot - 0.5) % 2;
+      this.desenhaimg()
+    },
+    aceita() {
+      // Só salva e vai embora
+    },
   }
 };
 </script>
