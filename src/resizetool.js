@@ -53,19 +53,21 @@ const guessresize = (resize, width, height) => {
   return [width, height]
 }
 
+
+
 /*
  * resize tool
  * here we'll force the friendship and resize the thing based on many naive beliefs.
  * 
- * @param file
- *   the file from form input
+ * @param data
+ *   the dataurl containing the encoded image
  * @param rezie
  *   the resize information we'll need to work on this file
  * @returns
  *   the promise containing the canvas.toBlob() return. kinda trippy.
  * 
  */
-exports.resize = (file, resize) => new Promise((resolve, reject) => {
+exports.resizedataimg = (data, resize) => new Promise((resolve, reject) => {
 
   if (!resize) {
     reject(new Error("dude, where's my resize info?"))
@@ -91,8 +93,11 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
     // }, 'image/jpeg', 0.95)
     resolve(cnv.toDataURL("image/jpeg", 0.9))
   }
-  img.src = URL.createObjectURL(file)
+  img.src = data
 })
+
+exports.resize = (file, resize) => 
+  exports.resizedataimg(URL.createObjectURL(file), resize)
 
 /*
  * given a dataURI we'll bring the blob back. somehow.
@@ -112,6 +117,9 @@ exports.mkjpeg = (dataURI) => {
   return new Blob([ab], { type: mimeString })
 }
 
+/**
+ * needed to force landscape image
+ */
 exports.dolandscape = dataimg => new Promise((resolve, reject) => {
 
   const img = document.createElement("img")
@@ -141,6 +149,10 @@ exports.dolandscape = dataimg => new Promise((resolve, reject) => {
     img.src = dataimg
 })
 
+
+/**
+ * needed to force portrait image
+ */
 exports.doportrait = dataimg => new Promise((resolve, reject) => {
   const img = document.createElement("img")
   img.onload = _ => {

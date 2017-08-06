@@ -101,6 +101,7 @@ module.exports = {
     cnv.addEventListener("touchend", this.touchend)
     cnv.addEventListener("mousedown", this.touchstart)
     cnv.addEventListener("mousemove", this.mousemove)
+    cnv.addEventListener("wheel", this.wheel)
     cnv.addEventListener("mouseup", this.touchend)
     this.ajustaimagem()
   },
@@ -124,13 +125,32 @@ module.exports = {
         } {
           const dx = this.lastmouse.clientX - ev.clientX
           const dy = this.lastmouse.clientY - ev.clientY
-          console.log("dx: %s, dy: %s", dx, dy)
-          this.sx += dx
-          this.sy += dy
+          console.log("dx: %s, dy: %s, rot: %s", dx, dy, this.rot)
+          // then we check rot, since it's very important thing to check
+          if (this.rot == 0) {
+            this.sx += dx
+            this.sy += dy
+          } else if (this.rot == 0.5) {
+            this.sx += dy
+            this.sy -= dx
+          } else if (this.rot == 1) {
+            this.sx -= dx
+            this.sy -= dy
+          } else if (this.rot == 1.5) {
+            this.sx -= dy
+            this.sy += dx
+          }
           this.lastmouse = ev
           this.desenhaimg()
         }
       }
+    },
+    wheel(ev) {
+      console.log(ev)
+      if (ev.deltaY < 0)
+        this.aproxima()
+      if (ev.deltaY > 0)
+        this.afasta()
     },
     touchend(ev) {
       this.dragging = false
@@ -187,15 +207,21 @@ module.exports = {
         ctx.translate(cw2, ch2)
         ctx.rotate(this.rot * Math.PI)
         ctx.fillRect(-cw2, -ch2, cnv.width, cnv.height)
-        ctx.drawImage(theimg, this.sx + cw2, this.sy + ch2, cnv.width * this.zoom, cnv.height * this.zoom, -cw2, -ch2, cnv.width, cnv.height)
+        // let's blit the canvas! https://en.wikipedia.org/wiki/Blitter
+        ctx.drawImage(
+          theimg, // data data data
+          this.sx + cw2, // source coords on data
+          this.sy + ch2,
+          cnv.width * this.zoom, // size obeys destiny to avoid deformatons
+          cnv.height * this.zoom,
+          -cw2, // destiny coords to land data data data
+          -ch2,
+          cnv.width, // destiny area to paint
+          cnv.height
+        )
         ctx.restore()
       }
       theimg.src = this.dataimg
-    },
-    canceladialog() {
-      this.$refs['updialog'].style.display = 'none'
-      this.dataimg = this.noimg
-      this.ajustaimagem()
     },
     aproxima() {
       this.zoom -= 0.1
@@ -206,16 +232,64 @@ module.exports = {
       this.desenhaimg()
     },
     giraesquerda() {
-      this.rot = (this.rot + 0.5) % 2;
+      this.rot = (this.rot + 1.5) % 2;
       this.desenhaimg()
     },
     giradireita() {
-      this.rot = (this.rot - 0.5) % 2;
+      this.rot = (this.rot + 0.5) % 2;
       this.desenhaimg()
     },
     aceita() {
       // Só salva e vai embora
+      this.dataimg = this.$refs["thecanvas"].toDataURL("image/jpeg", 0.75)
+      this.$refs['updialog'].style.display = 'none'
+      this.$refs["image"].src = this.dataimg
+      this.$emit("onimagechange", { file: this.$refs["input"].files[0], image: this.dataimg })
+      if(this.resize){
+        this.resizeimage()
+      }
     },
+    canceladialog() {
+      this.$refs['updialog'].style.display = 'none'
+      this.dataimg = this.noimg
+      this.ajustaimagem()
+    },
+    resizeimage() {
+      resizetool.resizedataimg(this.dataimg, this.resize).then(ret => {
+        this.dataimg = ret // preview
+        this.$refs["image"].src = this.dataimg
+        this.$emit("resizeimage", { file:this.file[0], image: this.$refs["image"] })
+        this.dotheupload()
+      })
+    },
+    dotheupload() {
+      if (this.url) {
+        // le's trust the image, not the file
+        let img = this.$refs["image"]
+        let file = this.$refs["input"].files[0]
+        const headers = {
+          "Content-Type": file.type || "image/jpeg",
+          "X-Filename": file.name
+        }
+        if (this.headers) {
+          for (let k in this.headers)
+            headers[k] = this.headers[k]
+        }
+        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
+          this.$emit("onupload", { file, image: this.$refs["image"], ret })
+        }).catch(err => {
+          this.$emit("onuploaderror", { file, image: this.$refs["image"], err })
+        })
+      }
+    }
+  },
+  watch: {
+    img(val) {
+      if (!this.dataimg) {
+        this.$refs["image"].src = val
+        this.$emit("onchangeimg", val)
+      }
+    }
   }
 };
 </script>
