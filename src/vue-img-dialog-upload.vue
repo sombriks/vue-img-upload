@@ -87,7 +87,8 @@ module.exports = {
       dragging: false,
       dataimg: undefined,
       lastmouse: undefined,
-      lasttouch: undefined,
+      lasttouch1: undefined,
+      lasttouch2: undefined,
       noimg: "data:image/svg+xml;base64," + fs.readFileSync(__dirname + "/no-img.svg", "base64")
     }
   },
@@ -111,10 +112,23 @@ module.exports = {
     },
     touchmove(ev) {
       if (this.dragging) {
-        if (!this.lasttouch) {
-          this.lasttouch = ev
+        if (!this.lasttouch2)
+          this.lasttouch2 = ev.touches[1]
+        if (!this.lasttouch1) {
+          this.lasttouch1 = ev.touches[0]
         } else {
-
+          console.log(ev)
+          const dx = this.lasttouch1.clientX - ev.touches[0].clientX
+          const dy = this.lasttouch1.clientY - ev.touches[0].clientY
+          this.dothemove(dx, dy)
+          if (ev.touches[1]) {
+            const ex = this.lasttouch2.clientX - ev.touches[1].clientX
+            const ey = this.lasttouch2.clientY - ev.touches[1].clientY
+            this.dothepinch(ex, ey)
+          }
+          this.lasttouch1 = ev.touches[0]
+          this.lasttouch2 = ev.touches[1]
+          this.desenhaimg()
         }
       }
     },
@@ -122,28 +136,36 @@ module.exports = {
       if (this.dragging) {
         if (!this.lastmouse) {
           this.lastmouse = ev
-        } {
+        } else {
           const dx = this.lastmouse.clientX - ev.clientX
           const dy = this.lastmouse.clientY - ev.clientY
-          console.log("dx: %s, dy: %s, rot: %s", dx, dy, this.rot)
-          // then we check rot, since it's very important thing to check
-          if (this.rot == 0) {
-            this.sx += dx
-            this.sy += dy
-          } else if (this.rot == 0.5) {
-            this.sx += dy
-            this.sy -= dx
-          } else if (this.rot == 1) {
-            this.sx -= dx
-            this.sy -= dy
-          } else if (this.rot == 1.5) {
-            this.sx -= dy
-            this.sy += dx
-          }
+          this.dothemove(dx, dy)
           this.lastmouse = ev
           this.desenhaimg()
         }
       }
+    },
+    dothemove(dx, dy) {
+      // then we check rot, since it's very important thing to check
+      if (this.rot == 0) {
+        this.sx += dx
+        this.sy += dy
+      } else if (this.rot == 0.5) {
+        this.sx += dy
+        this.sy -= dx
+      } else if (this.rot == 1) {
+        this.sx -= dx
+        this.sy -= dy
+      } else if (this.rot == 1.5) {
+        this.sx -= dy
+        this.sy += dx
+      }
+    },
+    dothepinch(ex, ey) {
+      if(ex > 0 || ey < 0)
+        this.afasta()
+      else if(ex < 0 || ey > 0)
+        this.aproxima()
     },
     wheel(ev) {
       console.log(ev)
@@ -155,7 +177,8 @@ module.exports = {
     touchend(ev) {
       this.dragging = false
       this.lastmouse = null
-      this.lasttouch = null
+      this.lasttouch1 = null
+      this.lasttouch2 = null
     },
     ajustaimagem() {
       const attr = document.createAttribute("style")
@@ -245,7 +268,7 @@ module.exports = {
       this.$refs['updialog'].style.display = 'none'
       this.$refs["image"].src = this.dataimg
       this.$emit("onimagechange", { file: this.$refs["input"].files[0], image: this.dataimg })
-      if(this.resize){
+      if (this.resize) {
         this.resizeimage()
       }
     },
@@ -258,7 +281,7 @@ module.exports = {
       resizetool.resizedataimg(this.dataimg, this.resize).then(ret => {
         this.dataimg = ret // preview
         this.$refs["image"].src = this.dataimg
-        this.$emit("resizeimage", { file:this.file[0], image: this.$refs["image"] })
+        this.$emit("resizeimage", { file: this.file[0], image: this.$refs["image"] })
         this.dotheupload()
       })
     },

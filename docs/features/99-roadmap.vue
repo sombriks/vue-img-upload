@@ -3,11 +3,11 @@
     <h2>1.0.0 (not released yet)</h2>
     <ul>
       <li>Add import/export support (currently only require/exports supported)</li>
+      <li>Improve mobile usability</li>
     </ul>
     <h2>0.4.0</h2>
     <ul>
       <li>Implement the crop/rotate dialog</li>
-      <li>Improve mobile usability</li>
     </ul>
     <h2>0.3.0</h2>
     <ul>
