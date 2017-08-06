@@ -47,8 +47,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-e84fe046", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43}],2:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44}],2:[function(require,module,exports){
 ;(function(){
+//
 //
 //
 //
@@ -71,7 +72,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_c('router-link',{attrs:{"to":"/00-start"}},[_vm._v("Start")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/01-basic"}},[_vm._v("Basic Usage")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/02-resize-px"}},[_vm._v("Resize (px)")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/03-resize-pct"}},[_vm._v("Resize (%)")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/04-upload"}},[_vm._v("Upload")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/05-orientation"}},[_vm._v("Orientation")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/06-default-img"}},[_vm._v("Default img")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/99-roadmap"}},[_vm._v("Roadmap")])],1)])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_c('router-link',{attrs:{"to":"/00-start"}},[_vm._v("Start")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/01-basic"}},[_vm._v("Basic Usage")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/02-resize-px"}},[_vm._v("Resize (px)")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/03-resize-pct"}},[_vm._v("Resize (%)")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/04-upload"}},[_vm._v("Upload")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/05-orientation"}},[_vm._v("Orientation")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/06-default-img"}},[_vm._v("Default img")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/07-dialog"}},[_vm._v("Dialog")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/99-roadmap"}},[_vm._v("Roadmap")])],1)])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -83,7 +84,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-1c4106d4", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43}],3:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44}],3:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -144,7 +145,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-7e04f583", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43}],4:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44}],4:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -208,7 +209,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-2c8cf210", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43}],5:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44}],5:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -278,7 +279,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-40f1bf64", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43}],6:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44}],6:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -342,7 +343,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-c28802d8", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43}],7:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44}],7:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -425,7 +426,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-997041a8", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43}],8:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44}],8:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -483,7 +484,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-20268b36", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43}],9:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44}],9:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -567,8 +568,78 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-60cc7bc4", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43}],10:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44}],10:[function(require,module,exports){
 ;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = {
+  name: "Dialog",
+  methods: {
+    gotchange(ev) {
+      console.log(ev)
+    },
+    gotnewimage(ev) {
+      console.log(ev)
+    }
+  }
+};
+
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-dialog-upload',{attrs:{"width":"200px"},on:{"onchangefile":_vm.gotchange,"onimagechange":_vm.gotnewimage}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-dialog-upload width=\"200px\"\n                        @onchangefile=\"gotchange\"\n                        @onimagechange=\"gotnewimage\"></vue-img-dialog-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"Dialog\",\n  methods: {\n    gotchange(ev) {\n      console.log(ev)\n    },\n    gotnewimage(ev) {\n      console.log(ev)\n    }\n  }\n};\n</script>\n      ")])])],1)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image preview, dialog to crop/zoom/rotate")])])}]
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f36879e0", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-f36879e0", __vue__options__)
+  }
+})()}
+},{"vue":46,"vue-hot-reload-api":44}],11:[function(require,module,exports){
+;(function(){
+//
+//
+//
+//
 //
 //
 //
@@ -613,7 +684,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.3.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Added 'default image' example")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Add import/export support (currently only require/exports supported)")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.3.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Added 'default image' example")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -624,9 +695,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-3fa7993d", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43}],11:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44}],12:[function(require,module,exports){
 var css = "/* Uncomment and set these variables to customize the grid. */\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-right: 2rem;\n  padding-left: 2rem;\n}\n.row {\n  box-sizing: border-box;\n  display: -ms-flexbox;\n  display: -webkit-box;\n  display: flex;\n  -ms-flex: 0 1 auto;\n  -webkit-box-flex: 0;\n  flex: 0 1 auto;\n  -ms-flex-direction: row;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  flex-direction: row;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n  margin-right: -1rem;\n  margin-left: -1rem;\n}\n.row.reverse {\n  -ms-flex-direction: row-reverse;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: reverse;\n  flex-direction: row-reverse;\n}\n.col.reverse {\n  -ms-flex-direction: column-reverse;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n  flex-direction: column-reverse;\n}\n.col-xs,\n.col-xs-1,\n.col-xs-2,\n.col-xs-3,\n.col-xs-4,\n.col-xs-5,\n.col-xs-6,\n.col-xs-7,\n.col-xs-8,\n.col-xs-9,\n.col-xs-10,\n.col-xs-11,\n.col-xs-12 {\n  box-sizing: border-box;\n  -ms-flex: 0 0 auto;\n  -webkit-box-flex: 0;\n  flex: 0 0 auto;\n  padding-right: 1rem;\n  padding-left: 1rem;\n}\n.col-xs {\n  -webkit-flex-grow: 1;\n  -ms-flex-positive: 1;\n  -webkit-box-flex: 1;\n  flex-grow: 1;\n  -ms-flex-preferred-size: 0;\n  flex-basis: 0;\n  max-width: 100%;\n}\n.col-xs-1 {\n  -ms-flex-preferred-size: 8.333%;\n  flex-basis: 8.333%;\n  max-width: 8.333%;\n}\n.col-xs-2 {\n  -ms-flex-preferred-size: 16.667%;\n  flex-basis: 16.667%;\n  max-width: 16.667%;\n}\n.col-xs-3 {\n  -ms-flex-preferred-size: 25%;\n  flex-basis: 25%;\n  max-width: 25%;\n}\n.col-xs-4 {\n  -ms-flex-preferred-size: 33.333%;\n  flex-basis: 33.333%;\n  max-width: 33.333%;\n}\n.col-xs-5 {\n  -ms-flex-preferred-size: 41.667%;\n  flex-basis: 41.667%;\n  max-width: 41.667%;\n}\n.col-xs-6 {\n  -ms-flex-preferred-size: 50%;\n  flex-basis: 50%;\n  max-width: 50%;\n}\n.col-xs-7 {\n  -ms-flex-preferred-size: 58.333%;\n  flex-basis: 58.333%;\n  max-width: 58.333%;\n}\n.col-xs-8 {\n  -ms-flex-preferred-size: 66.667%;\n  flex-basis: 66.667%;\n  max-width: 66.667%;\n}\n.col-xs-9 {\n  -ms-flex-preferred-size: 75%;\n  flex-basis: 75%;\n  max-width: 75%;\n}\n.col-xs-10 {\n  -ms-flex-preferred-size: 83.333%;\n  flex-basis: 83.333%;\n  max-width: 83.333%;\n}\n.col-xs-11 {\n  -ms-flex-preferred-size: 91.667%;\n  flex-basis: 91.667%;\n  max-width: 91.667%;\n}\n.col-xs-12 {\n  -ms-flex-preferred-size: 100%;\n  flex-basis: 100%;\n  max-width: 100%;\n}\n.col-xs-offset-1 {\n  margin-left: 8.333%;\n}\n.col-xs-offset-2 {\n  margin-left: 16.667%;\n}\n.col-xs-offset-3 {\n  margin-left: 25%;\n}\n.col-xs-offset-4 {\n  margin-left: 33.333%;\n}\n.col-xs-offset-5 {\n  margin-left: 41.667%;\n}\n.col-xs-offset-6 {\n  margin-left: 50%;\n}\n.col-xs-offset-7 {\n  margin-left: 58.333%;\n}\n.col-xs-offset-8 {\n  margin-left: 66.667%;\n}\n.col-xs-offset-9 {\n  margin-left: 75%;\n}\n.col-xs-offset-10 {\n  margin-left: 83.333%;\n}\n.col-xs-offset-11 {\n  margin-left: 91.667%;\n}\n.start-xs {\n  -ms-flex-pack: start;\n  -webkit-box-pack: start;\n  justify-content: flex-start;\n  text-align: start;\n}\n.center-xs {\n  -ms-flex-pack: center;\n  -webkit-box-pack: center;\n  justify-content: center;\n  text-align: center;\n}\n.end-xs {\n  -ms-flex-pack: end;\n  -webkit-box-pack: end;\n  justify-content: flex-end;\n  text-align: end;\n}\n.top-xs {\n  -ms-flex-align: start;\n  -webkit-box-align: start;\n  align-items: flex-start;\n}\n.middle-xs {\n  -ms-flex-align: center;\n  -webkit-box-align: center;\n  align-items: center;\n}\n.bottom-xs {\n  -ms-flex-align: end;\n  -webkit-box-align: end;\n  align-items: flex-end;\n}\n.around-xs {\n  -ms-flex-pack: distribute;\n  justify-content: space-around;\n}\n.between-xs {\n  -ms-flex-pack: justify;\n  -webkit-box-pack: justify;\n  justify-content: space-between;\n}\n.first-xs {\n  -ms-flex-order: -1;\n  -webkit-box-ordinal-group: 0;\n  order: -1;\n}\n.last-xs {\n  -ms-flex-order: 1;\n  -webkit-box-ordinal-group: 2;\n  order: 1;\n}\n@media only screen and (min-width: 48em) {\n  .container {\n    width: 46rem;\n  }\n\n  .col-sm,\n  .col-sm-1,\n  .col-sm-2,\n  .col-sm-3,\n  .col-sm-4,\n  .col-sm-5,\n  .col-sm-6,\n  .col-sm-7,\n  .col-sm-8,\n  .col-sm-9,\n  .col-sm-10,\n  .col-sm-11,\n  .col-sm-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-sm {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-sm-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-sm-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-sm-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-sm-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-sm-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-sm-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-sm-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-sm-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-sm-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-sm-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-sm-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-sm-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-sm-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-sm-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-sm-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-sm-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-sm-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-sm-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-sm-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-sm-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-sm-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-sm-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-sm-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-sm {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-sm {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-sm {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-sm {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-sm {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-sm {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-sm {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-sm {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-sm {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-sm {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n@media only screen and (min-width: 62em) {\n  .container {\n    width: 61rem;\n  }\n\n  .col-md,\n  .col-md-1,\n  .col-md-2,\n  .col-md-3,\n  .col-md-4,\n  .col-md-5,\n  .col-md-6,\n  .col-md-7,\n  .col-md-8,\n  .col-md-9,\n  .col-md-10,\n  .col-md-11,\n  .col-md-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-md {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-md-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-md-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-md-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-md-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-md-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-md-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-md-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-md-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-md-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-md-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-md-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-md-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-md-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-md-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-md-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-md-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-md-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-md-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-md-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-md-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-md-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-md-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-md-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-md {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-md {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-md {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-md {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-md {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-md {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-md {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-md {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-md {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-md {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n@media only screen and (min-width: 75em) {\n  .container {\n    width: 71rem;\n  }\n\n  .col-lg,\n  .col-lg-1,\n  .col-lg-2,\n  .col-lg-3,\n  .col-lg-4,\n  .col-lg-5,\n  .col-lg-6,\n  .col-lg-7,\n  .col-lg-8,\n  .col-lg-9,\n  .col-lg-10,\n  .col-lg-11,\n  .col-lg-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-lg {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-lg-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-lg-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-lg-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-lg-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-lg-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-lg-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-lg-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-lg-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-lg-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-lg-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-lg-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-lg-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-lg-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-lg-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-lg-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-lg-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-lg-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-lg-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-lg-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-lg-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-lg-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-lg-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-lg-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-lg {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-lg {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-lg {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-lg {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-lg {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-lg {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-lg {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-lg {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-lg {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-lg {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n"; (require("browserify-css").createStyle(css, { "href": "docs/index.css" }, { "insertAt": "bottom" })); module.exports = css;
-},{"browserify-css":40}],12:[function(require,module,exports){
+},{"browserify-css":41}],13:[function(require,module,exports){
 
 require("./index.css")
 
@@ -654,12 +725,13 @@ const vm = new Vue({
       { path: "/04-upload", component: require("./features/04-upload.vue") },
       { path: "/05-orientation", component: require("./features/05-orientation.vue") },
       { path: "/06-default-img", component: require("./features/06-default-img.vue") },
+      { path: "/07-dialog", component: require("./features/07-dialog.vue") },
       { path: "/99-roadmap", component: require("./features/99-roadmap.vue") },
     ]
   }),
 })
 
-},{"../src/main":47,"./components/code-preview.vue":1,"./components/menu.vue":2,"./features/00-start.vue":3,"./features/01-basic.vue":4,"./features/02-resize-px.vue":5,"./features/03-resize-pct.vue":6,"./features/04-upload.vue":7,"./features/05-orientation.vue":8,"./features/06-default-img.vue":9,"./features/99-roadmap.vue":10,"./index.css":11,"./index.vue":13,"vue":45,"vue-router":44}],13:[function(require,module,exports){
+},{"../src/main":48,"./components/code-preview.vue":1,"./components/menu.vue":2,"./features/00-start.vue":3,"./features/01-basic.vue":4,"./features/02-resize-px.vue":5,"./features/03-resize-pct.vue":6,"./features/04-upload.vue":7,"./features/05-orientation.vue":8,"./features/06-default-img.vue":9,"./features/07-dialog.vue":10,"./features/99-roadmap.vue":11,"./index.css":12,"./index.vue":14,"vue":46,"vue-router":45}],14:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#root[data-v-73e3f224] {\n  position: absolute;\n  top: 50px;\n  bottom: 0px;\n  left: 0px;\n  right: 0px;\n}")
 ;(function(){
 //
@@ -731,9 +803,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-73e3f224", __vue__options__)
   }
 })()}
-},{"vue":45,"vue-hot-reload-api":43,"vueify/lib/insert-css":46}],14:[function(require,module,exports){
+},{"vue":46,"vue-hot-reload-api":44,"vueify/lib/insert-css":47}],15:[function(require,module,exports){
 module.exports = require('./lib/axios');
-},{"./lib/axios":16}],15:[function(require,module,exports){
+},{"./lib/axios":17}],16:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -917,7 +989,7 @@ module.exports = function xhrAdapter(config) {
 };
 
 }).call(this,require('_process'))
-},{"../core/createError":22,"./../core/settle":25,"./../helpers/btoa":29,"./../helpers/buildURL":30,"./../helpers/cookies":32,"./../helpers/isURLSameOrigin":34,"./../helpers/parseHeaders":36,"./../utils":38,"_process":42}],16:[function(require,module,exports){
+},{"../core/createError":23,"./../core/settle":26,"./../helpers/btoa":30,"./../helpers/buildURL":31,"./../helpers/cookies":33,"./../helpers/isURLSameOrigin":35,"./../helpers/parseHeaders":37,"./../utils":39,"_process":43}],17:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -971,7 +1043,7 @@ module.exports = axios;
 // Allow use of default import syntax in TypeScript
 module.exports.default = axios;
 
-},{"./cancel/Cancel":17,"./cancel/CancelToken":18,"./cancel/isCancel":19,"./core/Axios":20,"./defaults":27,"./helpers/bind":28,"./helpers/spread":37,"./utils":38}],17:[function(require,module,exports){
+},{"./cancel/Cancel":18,"./cancel/CancelToken":19,"./cancel/isCancel":20,"./core/Axios":21,"./defaults":28,"./helpers/bind":29,"./helpers/spread":38,"./utils":39}],18:[function(require,module,exports){
 'use strict';
 
 /**
@@ -992,7 +1064,7 @@ Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 'use strict';
 
 var Cancel = require('./Cancel');
@@ -1051,14 +1123,14 @@ CancelToken.source = function source() {
 
 module.exports = CancelToken;
 
-},{"./Cancel":17}],19:[function(require,module,exports){
+},{"./Cancel":18}],20:[function(require,module,exports){
 'use strict';
 
 module.exports = function isCancel(value) {
   return !!(value && value.__CANCEL__);
 };
 
-},{}],20:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 'use strict';
 
 var defaults = require('./../defaults');
@@ -1146,7 +1218,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = Axios;
 
-},{"./../defaults":27,"./../helpers/combineURLs":31,"./../helpers/isAbsoluteURL":33,"./../utils":38,"./InterceptorManager":21,"./dispatchRequest":23}],21:[function(require,module,exports){
+},{"./../defaults":28,"./../helpers/combineURLs":32,"./../helpers/isAbsoluteURL":34,"./../utils":39,"./InterceptorManager":22,"./dispatchRequest":24}],22:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1200,7 +1272,7 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 
 module.exports = InterceptorManager;
 
-},{"./../utils":38}],22:[function(require,module,exports){
+},{"./../utils":39}],23:[function(require,module,exports){
 'use strict';
 
 var enhanceError = require('./enhanceError');
@@ -1220,7 +1292,7 @@ module.exports = function createError(message, config, code, request, response) 
   return enhanceError(error, config, code, request, response);
 };
 
-},{"./enhanceError":24}],23:[function(require,module,exports){
+},{"./enhanceError":25}],24:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1301,7 +1373,7 @@ module.exports = function dispatchRequest(config) {
   });
 };
 
-},{"../cancel/isCancel":19,"../defaults":27,"./../utils":38,"./transformData":26}],24:[function(require,module,exports){
+},{"../cancel/isCancel":20,"../defaults":28,"./../utils":39,"./transformData":27}],25:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1324,7 +1396,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
   return error;
 };
 
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 'use strict';
 
 var createError = require('./createError');
@@ -1352,7 +1424,7 @@ module.exports = function settle(resolve, reject, response) {
   }
 };
 
-},{"./createError":22}],26:[function(require,module,exports){
+},{"./createError":23}],27:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1374,7 +1446,7 @@ module.exports = function transformData(data, headers, fns) {
   return data;
 };
 
-},{"./../utils":38}],27:[function(require,module,exports){
+},{"./../utils":39}],28:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -1470,7 +1542,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = defaults;
 
 }).call(this,require('_process'))
-},{"./adapters/http":15,"./adapters/xhr":15,"./helpers/normalizeHeaderName":35,"./utils":38,"_process":42}],28:[function(require,module,exports){
+},{"./adapters/http":16,"./adapters/xhr":16,"./helpers/normalizeHeaderName":36,"./utils":39,"_process":43}],29:[function(require,module,exports){
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -1483,7 +1555,7 @@ module.exports = function bind(fn, thisArg) {
   };
 };
 
-},{}],29:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 'use strict';
 
 // btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
@@ -1521,7 +1593,7 @@ function btoa(input) {
 
 module.exports = btoa;
 
-},{}],30:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1591,7 +1663,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
   return url;
 };
 
-},{"./../utils":38}],31:[function(require,module,exports){
+},{"./../utils":39}],32:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1607,7 +1679,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
     : baseURL;
 };
 
-},{}],32:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1662,7 +1734,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":38}],33:[function(require,module,exports){
+},{"./../utils":39}],34:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1678,7 +1750,7 @@ module.exports = function isAbsoluteURL(url) {
   return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
 };
 
-},{}],34:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1748,7 +1820,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":38}],35:[function(require,module,exports){
+},{"./../utils":39}],36:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -1762,7 +1834,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
   });
 };
 
-},{"../utils":38}],36:[function(require,module,exports){
+},{"../utils":39}],37:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1801,7 +1873,7 @@ module.exports = function parseHeaders(headers) {
   return parsed;
 };
 
-},{"./../utils":38}],37:[function(require,module,exports){
+},{"./../utils":39}],38:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1830,7 +1902,7 @@ module.exports = function spread(callback) {
   };
 };
 
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 'use strict';
 
 var bind = require('./helpers/bind');
@@ -2135,7 +2207,7 @@ module.exports = {
   trim: trim
 };
 
-},{"./helpers/bind":28,"is-buffer":41}],39:[function(require,module,exports){
+},{"./helpers/bind":29,"is-buffer":42}],40:[function(require,module,exports){
 (function (process,global){
 /* @preserve
  * The MIT License (MIT)
@@ -7757,7 +7829,7 @@ module.exports = ret;
 },{"./es5":13}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":42}],40:[function(require,module,exports){
+},{"_process":43}],41:[function(require,module,exports){
 'use strict';
 // For more information about browser field, check out the browser field at https://github.com/substack/browserify-handbook#browser-field.
 
@@ -7834,7 +7906,7 @@ module.exports = {
     }
 };
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -7857,7 +7929,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -8043,7 +8115,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],43:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = window.__VUE_HOT_MAP__ = Object.create(null)
@@ -8189,7 +8261,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 (function (process){
 /**
   * vue-router v2.7.0
@@ -10700,7 +10772,7 @@ if (inBrowser && window.Vue) {
 module.exports = VueRouter;
 
 }).call(this,require('_process'))
-},{"_process":42}],45:[function(require,module,exports){
+},{"_process":43}],46:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.4.2
@@ -18133,7 +18205,7 @@ setTimeout(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":42}],46:[function(require,module,exports){
+},{"_process":43}],47:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -18158,11 +18230,14 @@ exports.insert = function (css) {
   }
 }
 
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 // component installation entry point
-exports.install = (Vue, opts) => 
+exports.install = (Vue, opts) => {
   Vue.component("vue-img-upload", require("./vue-img-upload.vue"))
-},{"./vue-img-upload.vue":49}],48:[function(require,module,exports){
+  Vue.component("vue-img-dialog-upload", require("./vue-img-dialog-upload.vue"))
+};
+
+},{"./vue-img-dialog-upload.vue":50,"./vue-img-upload.vue":51}],49:[function(require,module,exports){
 // resizetool.js
 const Promise = require("bluebird")
 
@@ -18218,19 +18293,21 @@ const guessresize = (resize, width, height) => {
   return [width, height]
 }
 
+
+
 /*
  * resize tool
  * here we'll force the friendship and resize the thing based on many naive beliefs.
  * 
- * @param file
- *   the file from form input
+ * @param data
+ *   the dataurl containing the encoded image
  * @param rezie
  *   the resize information we'll need to work on this file
  * @returns
  *   the promise containing the canvas.toBlob() return. kinda trippy.
  * 
  */
-exports.resize = (file, resize) => new Promise((resolve, reject) => {
+exports.resizedataimg = (data, resize) => new Promise((resolve, reject) => {
 
   if (!resize) {
     reject(new Error("dude, where's my resize info?"))
@@ -18256,8 +18333,11 @@ exports.resize = (file, resize) => new Promise((resolve, reject) => {
     // }, 'image/jpeg', 0.95)
     resolve(cnv.toDataURL("image/jpeg", 0.9))
   }
-  img.src = URL.createObjectURL(file)
+  img.src = data
 })
+
+exports.resize = (file, resize) => 
+  exports.resizedataimg(URL.createObjectURL(file), resize)
 
 /*
  * given a dataURI we'll bring the blob back. somehow.
@@ -18277,6 +18357,9 @@ exports.mkjpeg = (dataURI) => {
   return new Blob([ab], { type: mimeString })
 }
 
+/**
+ * needed to force landscape image
+ */
 exports.dolandscape = dataimg => new Promise((resolve, reject) => {
 
   const img = document.createElement("img")
@@ -18306,6 +18389,10 @@ exports.dolandscape = dataimg => new Promise((resolve, reject) => {
     img.src = dataimg
 })
 
+
+/**
+ * needed to force portrait image
+ */
 exports.doportrait = dataimg => new Promise((resolve, reject) => {
   const img = document.createElement("img")
   img.onload = _ => {
@@ -18333,7 +18420,323 @@ exports.doportrait = dataimg => new Promise((resolve, reject) => {
   else
     img.src = dataimg
 })
-},{"bluebird":39}],49:[function(require,module,exports){
+},{"bluebird":40}],50:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".thedialog[data-v-dc5feb2c] {\n  position: fixed;\n  display: none;\n  background-color: white;\n  top: 0px;\n  bottom: 0px;\n  left: 0px;\n  right: 0px;\n  z-index: 9999;\n  overflow: hidden;\n}\n\n.thedialog>button.fecha[data-v-dc5feb2c],\n.thedialog>button.aproxima[data-v-dc5feb2c],\n.thedialog>button.afasta[data-v-dc5feb2c],\n.thedialog>button.giraesquerda[data-v-dc5feb2c],\n.thedialog>button.giradireita[data-v-dc5feb2c],\n.thedialog>button.aceita[data-v-dc5feb2c] {\n  position: fixed;\n  width: 2em;\n}\n\n.thedialog>button.aproxima[data-v-dc5feb2c],\n.thedialog>button.afasta[data-v-dc5feb2c],\n.thedialog>button.giraesquerda[data-v-dc5feb2c],\n.thedialog>button.giradireita[data-v-dc5feb2c],\n.thedialog>button.aceita[data-v-dc5feb2c] {\n  left: 0.5em;\n  top: 0.5em;\n}\n\n.thedialog>button.fecha[data-v-dc5feb2c] {\n  right: 2.5em;\n  top: 0.5em;\n}\n\n.thedialog>button.afasta[data-v-dc5feb2c] {\n  top: 4em;\n}\n\n.thedialog>button.giraesquerda[data-v-dc5feb2c] {\n  top: 7.5em;\n}\n\n.thedialog>button.giradireita[data-v-dc5feb2c] {\n  top: 11em;\n}\n\n.thedialog>button.aceita[data-v-dc5feb2c] {\n  top: 14.5em;\n}\n\n.thedialog>canvas.thecanvas[data-v-dc5feb2c] {\n  position: fixed;\n  border: 1px groove black;\n}\n\ninput.theinput[data-v-dc5feb2c] {\n  display: none\n}")
+;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+const axios = require("axios")
+const resizetool = require("./resizetool")
+module.exports = {
+  name: "VueImgDialogUpload",
+  props: {
+    url: String,
+    headers: Object,
+    width: {
+      type: String,
+      default: "auto"
+    },
+    height: {
+      type: String,
+      default: "auto"
+    },
+    legenda: {
+      type: String,
+      default: "Toque a imagem para alterar"
+    },
+    method: {
+      type: String,
+      default: "post"
+    },
+    img: {
+      type: String,
+      default: this.noimg
+    }
+  },
+  data() {
+    return {
+      sx: 0,
+      sy: 0,
+      rot: 0,
+      zoom: 1,
+      name: "",
+      dragging: false,
+      dataimg: undefined,
+      lastmouse: undefined,
+      lasttouch: undefined,
+      noimg: "data:image/svg+xml;base64," + "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiICB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMyw5SDE4LjVMMTMsMy41VjlNNiwySDE0TDIwLDhWMjBBMiwyIDAgMCwxIDE4LDIySDZDNC44OSwyMiA0LDIxLjEgNCwyMFY0QzQsMi44OSA0Ljg5LDIgNiwyTTYsMjBIMTVMMTgsMjBWMTJMMTQsMTZMMTIsMTRMNiwyME04LDlBMiwyIDAgMCwwIDYsMTFBMiwyIDAgMCwwIDgsMTNBMiwyIDAgMCwwIDEwLDExQTIsMiAwIDAsMCA4LDlaIiAvPgo8L3N2Zz4="
+    }
+  },
+  mounted() {
+    this.dataimg = this.img
+    if (this.dataimg == null)
+      this.dataimg = this.noimg
+    const cnv = this.$refs["thecanvas"]
+    cnv.addEventListener("touchstart", this.touchstart)
+    cnv.addEventListener("touchmove", this.touchmove)
+    cnv.addEventListener("touchend", this.touchend)
+    cnv.addEventListener("mousedown", this.touchstart)
+    cnv.addEventListener("mousemove", this.mousemove)
+    cnv.addEventListener("wheel", this.wheel)
+    cnv.addEventListener("mouseup", this.touchend)
+    this.ajustaimagem()
+  },
+  methods: {
+    touchstart(ev) {
+      this.dragging = true
+    },
+    touchmove(ev) {
+      if (this.dragging) {
+        if (!this.lasttouch) {
+          this.lasttouch = ev
+        } else {
+
+        }
+      }
+    },
+    mousemove(ev) {
+      if (this.dragging) {
+        if (!this.lastmouse) {
+          this.lastmouse = ev
+        } {
+          const dx = this.lastmouse.clientX - ev.clientX
+          const dy = this.lastmouse.clientY - ev.clientY
+          console.log("dx: %s, dy: %s, rot: %s", dx, dy, this.rot)
+          // then we check rot, since it's very important thing to check
+          if (this.rot == 0) {
+            this.sx += dx
+            this.sy += dy
+          } else if (this.rot == 0.5) {
+            this.sx += dy
+            this.sy -= dx
+          } else if (this.rot == 1) {
+            this.sx -= dx
+            this.sy -= dy
+          } else if (this.rot == 1.5) {
+            this.sx -= dy
+            this.sy += dx
+          }
+          this.lastmouse = ev
+          this.desenhaimg()
+        }
+      }
+    },
+    wheel(ev) {
+      console.log(ev)
+      if (ev.deltaY < 0)
+        this.aproxima()
+      if (ev.deltaY > 0)
+        this.afasta()
+    },
+    touchend(ev) {
+      this.dragging = false
+      this.lastmouse = null
+      this.lasttouch = null
+    },
+    ajustaimagem() {
+      const attr = document.createAttribute("style")
+      attr.value = `width:${this.width};height:${this.height};`
+      this.$refs["imgconainer"].setAttributeNode(attr)
+      this.$refs["image"].src = this.dataimg
+    },
+    loadimg() {
+      this.$refs["input"].click()
+    },
+    changefile() {
+      let file = this.$refs["input"].files[0]
+      if (!file) {
+        // silent french exit
+        return
+      }
+      this.name = file.name
+      this.dataimg = URL.createObjectURL(file)
+      this.ajustaimagem()
+      this.$emit("onchangefile", { file, image: this.$refs["image"] })
+      this.preparedialog()
+    },
+    preparedialog() {
+
+      this.$refs["updialog"].style.display = "block"
+      const cnv = this.$refs["thecanvas"];
+      const w = window.innerWidth
+      const h = window.innerHeight
+      const cw = document.createAttribute("width")
+      const ch = document.createAttribute("height")
+      const isportrait = w < h
+      // always draw a square
+      cw.value = ch.value = isportrait ? w : h
+      cnv.setAttributeNode(cw)
+      cnv.setAttributeNode(ch)
+      cnv.style[isportrait ? "top" : "left"] = (isportrait ? (h - w) / 2 : (w - h) / 2) + "px"
+      cnv.style[isportrait ? "left" : "top"] = "0px"
+      this.desenhaimg()
+    },
+    desenhaimg() {
+      const theimg = new Image()
+      theimg.onload = _ => {
+        const cnv = this.$refs["thecanvas"]
+        const ctx = cnv.getContext("2d")
+        const cw2 = cnv.width / 2
+        const ch2 = cnv.height / 2
+        ctx.fillStyle = "white"
+        ctx.save()
+        ctx.translate(cw2, ch2)
+        ctx.rotate(this.rot * Math.PI)
+        ctx.fillRect(-cw2, -ch2, cnv.width, cnv.height)
+        // let's blit the canvas! https://en.wikipedia.org/wiki/Blitter
+        ctx.drawImage(
+          theimg, // data data data
+          this.sx + cw2, // source coords on data
+          this.sy + ch2,
+          cnv.width * this.zoom, // size obeys destiny to avoid deformatons
+          cnv.height * this.zoom,
+          -cw2, // destiny coords to land data data data
+          -ch2,
+          cnv.width, // destiny area to paint
+          cnv.height
+        )
+        ctx.restore()
+      }
+      theimg.src = this.dataimg
+    },
+    aproxima() {
+      this.zoom -= 0.1
+      this.desenhaimg()
+    },
+    afasta() {
+      this.zoom += 0.1
+      this.desenhaimg()
+    },
+    giraesquerda() {
+      this.rot = (this.rot + 1.5) % 2;
+      this.desenhaimg()
+    },
+    giradireita() {
+      this.rot = (this.rot + 0.5) % 2;
+      this.desenhaimg()
+    },
+    aceita() {
+      // Só salva e vai embora
+      this.dataimg = this.$refs["thecanvas"].toDataURL("image/jpeg", 0.75)
+      this.$refs['updialog'].style.display = 'none'
+      this.$refs["image"].src = this.dataimg
+      this.$emit("onimagechange", { file: this.$refs["input"].files[0], image: this.dataimg })
+      if(this.resize){
+        this.resizeimage()
+      }
+    },
+    canceladialog() {
+      this.$refs['updialog'].style.display = 'none'
+      this.dataimg = this.noimg
+      this.ajustaimagem()
+    },
+    resizeimage() {
+      resizetool.resizedataimg(this.dataimg, this.resize).then(ret => {
+        this.dataimg = ret // preview
+        this.$refs["image"].src = this.dataimg
+        this.$emit("resizeimage", { file:this.file[0], image: this.$refs["image"] })
+        this.dotheupload()
+      })
+    },
+    dotheupload() {
+      if (this.url) {
+        // le's trust the image, not the file
+        let img = this.$refs["image"]
+        let file = this.$refs["input"].files[0]
+        const headers = {
+          "Content-Type": file.type || "image/jpeg",
+          "X-Filename": file.name
+        }
+        if (this.headers) {
+          for (let k in this.headers)
+            headers[k] = this.headers[k]
+        }
+        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
+          this.$emit("onupload", { file, image: this.$refs["image"], ret })
+        }).catch(err => {
+          this.$emit("onuploaderror", { file, image: this.$refs["image"], err })
+        })
+      }
+    }
+  },
+  watch: {
+    img(val) {
+      if (!this.dataimg) {
+        this.$refs["image"].src = val
+        this.$emit("onchangeimg", val)
+      }
+    }
+  }
+};
+
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"imgconainer"},[_c('img',{ref:"image",attrs:{"width":"100%","height":"100%"},on:{"click":_vm.loadimg}}),_vm._v(" "),_c('input',{ref:"input",staticClass:"theinput",attrs:{"type":"file","accept":"image/*"},on:{"change":_vm.changefile}}),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.name))])]),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.legenda))])]),_vm._v(" "),_c('div',{ref:"updialog",staticClass:"thedialog"},[_c('canvas',{ref:"thecanvas",staticClass:"thecanvas"}),_vm._v(" "),_c('button',{staticClass:"fecha",on:{"click":_vm.canceladialog}},[_vm._v("\n      X\n    ")]),_vm._v(" "),_c('button',{staticClass:"aproxima",on:{"click":_vm.aproxima}},[_vm._v("\n      +\n    ")]),_vm._v(" "),_c('button',{staticClass:"afasta",on:{"click":_vm.afasta}},[_vm._v("\n      -\n    ")]),_vm._v(" "),_c('button',{staticClass:"giraesquerda",on:{"click":_vm.giraesquerda}},[_vm._v("\n      ↺\n    ")]),_vm._v(" "),_c('button',{staticClass:"giradireita",on:{"click":_vm.giradireita}},[_vm._v("\n      ↻\n    ")]),_vm._v(" "),_c('button',{staticClass:"aceita",on:{"click":_vm.aceita}},[_vm._v("\n      ✓\n    ")])])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-dc5feb2c"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-dc5feb2c", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-dc5feb2c", __vue__options__)
+  }
+})()}
+},{"./resizetool":49,"axios":15,"vue":46,"vue-hot-reload-api":44,"vueify/lib/insert-css":47}],51:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("input.theinput[data-v-16dba0ed] {\n  display: none\n}")
 ;(function(){
 //
@@ -18512,4 +18915,4 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-16dba0ed", __vue__options__)
   }
 })()}
-},{"./resizetool":48,"axios":14,"vue":45,"vue-hot-reload-api":43,"vueify/lib/insert-css":46}]},{},[12]);
+},{"./resizetool":49,"axios":15,"vue":46,"vue-hot-reload-api":44,"vueify/lib/insert-css":47}]},{},[13]);
