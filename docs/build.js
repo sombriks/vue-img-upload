@@ -667,6 +667,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
+//
+//
+//
+//
 
 module.exports = {
   name: "Roadmap",
@@ -688,7 +692,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Add import/export support (currently only require/exports supported)")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.1")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")])]),_vm._v(" "),_c('h2',[_vm._v("0.3.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Added 'default image' example")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Add import/export support (currently only require/exports supported)")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.2")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed another dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.1")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")])]),_vm._v(" "),_c('h2',[_vm._v("0.3.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Added 'default image' example")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -18425,7 +18429,7 @@ exports.doportrait = dataimg => new Promise((resolve, reject) => {
     img.src = dataimg
 })
 },{"bluebird":40}],50:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".thedialog[data-v-dc5feb2c] {\n  position: fixed;\n  display: none;\n  background-color: white;\n  top: 0px;\n  bottom: 0px;\n  left: 0px;\n  right: 0px;\n  z-index: 9999;\n  overflow: hidden;\n}\n\n.thedialog>canvas.thecanvas[data-v-dc5feb2c] {\n  position: fixed;\n  border: 1px groove black;\n}\n\n.thedialog>div.toolbox[data-v-dc5feb2c] {\n  position: fixed;\n}\n\n.thedialog>div.toolbox>button[data-v-dc5feb2c] {\n  width: 15%;\n}\n\ninput.theinput[data-v-dc5feb2c] {\n  display: none\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".thedialog[data-v-dc5feb2c] {\n  position: fixed;\n  display: none;\n  background-color: white;\n  top: 0px;\n  bottom: 0px;\n  left: 0px;\n  right: 0px;\n  z-index: 99999;\n  overflow: hidden;\n}\n\n.thedialog>canvas.thecanvas[data-v-dc5feb2c] {\n  position: fixed;\n  border: 1px groove black;\n}\n\n.thedialog>div.toolbox[data-v-dc5feb2c] {\n  position: fixed;\n}\n\n.thedialog>div.toolbox>button[data-v-dc5feb2c] {\n  width: 15%;\n}\n\ninput.theinput[data-v-dc5feb2c] {\n  display: none\n}")
 ;(function(){
 //
 //
@@ -18650,7 +18654,9 @@ module.exports = {
       cnv.style[isportrait ? "top" : "left"] = (isportrait ? (h - w) / 2 : (w - h) / 2) + "px"
       cnv.style[isportrait ? "left" : "top"] = "0px"
       const box = this.$refs["toolbox"]
-      box.style.width = w + "px"
+      box.style[isportrait ? "top" : "left"] = (isportrait ? (h - w) / 2 : (w - h) / 2) + "px"
+      box.style[isportrait ? "left" : "top"] = "0px"
+      box.style.width = (isportrait ? w : h) + "px"
       box.style.height = "3em"
 
       this.desenhaimg()

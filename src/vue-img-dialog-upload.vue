@@ -221,7 +221,9 @@ module.exports = {
       cnv.style[isportrait ? "top" : "left"] = (isportrait ? (h - w) / 2 : (w - h) / 2) + "px"
       cnv.style[isportrait ? "left" : "top"] = "0px"
       const box = this.$refs["toolbox"]
-      box.style.width = w + "px"
+      box.style[isportrait ? "top" : "left"] = (isportrait ? (h - w) / 2 : (w - h) / 2) + "px"
+      box.style[isportrait ? "left" : "top"] = "0px"
+      box.style.width = (isportrait ? w : h) + "px"
       box.style.height = "3em"
 
       this.desenhaimg()
@@ -334,7 +336,7 @@ module.exports = {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  z-index: 9999;
+  z-index: 99999;
   overflow: hidden;
 }
 

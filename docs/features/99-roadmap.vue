@@ -5,6 +5,10 @@
       <li>Add import/export support (currently only require/exports supported)</li>
       <li>Improve mobile usability</li>
     </ul>
+    <h2>0.4.2</h2>
+    <ul>
+      <li>Fixed another dialog buttons positioning problem</li>
+    </ul>
     <h2>0.4.1</h2>
     <ul>
       <li>Fixed dialog buttons positioning problem</li>
