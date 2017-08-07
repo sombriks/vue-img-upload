@@ -671,6 +671,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
+//
+//
+//
+//
 
 module.exports = {
   name: "Roadmap",
@@ -692,7 +696,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Add import/export support (currently only require/exports supported)")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.2")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed another dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.1")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")])]),_vm._v(" "),_c('h2',[_vm._v("0.3.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Added 'default image' example")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Add import/export support (currently only require/exports supported)")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.3")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("fixed buttons trying to submit form")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.2")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed another dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.1")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")])]),_vm._v(" "),_c('h2',[_vm._v("0.3.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Added 'default image' example")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -18484,6 +18488,12 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".thedial
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 const axios = require("axios")
@@ -18763,7 +18773,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"imgconainer"},[_c('img',{ref:"image",attrs:{"width":"100%","height":"100%"},on:{"click":_vm.loadimg}}),_vm._v(" "),_c('input',{ref:"input",staticClass:"theinput",attrs:{"type":"file","accept":"image/*"},on:{"change":_vm.changefile}}),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.name))])]),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.legenda))])]),_vm._v(" "),_c('div',{ref:"updialog",staticClass:"thedialog"},[_c('canvas',{ref:"thecanvas",staticClass:"thecanvas"}),_vm._v(" "),_c('div',{ref:"toolbox",staticClass:"toolbox"},[_c('button',{staticClass:"fecha",on:{"click":_vm.canceladialog}},[_vm._v("\n        X\n      ")]),_vm._v(" "),_c('button',{staticClass:"aproxima",on:{"click":_vm.aproxima}},[_vm._v("\n        +\n      ")]),_vm._v(" "),_c('button',{staticClass:"afasta",on:{"click":_vm.afasta}},[_vm._v("\n        -\n      ")]),_vm._v(" "),_c('button',{staticClass:"giraesquerda",on:{"click":_vm.giraesquerda}},[_vm._v("\n        ↺\n      ")]),_vm._v(" "),_c('button',{staticClass:"giradireita",on:{"click":_vm.giradireita}},[_vm._v("\n        ↻\n      ")]),_vm._v(" "),_c('button',{staticClass:"aceita",on:{"click":_vm.aceita}},[_vm._v("\n        ✓\n      ")])])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"imgconainer"},[_c('img',{ref:"image",attrs:{"width":"100%","height":"100%"},on:{"click":_vm.loadimg}}),_vm._v(" "),_c('input',{ref:"input",staticClass:"theinput",attrs:{"type":"file","accept":"image/*"},on:{"change":_vm.changefile}}),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.name))])]),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.legenda))])]),_vm._v(" "),_c('div',{ref:"updialog",staticClass:"thedialog"},[_c('canvas',{ref:"thecanvas",staticClass:"thecanvas"}),_vm._v(" "),_c('div',{ref:"toolbox",staticClass:"toolbox"},[_c('button',{staticClass:"fecha",attrs:{"type":"button"},on:{"click":_vm.canceladialog}},[_vm._v("\n        X\n      ")]),_vm._v(" "),_c('button',{staticClass:"aproxima",attrs:{"type":"button"},on:{"click":_vm.aproxima}},[_vm._v("\n        +\n      ")]),_vm._v(" "),_c('button',{staticClass:"afasta",attrs:{"type":"button"},on:{"click":_vm.afasta}},[_vm._v("\n        -\n      ")]),_vm._v(" "),_c('button',{staticClass:"giraesquerda",attrs:{"type":"button"},on:{"click":_vm.giraesquerda}},[_vm._v("\n        ↺\n      ")]),_vm._v(" "),_c('button',{staticClass:"giradireita",attrs:{"type":"button"},on:{"click":_vm.giradireita}},[_vm._v("\n        ↻\n      ")]),_vm._v(" "),_c('button',{staticClass:"aceita",attrs:{"type":"button"},on:{"click":_vm.aceita}},[_vm._v("\n        ✓\n      ")])])])])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-dc5feb2c"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")

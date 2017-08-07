@@ -22,27 +22,33 @@
       <div ref="toolbox"
            class="toolbox">
   
-        <button class="fecha"
+        <button type="button"
+                class="fecha"
                 @click="canceladialog">
           X
         </button>
-        <button class="aproxima"
+        <button type="button"
+                class="aproxima"
                 @click="aproxima">
           +
         </button>
-        <button class="afasta"
+        <button type="button"
+                class="afasta"
                 @click="afasta">
           -
         </button>
-        <button class="giraesquerda"
+        <button type="button"
+                class="giraesquerda"
                 @click="giraesquerda">
           &#8634;
         </button>
-        <button class="giradireita"
+        <button type="button"
+                class="giradireita"
                 @click="giradireita">
           &#8635;
         </button>
-        <button class="aceita"
+        <button type="button"
+                class="aceita"
                 @click="aceita">
           &#10003;
         </button>
