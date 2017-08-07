@@ -284,9 +284,10 @@ module.exports = {
       this.$refs['updialog'].style.display = 'none'
       this.$refs["image"].src = this.dataimg
       this.$emit("onimagechange", { file: this.$refs["input"].files[0], image: this.dataimg })
-      if (this.resize) {
+      if (this.resize) 
         this.resizeimage()
-      }
+      else
+        this.dotheupload()
     },
     canceladialog() {
       this.$refs['updialog'].style.display = 'none'
