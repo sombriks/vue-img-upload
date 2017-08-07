@@ -19,30 +19,34 @@
          class="thedialog">
       <canvas ref="thecanvas"
               class="thecanvas"></canvas>
-      <button class="fecha"
-              @click="canceladialog">
-        X
-      </button>
-      <button class="aproxima"
-              @click="aproxima">
-        +
-      </button>
-      <button class="afasta"
-              @click="afasta">
-        -
-      </button>
-      <button class="giraesquerda"
-              @click="giraesquerda">
-        &#8634;
-      </button>
-      <button class="giradireita"
-              @click="giradireita">
-        &#8635;
-      </button>
-      <button class="aceita"
-              @click="aceita">
-        &#10003;
-      </button>
+      <div ref="toolbox"
+           class="toolbox">
+  
+        <button class="fecha"
+                @click="canceladialog">
+          X
+        </button>
+        <button class="aproxima"
+                @click="aproxima">
+          +
+        </button>
+        <button class="afasta"
+                @click="afasta">
+          -
+        </button>
+        <button class="giraesquerda"
+                @click="giraesquerda">
+          &#8634;
+        </button>
+        <button class="giradireita"
+                @click="giradireita">
+          &#8635;
+        </button>
+        <button class="aceita"
+                @click="aceita">
+          &#10003;
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -162,9 +166,9 @@ module.exports = {
       }
     },
     dothepinch(ex, ey) {
-      if(ex > 0 || ey < 0)
+      if (ex > 0 || ey < 0)
         this.afasta()
-      else if(ex < 0 || ey > 0)
+      else if (ex < 0 || ey > 0)
         this.aproxima()
     },
     wheel(ev) {
@@ -216,6 +220,10 @@ module.exports = {
       cnv.setAttributeNode(ch)
       cnv.style[isportrait ? "top" : "left"] = (isportrait ? (h - w) / 2 : (w - h) / 2) + "px"
       cnv.style[isportrait ? "left" : "top"] = "0px"
+      const box = this.$refs["toolbox"]
+      box.style.width = w + "px"
+      box.style.height = "3em"
+
       this.desenhaimg()
     },
     desenhaimg() {
@@ -330,49 +338,17 @@ module.exports = {
   overflow: hidden;
 }
 
-.thedialog>button.fecha,
-.thedialog>button.aproxima,
-.thedialog>button.afasta,
-.thedialog>button.giraesquerda,
-.thedialog>button.giradireita,
-.thedialog>button.aceita {
-  position: fixed;
-  width: 2em;
-}
-
-.thedialog>button.aproxima,
-.thedialog>button.afasta,
-.thedialog>button.giraesquerda,
-.thedialog>button.giradireita,
-.thedialog>button.aceita {
-  left: 0.5em;
-  top: 0.5em;
-}
-
-.thedialog>button.fecha {
-  right: 2.5em;
-  top: 0.5em;
-}
-
-.thedialog>button.afasta {
-  top: 4em;
-}
-
-.thedialog>button.giraesquerda {
-  top: 7.5em;
-}
-
-.thedialog>button.giradireita {
-  top: 11em;
-}
-
-.thedialog>button.aceita {
-  top: 14.5em;
-}
-
 .thedialog>canvas.thecanvas {
   position: fixed;
   border: 1px groove black;
+}
+
+.thedialog>div.toolbox {
+  position: fixed;
+}
+
+.thedialog>div.toolbox>button {
+  width: 15%;
 }
 
 input.theinput {
