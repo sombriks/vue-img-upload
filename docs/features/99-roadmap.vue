@@ -5,6 +5,14 @@
       <li>Add import/export support (currently only require/exports supported)</li>
       <li>Improve mobile usability</li>
     </ul>
+    <h2>0.5.4</h2>
+    <ul>
+      <li>added new events for dialog</li>
+    </ul>
+    <h2>0.4.4</h2>
+    <ul>
+      <li>fixed upload on dialog version</li>
+    </ul>
     <h2>0.4.3</h2>
     <ul>
       <li>fixed buttons trying to submit form</li>

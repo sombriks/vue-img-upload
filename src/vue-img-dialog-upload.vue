@@ -233,6 +233,8 @@ module.exports = {
       box.style.height = "3em"
 
       this.desenhaimg()
+
+      this.$emit("onopendialog", { file: this.$refs["input"].files[0], image: this.dataimg })
     },
     desenhaimg() {
       const theimg = new Image()
@@ -284,6 +286,7 @@ module.exports = {
       this.$refs['updialog'].style.display = 'none'
       this.$refs["image"].src = this.dataimg
       this.$emit("onimagechange", { file: this.$refs["input"].files[0], image: this.dataimg })
+      this.$emit("onclosedialog", { file: this.$refs["input"].files[0], image: this.dataimg })
       if (this.resize) 
         this.resizeimage()
       else
@@ -293,6 +296,7 @@ module.exports = {
       this.$refs['updialog'].style.display = 'none'
       this.dataimg = this.noimg
       this.ajustaimagem()
+      this.$emit("oncanceladialog", { file: this.file[0], image: this.$refs["image"] })
     },
     resizeimage() {
       resizetool.resizedataimg(this.dataimg, this.resize).then(ret => {
