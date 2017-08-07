@@ -293,10 +293,10 @@ module.exports = {
         this.dotheupload()
     },
     canceladialog() {
+      this.$emit("oncanceladialog", { file: this.file[0], image: this.$refs["image"] })
       this.$refs['updialog'].style.display = 'none'
       this.dataimg = this.noimg
       this.ajustaimagem()
-      this.$emit("oncanceladialog", { file: this.file[0], image: this.$refs["image"] })
     },
     resizeimage() {
       resizetool.resizedataimg(this.dataimg, this.resize).then(ret => {
