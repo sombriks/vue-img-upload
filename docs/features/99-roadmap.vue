@@ -5,6 +5,25 @@
       <li>Add import/export support (currently only require/exports supported)</li>
       <li>Improve mobile usability</li>
     </ul>
+    <h2>0.6.0</h2>
+    <ul>
+      <li>Added dependency on hammer.js to better handle gestures (pinch/zoom on new dialog)</li>
+      <li>Added dependency on pixi.js to better handle image scale (pinch/zoom on new dialog)</li>
+      <li>Added "onremoveimage" event when you click on the fancy delete button which appears when 
+        you select an image.</li>
+      <li>Due to a code improvement (it's a feature, not a bug. Trust me), the 'image' field on event parameter became 
+        erratic. For example, if your code handles "onchangefile" and also "onresizefile", only "onresizefile" get all 
+        stuff. the "image" field will be undefined on "onchangefile". I <i>should</i> bump major, 
+        <b>but i will not</b>. This isn't 1.x stuff yet.</li>
+    </ul>
+    <h2>0.5.6</h2>
+    <ul>
+      <li>minor bugfix</li>
+    </ul>
+    <h2>0.5.5</h2>
+    <ul>
+      <li>minor bugfix</li>
+    </ul>
     <h2>0.5.4</h2>
     <ul>
       <li>added new events for dialog</li>
@@ -48,17 +67,11 @@
 <script>
 module.exports = {
   name: "Roadmap",
-  created() {
-
-  },
+  created() {},
   data() {
-    return {
-
-    };
+    return {};
   },
-  methods: {
-
-  }
+  methods: {}
 };
 </script>
 

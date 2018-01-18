@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 const VueImgUpload = require("../src/main")
 Vue.use(VueImgUpload)
 
-Vue.component("doc-menu", require("./components/menu.vue"))
+Vue.component("doc-menu", require("./components/doc-menu.vue"))
 Vue.component("code-preview", require("./components/code-preview.vue"))
 
 const vm = new Vue({

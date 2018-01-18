@@ -12,12 +12,25 @@
         <button @click="ori = ori == 'landscape' ? 'portrait' : 'landscape'">{{ori}}</button>
       </div>
       <div slot="source">
-        &lt;template> &lt;div> &lt;vue-img-upload width="200px" :orientation="ori" legenda="Landscape
-        Only" @onchangefile="gotchange">&lt;/vue-img-upload> Next image will be &lt;button
-        @click="ori = ori == 'landscape' ? 'portrait' : 'landscape'">{ {ori}}&lt;/button>
-        &lt;/div> &lt;/template> &lt;script> module.exports = { name: "Orientation",
-        data(){ return { ori:"portrait" } }, methods:{ gotchange(img){ console.log(img)
-        } } } &lt;/script>
+        &lt;template> 
+          &lt;div> 
+            &lt;vue-img-upload width="200px" :orientation="ori" legenda="Landscape Only" 
+              @onchangefile="gotchange">&lt;/vue-img-upload> 
+            Next image will be 
+            &lt;button @click="ori = ori == 'landscape' ? 'portrait' : 'landscape'">{ {ori}}&lt;/button>
+          &lt;/div> 
+        &lt;/template> 
+        &lt;script> 
+          module.exports = { 
+            name: "Orientation",
+            data(){ 
+              return { ori:"portrait" } 
+            }, 
+            methods:{ 
+              gotchange(img){ console.log(img) } 
+            } 
+          } 
+        &lt;/script>
       </div>
     </code-preview>
   </div>

@@ -2,19 +2,23 @@
   <div class="row">
     <div class="col-xs-12">
       <h3>Image upoad, resize 10%,10%</h3>
+        <p>On upload scenarios, prefer capture <i><b>onupload</b></i> since <i><b>onchangefile</b></i> will not work. 
+        Also set <i><b>onupload</b></i> since remote things might go nasty without warning.</p>
     </div>
     <code-preview class="col-xs-12">
       <div slot="example">
         <label for="theinput">provide http upload link</label><br/>
-        <input id="theinput" v-model="url" style="width:100%"/> <br/>
-        <vue-img-upload width="300px" resize="10%,10%" :url="url" @onupload="gotupload" @onuploaderror="goterror"></vue-img-upload>
+        <input id="theinput" v-model="url" style="width:80%"/> <br/>
+        <vue-img-upload width="300px" resize="10%,10%" :url="url" @onupload="gotupload" 
+        @onuploaderror="goterror"></vue-img-upload>
       </div>
       <div slot="source">
 &lt;template>
   &lt;div>
     &lt;label for="theinput">provide http upload link&lt;/label>&lt;br/>
-    &lt;input id="theinput" v-model="url" style="width:100%"/> &lt;br/>
-    &lt;vue-img-upload width="300px" resize="10%,10%" :url="url" @onupload="gotupload" @onuploaderror="goterror">&lt;/vue-img-upload>
+    &lt;input id="theinput" v-model="url" style="width:80%"/> &lt;br/>
+    &lt;vue-img-upload width="300px" resize="10%,10%" :url="url" @onupload="gotupload" 
+    @onuploaderror="goterror">&lt;/vue-img-upload>
   &lt;/div>
 &lt;/template>
 &lt;script>
@@ -26,9 +30,6 @@ module.exports = {
     };
   }
   methods:{
-    gotchange(img){
-      console.log(img)
-    },
     gotupload(ret){
       console.log(ret)
     },
@@ -51,9 +52,6 @@ module.exports = {
     };
   },
   methods: {
-    gotchange(img){
-      console.log(img)
-    },
     gotupload(ret){
       console.log(ret)
     },

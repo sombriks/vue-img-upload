@@ -7,6 +7,8 @@
     <ul>
       <li>Vue.js 2.2+</li>
       <li>Axios 0.16+</li>
+      <li>Hammer.js 2.0.8+</li>
+      <li>pixi.js 4.6.2+</li>
       <li>Bluebird 3.5+</li>
       <li>brfs 1.4.3+</li>
     </ul>

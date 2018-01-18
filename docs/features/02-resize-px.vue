@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-xs-12">
         <h3>Image preview, resize to 100px</h3>
+        <p>You can capture <i><b>onchangefile</b></i> and <i><b>onresizefile</b></i>, but prefer <i><b>onresizefile</b></i>.</p>
     </div>
     <code-preview class="col-xs-12">
       <div slot="example">

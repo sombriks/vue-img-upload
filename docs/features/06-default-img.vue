@@ -5,42 +5,17 @@
     </div>
     <code-preview class="col-xs-12">
       <div slot="example">
-        <vue-img-upload width="200px"
-                        :img="oneimg"
-                        @onchangefile="gotchange"></vue-img-upload>
-        <span v-show="!changed">Default img is</span>
-        <button v-show="!changed"
-                @click="oneimg = oneimg == 'imgs/star.png' ? 'imgs/wolf-moon.png' : 'imgs/star.png'">{{oneimg}}</button>
-        <span v-show="changed">Once a file is selected, default image isn't needed anymore</span>
+        <vue-img-upload width="200px" :img="oneimg" legenda=""></vue-img-upload>
       </div>
       <div slot="source">
         &lt;template> 
-          &lt;vue-img-upload width="200px" 
-            :img="oneimg" @onchangefile="gotchange">&lt;/vue-img-upload>
-          &lt;span v-show="!changed">Default img is&lt;/span> 
-          &lt;button v-show="!changed"
-            @click="oneimg = oneimg == 'imgs/star.png' ? 'imgs/wolf-moon.png' : 'imgs/star.png'">
-              { {oneimg}}
-            &lt;/button> 
-          &lt;span v-show="changed">
-            Once a file is selected, default image isn't needed anymore&lt;/span> 
+          &lt;vue-img-upload width="200px" :img="oneimg" legenda="">&lt;/vue-img-upload> 
         &lt;/template> 
         &lt;script> 
-        module.exports = { 
-          name: "DefaultImg", 
-          data() {
-            return {
-              oneimg: "imgs/star.png",
-              changed: false
-            };
-          },
-          methods:{ 
-            gotchange(img){ 
-              console.log(img)
-              this.changed = true;
-            } 
+          module.exports = { 
+            name: "DefaultImg", 
+            data: _ => ({ oneimg: "imgs/default1.jpg" }) 
           } 
-        } 
         &lt;/script>
       </div>
     </code-preview>
@@ -48,21 +23,10 @@
 </template>
 
 <script>
-module.exports = {
-  name: "DefaultImg",
-  data() {
-    return {
-      oneimg: "imgs/star.png",
-      changed: false
-    };
-  },
-  methods: {
-    gotchange(img) {
-      console.log(img)
-      this.changed = true;
-    }
-  }
-};
+  module.exports = { 
+    name: "DefaultImg", 
+    data: _ => ({ oneimg: "imgs/default1.jpg" }) 
+  } 
 </script>
 
 <style>

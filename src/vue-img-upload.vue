@@ -1,35 +1,27 @@
 <template>
-  <div ref="imgconainer">
-    <img ref="image"
-         width="100%"
-         height="100%"
-         @click="loadimg" />
-    <input type="file"
-           ref="input"
-           class="theinput"
-           accept="image/*"
-           @change="changefile" />
-    <div>
-      <small>{{name}}</small>
-    </div>
-    <div>
+  <div ref="imgconainer" class="theimgcontainer">
+    <img v-if="!dataimg" :src="img ? img : noimg" width="100%" height="100%" class="theimg" @click="loadimg" />
+    <img v-if="dataimg" :src="dataimg" ref="image" width="100%" height="100%" class="theimg" />
+    <img v-if="dataimg" :src="cancelimg" class="cancelimg" @click="removeimg" />
+    <input type="file" ref="input" class="theinput" accept="image/*" @change="changefile" />
+    <div class="legenda" v-if="!dataimg" @click="loadimg">
       <small>{{legenda}}</small>
+    </div>
+    <div v-if="file">
+      <small @click="loadimg">{{file.name}}</small>
     </div>
   </div>
 </template>
-<style scoped>
-input.theinput {
-  display: none
-}
-</style>
 <script>
-const fs = require("fs")
-const axios = require("axios")
-const resizetool = require("./resizetool")
+const fs = require("fs");
+const axios = require("axios");
+const resizetool = require("./resizetool");
 module.exports = {
-  // vue-img-upload
   name: "VueImgUpload",
   props: {
+    url: String,
+    headers: Object,
+    resize: String,
     width: {
       type: String,
       default: "auto"
@@ -46,9 +38,6 @@ module.exports = {
       type: String,
       default: "post"
     },
-    url: String,
-    headers: Object,
-    resize: String,
     orientation: {
       type: String,
       default: "any"
@@ -60,99 +49,141 @@ module.exports = {
   },
   data() {
     return {
-      name: "",
       dataimg: undefined,
-      noimg: "data:image/svg+xml;base64," + fs.readFileSync(__dirname + "/no-img.svg", "base64")
-    }
+      file: undefined,
+      noimg:
+        "data:image/svg+xml;base64," +
+        fs.readFileSync(__dirname + "/no-img.svg", "base64"),
+      cancelimg:
+        "data:image/svg+xml;base64," +
+        fs.readFileSync(__dirname + "/cancel-img.svg", "base64")
+    };
   },
   mounted() {
-    let attr = document.createAttribute("style")
-    attr.value = `width:${this.width};height:${this.height};`
-    this.$refs["imgconainer"].setAttributeNode(attr)
-    if (this.img != null)
-      this.$refs["image"].src = this.img
-    else
-      this.$refs["image"].src = this.noimg
+    let attr = document.createAttribute("style");
+    attr.value = `width:${this.width};height:${this.height};`;
+    this.$refs["imgconainer"].setAttributeNode(attr);
   },
   methods: {
     loadimg() {
-      this.$refs["input"].click()
+      this.file = null;
+      this.$refs["input"].type = "";
+      this.$refs["input"].type = "file";
+      this.$refs["input"].click();
     },
     changefile() {
-      let file = this.$refs["input"].files[0]
+      this.file = this.$refs["input"].files[0];
+      let file = this.file;
       if (!file) {
         // silent french exit
-        return
+        return;
       }
-      this.name = file.name
-      this.$emit("onchangefile", { file, image: this.$refs["image"] })
-      if (this.resize)
-        this.resizefile()
-      else
-        this.previewimg()
+      this.$nextTick(_ => {
+        this.$emit("onchangefile", { file, image: this.$refs["image"] });
+      });
+      if (this.resize) this.resizefile();
+      else this.previewimg();
     },
     resizefile() {
-      let file = this.$refs["input"].files[0]
-      resizetool.resize(file, this.resize).then((ret) => {
-        this.dataimg = ret // preview
-        this.checkorientation()
-        this.$emit("onresizefile", { file, image: this.$refs["image"] })
-      })
+      let file = this.file; //this.$refs["input"].files[0];
+      resizetool.resize(file, this.resize).then(ret => {
+        this.dataimg = ret; // preview
+        this.$nextTick(_ =>
+          this.$emit("onresizefile", { file, image: this.$refs["image"] })
+        );
+        this.checkorientation();
+      });
     },
     previewimg() {
-      let file = this.$refs["input"].files[0]
-      this.dataimg = URL.createObjectURL(file)
-      this.checkorientation()
+      let file = this.file;
+      this.dataimg = URL.createObjectURL(file);
+      this.checkorientation();
     },
     checkorientation() {
-      let file = this.$refs["input"].files[0]
+      let file = this.file;
       if (this.orientation == "landscape") {
         resizetool.dolandscape(this.dataimg).then(dataimg => {
-          this.dataimg = dataimg
-          this.$refs["image"].src = this.dataimg
-          this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
-          this.dotheupload()
-        })
+          this.dataimg = dataimg;
+          this.$emit("onchangeorientation", {
+            file,
+            image: this.$refs["image"]
+          });
+          this.dotheupload();
+        });
       } else if (this.orientation == "portrait") {
         resizetool.doportrait(this.dataimg).then(dataimg => {
           this.dataimg = dataimg;
-          this.$refs["image"].src = this.dataimg
-          this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
-          this.dotheupload()
-        })
+          this.$emit("onchangeorientation", {
+            file,
+            image: this.$refs["image"]
+          });
+          this.dotheupload();
+        });
       } else {
-        this.$refs["image"].src = this.dataimg
-        this.dotheupload()
+        this.dotheupload();
       }
     },
     dotheupload() {
       if (this.url) {
         // le's trust the image, not the file
-        let img = this.$refs["image"]
-        let file = this.$refs["input"].files[0]
+        let img = this.$refs["image"];
+        let file = this.file;
         const headers = {
           "Content-Type": file.type || "image/jpeg",
           "X-Filename": file.name
-        }
+        };
         if (this.headers) {
-          for (let k in this.headers)
-            headers[k] = this.headers[k]
+          for (let k in this.headers) headers[k] = this.headers[k];
         }
-        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
-          this.$emit("onupload", { file, image: this.$refs["image"], ret })
-        }).catch(err => {
-          this.$emit("onuploaderror", { file, image: this.$refs["image"], err })
+        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), {
+          headers
         })
+          .then(ret =>
+            this.$nextTick(_ =>
+              this.$emit("onupload", { file, image: this.$refs["image"], ret })
+            )
+          )
+          .catch(err => {
+            this.$nextTick(_ =>
+              this.$emit("onuploaderror", {
+                file,
+                image: this.$refs["image"], 
+                err
+              })
+            );
+          });
       }
-    }
-  },
-  watch: {
-    img(val) {
-      if (!this.dataimg) {
-        this.$refs["image"].src = val
-        this.$emit("onchangeimg", val)
-      }
+    },
+    removeimg() {
+      this.dataimg = null;
+      this.file = null;
+      this.$emit("onremoveimage");
     }
   }
-}
+};
 </script>
+
+<style scoped>
+.theimgcontainer {
+  position: relative;
+}
+.theimg {
+  min-height: 100px;
+}
+input.theinput {
+  display: none;
+}
+.legenda {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+.cancelimg {
+  position: absolute;
+  max-width: 40px;
+  max-height: 40px;
+  top: -20px;
+  right: -20px;
+}
+</style>
