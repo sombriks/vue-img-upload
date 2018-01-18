@@ -45,8 +45,15 @@
   </div>
 </template>
 <script>
+const VueRouter = require("vue-router")
 module.exports = {
-  name: "DocRoot"
+  name: "DocRoot",
+  router: new VueRouter({
+    routes: [
+      { path: "/", redirect: "/00-start" },
+      ... require("./components/routes")
+    ]
+  }),
 }
 </script>
 <style scoped>

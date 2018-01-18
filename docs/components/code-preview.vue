@@ -17,5 +17,5 @@
   </div>
 </template>
 <script>
-exports.name = "CodePreview";
+exports.name = "CodePreview"
 </script>

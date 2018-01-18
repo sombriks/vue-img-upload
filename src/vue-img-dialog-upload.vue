@@ -13,7 +13,7 @@
       </div>
     </div>
     <div ref="thedialog" class="thedialog">
-
+      <!-- TODO terminar --> 
     </div>
   </div>
 </template>
