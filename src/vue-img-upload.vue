@@ -95,8 +95,7 @@ module.exports = {
       });
     },
     previewimg() {
-      let file = this.file;
-      this.dataimg = URL.createObjectURL(file);
+      this.dataimg = URL.createObjectURL(this.file);
       this.checkorientation();
     },
     checkorientation() {

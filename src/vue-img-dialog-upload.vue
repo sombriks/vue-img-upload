@@ -13,7 +13,10 @@
       </div>
     </div>
     <div ref="thedialog" class="thedialog">
-      <!-- TODO terminar --> 
+      <div class="dialogpane">
+        <img :src="cancelimg" class="cancelimg" @click="closedialog" />
+        <div ref="imgpane" class="imgpane"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -66,14 +69,28 @@ module.exports = {
     this.$refs["imgconainer"].setAttributeNode(attr);
   },
   methods: {
-    loadimg() {
+    resetfile() {
       this.file = null;
+      this.dataimg = null;
       this.$refs["input"].type = "";
       this.$refs["input"].type = "file";
+    },
+    loadimg() {
+      this.resetfile();
       this.$refs["input"].click();
     },
     changefile() {
+      this.file = this.$refs["input"].files[0];
+      let file = this.file;
+      if (!file) {
+        // silent french exit
+        return;
+      }
       this.$refs["thedialog"].style.display = "block";
+    },
+    closedialog() {
+      this.$refs["thedialog"].style.display = "none";
+      this.resetfile();
     }
   }
 };
@@ -98,8 +115,8 @@ input.theinput {
   position: absolute;
   max-width: 40px;
   max-height: 40px;
-  top: -20px;
-  right: -20px;
+  top: 50px;
+  right: 50px;
 }
 .thedialog {
   display: none;
@@ -110,5 +127,8 @@ input.theinput {
   bottom: 0px;
   left: 0px;
   right: 0px;
+}
+.imgpane {
+  position: absolute;
 }
 </style>

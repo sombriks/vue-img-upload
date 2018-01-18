@@ -24,6 +24,8 @@
     <h3>Roadmap</h3>
     <p>See
       <router-link to="/99-roadmap">here</router-link>.</p>
+    <h3>Help wanted!</h3>
+    <p>This is an open source project and i am still willing to receive patches.</p>
   </div>
 </template>
 

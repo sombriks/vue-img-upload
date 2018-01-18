@@ -6,11 +6,13 @@
     </div>
     <code-preview class="col-xs-12">
       <div slot="example">
-        <vue-img-upload resize="50%" width="200px" @onresizefile="gotchange"></vue-img-upload>
+        <vue-img-upload resize="50%" width="200px" 
+        @onresizefile="gotchange"></vue-img-upload>
       </div>
       <div slot="source">
 &lt;template>
-  &lt;vue-img-upload resize="50%" width="200px" @onresizefile="gotchange">&lt;/vue-img-upload>
+  &lt;vue-img-upload resize="50%" width="200px" 
+  @onresizefile="gotchange">&lt;/vue-img-upload>
 &lt;/template>
 &lt;script>
 module.exports = {
