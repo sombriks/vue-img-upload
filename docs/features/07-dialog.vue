@@ -12,8 +12,9 @@
       <div slot="source">
 &lt;template>
   &lt;vue-img-dialog-upload width="200px"
-                        @onchangefile="gotchange"
-                        @onimagechange="gotnewimage">&lt;/vue-img-dialog-upload>
+    @onchangefile="gotchange"
+    @onimagechange="gotnewimage">
+  &lt;/vue-img-dialog-upload>
 &lt;/template>
 &lt;script>
 module.exports = {
