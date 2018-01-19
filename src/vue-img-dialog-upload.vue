@@ -14,7 +14,7 @@
     </div>
     <div ref="thedialog" class="thedialog">
       <div class="dialogpane">
-        <div ref="imgpane" class="imgpane"></div>
+        <canvas ref="imgpane" :width="cwidth" :height="cheight" class="imgpane"></canvas>
         <img :src="cancelimg" class="dialogcancelimg" @click="closedialog" />
       </div>
     </div>
@@ -24,7 +24,6 @@
 const fs = require("fs");
 const axios = require("axios");
 const resizetool = require("./resizetool");
-const PIXI = require("pixi.js");
 const Hammer = require("hammerjs");
 module.exports = {
   name: "VueImgDialogUpload",
@@ -53,13 +52,14 @@ module.exports = {
     }
   },
   data: _ => ({
+    imx: 0,
+    imy: 0,
+    cwidth: 240,
+    cheight: 320,
     mc: undefined,
     file: undefined,
-    pixiapp: undefined,
-    piximg: undefined,
+    cnvimg: undefined,
     dataimg: undefined,
-    dragging: false,
-    dragdata: undefined,
     noimg:
       "data:image/svg+xml;base64," +
       fs.readFileSync(__dirname + "/no-img.svg", "base64"),
@@ -74,12 +74,15 @@ module.exports = {
     let attr = document.createAttribute("style");
     attr.value = `width:${this.width};height:${this.height};`;
     this.$refs["imgconainer"].setAttributeNode(attr);
+
     this.mc = new Hammer(this.$refs["imgpane"]);
+
     this.mc.get("pinch").set({ enable: true });
-    this.mc.get("rotate").set({ enable: true });
     this.mc.get("pan").set({ direction: Hammer.DIRECTION_ALL });
-    this.mc.get("swipe").set({ direction: Hammer.DIRECTION_VERTICAL });
+
     this.mc.on("pinch", e => this.pinchimg(e));
+    this.mc.on("pan", e => this.panimg(e));
+    this.checkcnvsize();
   },
   methods: {
     resetfile() {
@@ -92,6 +95,17 @@ module.exports = {
       this.resetfile();
       this.$refs["input"].click();
     },
+    checkcnvsize() {
+      let w = window.innerWidth;
+      let h = window.innerHeight;
+      // we need a square
+      let portrait = w > h;
+      let landscape = h >= w;
+      if (landscape) h = w;
+      if (portrait) w = h;
+      this.cwidth = w;
+      this.cheight = h;
+    },
     changefile() {
       this.file = this.$refs["input"].files[0];
       let file = this.file;
@@ -100,60 +114,31 @@ module.exports = {
         return;
       }
       this.dataimg = URL.createObjectURL(this.file);
+      this.cnvimg = new Image();
+      this.cnvimg.onload = _ => {
+        let imgpane = this.$refs["imgpane"];
+        this.imx = 0;
+        this.imy = 0;
+        imgpane.getContext("2d").drawImage(this.cnvimg, this.imx, this.imy);
+      };
+      this.cnvimg.src = this.dataimg;
       this.$refs["thedialog"].style.display = "block";
-      let rootcanvas = this.$refs["imgpane"];
-      let w = window.innerWidth;
-      let h = window.innerHeight;
-      // we need a square
-      let portrait = w > h;
-      let landscape = h >= w;
-      if (landscape) h = w;
-      if (portrait) w = h;
-      this.pixiapp = new PIXI.Application(w, h, { backgroundColor: 0xf0f0f0 });
-      rootcanvas.appendChild(this.pixiapp.view);
-
-      this.piximg = PIXI.Sprite.fromImage(this.dataimg);
-      this.piximg.anchor.set(0.5);
-      this.piximg.x = w/2;
-      this.piximg.y = h/2;
-      this.piximg.interactive = true;
-      this.piximg.buttonMode = true;
-      this.piximg
-        .on("pointerdown", this.onDragStart)
-        .on("pointerup", this.onDragEnd)
-        .on("pointerupoutside", this.onDragEnd)
-        .on("pointermove", this.onDragMove);
-      this.pixiapp.stage.addChild(this.piximg);
     },
     closedialog() {
       this.$refs["thedialog"].style.display = "none";
       this.resetfile();
-      let rootcanvas = this.$refs["imgpane"];
-      if (this.pixiapp) {
-        this.pixiapp.destroy();
-        this.pixiapp = null;
-        this.piximg = null;
-        rootcanvas.innerHTML = "";
-      }
+      // rootcanvas.innerHTML = "";;
     },
     pinchimg(e) {
-      const piximg = this.piximg;
-      if (!piximg) return;
+      console.log(e);
     },
-    onDragStart(e) {
-      this.dragging = true;
-      this.dragdata = e.data;
-    },
-    onDragEnd(e) {
-      this.dragging = false;
-      this.dragdata = undefined;
-    },
-    onDragMove(e) {
-      if (this.dragging) {
-        let xy = this.dragdata.getLocalPosition(this.piximg.parent);
-        this.piximg.x = xy.x;
-        this.piximg.y = xy.y;
-      }
+    panimg(e) {
+      let imgpane = this.$refs["imgpane"];
+      imgpane.getContext("2d").clearRect(0, 0, this.cwidth, this.cheight);
+      this.imx += e.deltaX * 0.2;
+      this.imy += e.deltaY * 0.2;
+      imgpane.getContext("2d").drawImage(this.cnvimg, this.imx, this.imy);
+      console.log(e);
     }
   }
 };
@@ -183,7 +168,7 @@ input.theinput {
   right: -20px;
 }
 .dialogcancelimg {
-  top: 30px;
+  top: 0px;
   right: 30px;
 }
 .thedialog {
@@ -198,6 +183,7 @@ input.theinput {
 }
 .imgpane {
   position: absolute;
+  top: 35px;
   left: 0px;
   right: 0px;
   /* border: 1px groove black; */
