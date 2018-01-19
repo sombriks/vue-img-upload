@@ -14,7 +14,7 @@
     </div>
     <div ref="thedialog" class="thedialog">
       <div class="dialogpane">
-        <canvas ref="imgpane" :width="cwidth" :height="cheight" class="imgpane"></canvas>
+        <div ref="imgpane" class="imgpane"></div>
         <img :src="cancelimg" class="dialogcancelimg" @click="closedialog" />
       </div>
     </div>
@@ -24,7 +24,8 @@
 const fs = require("fs");
 const axios = require("axios");
 const resizetool = require("./resizetool");
-const Hammer = require("hammerjs");
+const Croppie = require("croppie");
+
 module.exports = {
   name: "VueImgDialogUpload",
   props: {
@@ -56,9 +57,7 @@ module.exports = {
     imy: 0,
     cwidth: 240,
     cheight: 320,
-    mc: undefined,
     file: undefined,
-    cnvimg: undefined,
     dataimg: undefined,
     noimg:
       "data:image/svg+xml;base64," +
@@ -74,14 +73,6 @@ module.exports = {
     let attr = document.createAttribute("style");
     attr.value = `width:${this.width};height:${this.height};`;
     this.$refs["imgconainer"].setAttributeNode(attr);
-
-    this.mc = new Hammer(this.$refs["imgpane"]);
-
-    this.mc.get("pinch").set({ enable: true });
-    this.mc.get("pan").set({ direction: Hammer.DIRECTION_ALL });
-
-    this.mc.on("pinch", e => this.pinchimg(e));
-    this.mc.on("pan", e => this.panimg(e));
     this.checkcnvsize();
   },
   methods: {
@@ -113,32 +104,17 @@ module.exports = {
         // silent french exit
         return;
       }
-      this.dataimg = URL.createObjectURL(this.file);
-      this.cnvimg = new Image();
-      this.cnvimg.onload = _ => {
+      resizetool.resize(file, this.cwidth + "px").then(ret => {
+        this.dataimg = ret;
         let imgpane = this.$refs["imgpane"];
-        this.imx = 0;
-        this.imy = 0;
-        imgpane.getContext("2d").drawImage(this.cnvimg, this.imx, this.imy);
-      };
-      this.cnvimg.src = this.dataimg;
-      this.$refs["thedialog"].style.display = "block";
+        new Croppie(imgpane, { url: this.dataimg });
+        this.$refs["thedialog"].style.display = "block";
+      });
     },
     closedialog() {
       this.$refs["thedialog"].style.display = "none";
       this.resetfile();
       // rootcanvas.innerHTML = "";;
-    },
-    pinchimg(e) {
-      console.log(e);
-    },
-    panimg(e) {
-      let imgpane = this.$refs["imgpane"];
-      imgpane.getContext("2d").clearRect(0, 0, this.cwidth, this.cheight);
-      this.imx += e.deltaX * 0.2;
-      this.imy += e.deltaY * 0.2;
-      imgpane.getContext("2d").drawImage(this.cnvimg, this.imx, this.imy);
-      console.log(e);
     }
   }
 };
@@ -184,8 +160,8 @@ input.theinput {
 .imgpane {
   position: absolute;
   top: 35px;
-  left: 0px;
-  right: 0px;
-  /* border: 1px groove black; */
+  left: 20%;
+  right: 20%;
+  border: 1px groove black;
 }
 </style>

@@ -7,8 +7,8 @@
     </ul>
     <h2>0.6.0</h2>
     <ul>
-      <li>Added dependency on hammer.js to better handle gestures (pinch/zoom on new dialog)</li>
-      <li>Added dependency on pixi.js to better handle image scale (pinch/zoom on new dialog)</li>
+      <li>Added <b>vue-croppie</b> event when you click on the fancy delete button which appears when 
+        you select an image.</li>
       <li>Added "onremoveimage" event when you click on the fancy delete button which appears when 
         you select an image.</li>
       <li>Due to a code improvement (it's a feature, not a bug. Trust me), the 'image' field on event parameter became 
