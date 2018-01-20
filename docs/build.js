@@ -15,27 +15,17 @@
 //
 //
 //
+//
+//
+//
 
-module.exports = {
-  name: "CodePreview",
-  created() {
-
-  },
-  data() {
-    return {
-
-    };
-  },
-  methods: {
-
-  }
-};
+exports.name = "CodePreview"
 
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xs-4"},[_c('h5',[_vm._v("Example")]),_vm._v(" "),_vm._t("example")],2),_vm._v(" "),_c('div',{staticClass:"col-xs-8"},[_c('h5',[_vm._v("Source")]),_vm._v(" "),_c('pre',[_vm._v("      "),_vm._t("source"),_vm._v("\n    ")],2)])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xs-12"},[_c('h5',[_vm._v("Example")]),_vm._v(" "),_vm._t("example")],2)]),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-xs-12"},[_c('h5',[_vm._v("Source")]),_vm._v(" "),_c('pre',[_vm._v("      "),_vm._t("source"),_vm._v("\n    ")],2)])])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -47,7 +37,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-e84fe046", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],2:[function(require,module,exports){
+},{"vue":48,"vue-hot-reload-api":46}],2:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -63,29 +53,54 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
+//
+//
 
+const routes = require("./routes");
 module.exports = {
   name: "DocMenu",
+  data: _ => ({ routes })
 };
 
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_c('router-link',{attrs:{"to":"/00-start"}},[_vm._v("Start")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/01-basic"}},[_vm._v("Basic Usage")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/02-resize-px"}},[_vm._v("Resize (px)")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/03-resize-pct"}},[_vm._v("Resize (%)")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/04-upload"}},[_vm._v("Upload")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/05-orientation"}},[_vm._v("Orientation")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/06-default-img"}},[_vm._v("Default img")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/07-dialog"}},[_vm._v("Dialog")])],1),_vm._v(" "),_c('li',[_c('router-link',{attrs:{"to":"/99-roadmap"}},[_vm._v("Roadmap")])],1)])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',_vm._l((_vm.routes),function(r){return _c('li',{key:r.path},[_c('router-link',{attrs:{"to":r.path}},[_vm._v(_vm._s(r.label))])],1)}))}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1c4106d4", __vue__options__)
+    hotAPI.createRecord("data-v-612e256e", __vue__options__)
   } else {
-    hotAPI.reload("data-v-1c4106d4", __vue__options__)
+    hotAPI.reload("data-v-612e256e", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],3:[function(require,module,exports){
+},{"./routes":3,"vue":48,"vue-hot-reload-api":46}],3:[function(require,module,exports){
+module.exports = [
+  { path: "/00-start", label:"Start", component: require("../features/00-start.vue") },
+  { path: "/01-basic", label:"Basic Usage", component: require("../features/01-basic.vue") },
+  { path: "/02-resize-px", label:"Resize (px)", component: require("../features/02-resize-px.vue") },
+  { path: "/03-resize-pct", label:"Resize (%)", component: require("../features/03-resize-pct.vue") },
+  { path: "/04-upload", label:"Upload", component: require("../features/04-upload.vue") },
+  { path: "/05-orientation", label:"Orientation", component: require("../features/05-orientation.vue") },
+  { path: "/06-default-img", label:"Default Img", component: require("../features/06-default-img.vue") },
+  { path: "/07-dialog", label:"Dialog", component: require("../features/07-dialog.vue") },
+  { path: "/99-roadmap", label:"Roadmap", component: require("../features/99-roadmap.vue") }
+]
+},{"../features/00-start.vue":4,"../features/01-basic.vue":5,"../features/02-resize-px.vue":6,"../features/03-resize-pct.vue":7,"../features/04-upload.vue":8,"../features/05-orientation.vue":9,"../features/06-default-img.vue":10,"../features/07-dialog.vue":11,"../features/99-roadmap.vue":12}],4:[function(require,module,exports){
 ;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -133,8 +148,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h3',[_vm._v("Introduction")]),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('h3',[_vm._v("Dependencies")]),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('p',[_vm._v("Your project must provide that in order to get things working.")]),_vm._v(" "),_c('h3',[_vm._v("Installation")]),_vm._v(" "),_c('pre',[_vm._v("    npm install vue-img-upload --save\n  ")]),_vm._v(" "),_c('p',[_vm._v("After that you have to register it with Vue:")]),_vm._v(" "),_c('pre',[_vm._v("    const VueImgUpload = require(\"vue-img-upload\")\n    Vue.use(VueImgUpload)")]),_vm._v(" "),_c('h3',[_vm._v("Roadmap")]),_vm._v(" "),_c('p',[_vm._v("See\n    "),_c('router-link',{attrs:{"to":"/99-roadmap"}},[_vm._v("here")]),_vm._v(".")],1)])}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_vm._v("Vue Image Upload is yet another\n    "),_c('a',{attrs:{"href":"https://vuejs.org/","target":"vuejs"}},[_vm._v("vue.js")]),_vm._v(" lib to preview/upload images.")])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_vm._v("Vue.js 2.2+")]),_vm._v(" "),_c('li',[_vm._v("Axios 0.16+")]),_vm._v(" "),_c('li',[_vm._v("Bluebird 3.5+")]),_vm._v(" "),_c('li',[_vm._v("brfs 1.4.3+")])])}]
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h3',[_vm._v("Introduction")]),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('h3',[_vm._v("Dependencies")]),_vm._v(" "),_vm._m(1),_vm._v(" "),_vm._m(2),_vm._v(" "),_c('h3',[_vm._v("Installation")]),_vm._v(" "),_c('pre',[_vm._v("      npm install croppie --save\n      // all othe dependecies\n      npm install vue-img-upload --save\n    ")]),_vm._v(" "),_c('p',[_vm._v("After that you have to register it with Vue:")]),_vm._v(" "),_c('pre',[_vm._v("require(\"../node_modules/croppie/croppie.css\")\n\nconst VueImgUpload = require(\"vue-img-upload\")\nVue.use(VueImgUpload)\n// now you can use either vue-img-ipload or vue-img-dialog-upload\n    ")]),_vm._v(" "),_c('h3',[_vm._v("Roadmap")]),_vm._v(" "),_c('p',[_vm._v("See\n      "),_c('router-link',{attrs:{"to":"/99-roadmap"}},[_vm._v("here")]),_vm._v(".")],1),_vm._v(" "),_c('h3',[_vm._v("Help wanted!")]),_vm._v(" "),_c('p',[_vm._v("This is an open source project and i am still willing to receive patches.")])])}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_vm._v("Vue Image Upload is yet another\n      "),_c('a',{attrs:{"href":"https://vuejs.org/","target":"vuejs"}},[_vm._v("vue.js")]),_vm._v(" lib to preview/upload images.")])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_vm._v("Vue.js 2.2+")]),_vm._v(" "),_c('li',[_vm._v("Axios 0.16+")]),_vm._v(" "),_c('li',[_vm._v("Croppie 2.5.1+")]),_vm._v(" "),_c('li',[_vm._v("Bluebird 3.5+")]),_vm._v(" "),_c('li',[_vm._v("Brfs 1.4.3+")])])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_vm._v("Your project "),_c('b',[_vm._v("must")]),_vm._v(" provide that in order to get things working.")])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -145,8 +160,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-7e04f583", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],4:[function(require,module,exports){
+},{"vue":48,"vue-hot-reload-api":46}],5:[function(require,module,exports){
 ;(function(){
+//
+//
+//
+//
 //
 //
 //
@@ -197,7 +216,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px"},on:{"onchangefile":_vm.gotchange}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-upload width=\"200px\" @onchangefile=\"gotchange\"></vue-img-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"Basic\",\n  methods:{\n    gotchange(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","legenda":"Touch to select image"},on:{"onchangefile":_vm.gotchange}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-upload width=\"200px\" \n    legenda=\"Touch to select image\"\n    @onchangefile=\"gotchange\"></vue-img-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"Basic\",\n  methods:{\n    gotchange(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image preview, no resize")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -209,8 +228,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-2c8cf210", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],5:[function(require,module,exports){
+},{"vue":48,"vue-hot-reload-api":46}],6:[function(require,module,exports){
 ;(function(){
+//
+//
+//
 //
 //
 //
@@ -267,8 +289,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"resize":"100px","width":"200px"},on:{"onchangefile":_vm.gotchange,"onresizefile":_vm.gotresize}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-upload resize=\"100px\" width=\"200px\" @onchangefile=\"gotchange\" @onresizefile=\"gotresize\"></vue-img-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"ResizePx\",\n  methods:{\n    gotchange(img){\n      console.log(img)\n    },\n    gotresize(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image preview, resize to 100px")])])}]
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"resize":"100px","width":"200px"},on:{"onchangefile":_vm.gotchange,"onresizefile":_vm.gotresize}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-upload resize=\"100px\" width=\"200px\" \n  @onchangefile=\"gotchange\" @onresizefile=\"gotresize\"></vue-img-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"ResizePx\",\n  methods:{\n    gotchange(img){\n      console.log(img)\n    },\n    gotresize(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image preview, resize to 100px")]),_vm._v(" "),_c('p',[_vm._v("You can capture "),_c('i',[_c('b',[_vm._v("onchangefile")])]),_vm._v(" and "),_c('i',[_c('b',[_vm._v("onresizefile")])]),_vm._v(", but prefer "),_c('i',[_c('b',[_vm._v("onresizefile")])]),_vm._v(".")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -279,8 +301,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-40f1bf64", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],6:[function(require,module,exports){
+},{"vue":48,"vue-hot-reload-api":46}],7:[function(require,module,exports){
 ;(function(){
+//
+//
+//
 //
 //
 //
@@ -331,8 +356,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"resize":"50%","width":"200px"},on:{"onchangefile":_vm.gotchange}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-upload resize=\"50%\" width=\"200px\" @onchangefile=\"gotchange\"></vue-img-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"ResizePx\",\n  methods:{\n    gotchange(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image preview, resize  50%")])])}]
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"resize":"50%","width":"200px"},on:{"onresizefile":_vm.gotchange}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-upload resize=\"50%\" width=\"200px\" \n  @onresizefile=\"gotchange\"></vue-img-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"ResizePx\",\n  methods:{\n    gotchange(img){\n      console.log(img)\n    }\n  }\n}\n</script> \n      ")])])],1)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image preview, resize  50%")]),_vm._v(" "),_c('p',[_vm._v("You can capture "),_c('i',[_c('b',[_vm._v("onchangefile")])]),_vm._v(" and "),_c('i',[_c('b',[_vm._v("onresizefile")])]),_vm._v(", but prefer "),_c('i',[_c('b',[_vm._v("onresizefile")])]),_vm._v(".")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -343,8 +368,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-c28802d8", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],7:[function(require,module,exports){
+},{"vue":48,"vue-hot-reload-api":46}],8:[function(require,module,exports){
 ;(function(){
+//
+//
+//
 //
 //
 //
@@ -398,9 +426,6 @@ module.exports = {
     };
   },
   methods: {
-    gotchange(img){
-      console.log(img)
-    },
     gotupload(ret){
       console.log(ret)
     },
@@ -414,8 +439,8 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('label',{attrs:{"for":"theinput"}},[_vm._v("provide http upload link")]),_c('br'),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.url),expression:"url"}],staticStyle:{"width":"100%"},attrs:{"id":"theinput"},domProps:{"value":(_vm.url)},on:{"input":function($event){if($event.target.composing){ return; }_vm.url=$event.target.value}}}),_vm._v(" "),_c('br'),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"10%,10%","url":_vm.url},on:{"onupload":_vm.gotupload,"onuploaderror":_vm.goterror}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <div>\n    <label for=\"theinput\">provide http upload link</label><br/>\n    <input id=\"theinput\" v-model=\"url\" style=\"width:100%\"/> <br/>\n    <vue-img-upload width=\"300px\" resize=\"10%,10%\" :url=\"url\" @onupload=\"gotupload\" @onuploaderror=\"goterror\"></vue-img-upload>\n  </div>\n</template>\n<script>\nmodule.exports = {\n  name: \"Upload\",\n  data(){\n    return {\n      url:\"http://localhost:3000/upimage\"\n    };\n  }\n  methods:{\n    gotchange(img){\n      console.log(img)\n    },\n    gotupload(ret){\n      console.log(ret)\n    },\n    goterror(ret){\n      console.log(ret)\n    }\n  }\n}\n</script>\n      ")])])],1)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image upoad, resize 10%,10%")])])}]
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('label',{attrs:{"for":"theinput"}},[_vm._v("provide http upload link")]),_c('br'),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.url),expression:"url"}],staticStyle:{"width":"80%"},attrs:{"id":"theinput"},domProps:{"value":(_vm.url)},on:{"input":function($event){if($event.target.composing){ return; }_vm.url=$event.target.value}}}),_vm._v(" "),_c('br'),_vm._v(" "),_c('vue-img-upload',{attrs:{"width":"300px","resize":"10%,10%","url":_vm.url},on:{"onupload":_vm.gotupload,"onuploaderror":_vm.goterror}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <div>\n    <label for=\"theinput\">provide http upload link</label><br/>\n    <input id=\"theinput\" v-model=\"url\" style=\"width:80%\"/> <br/>\n    <vue-img-upload width=\"300px\" resize=\"10%,10%\" \n    :url=\"url\" @onupload=\"gotupload\" \n    @onuploaderror=\"goterror\"></vue-img-upload>\n  </div>\n</template>\n<script>\nmodule.exports = {\n  name: \"Upload\",\n  data(){\n    return {\n      url:\"http://localhost:3000/upimage\"\n    };\n  }\n  methods:{\n    gotupload(ret){\n      console.log(ret)\n    },\n    goterror(ret){\n      console.log(ret)\n    }\n  }\n}\n</script>\n      ")])])],1)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image upoad, resize 10%,10%")]),_vm._v(" "),_c('p',[_vm._v("On upload scenarios, prefer capture "),_c('i',[_c('b',[_vm._v("onupload")])]),_vm._v(" since "),_c('i',[_c('b',[_vm._v("onchangefile")])]),_vm._v(" may not fire. \n        Also set "),_c('i',[_c('b',[_vm._v("onupload")])]),_vm._v(" since remote things might go nasty without warning.")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -426,8 +451,21 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-997041a8", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],8:[function(require,module,exports){
+},{"vue":48,"vue-hot-reload-api":46}],9:[function(require,module,exports){
 ;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -472,7 +510,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","orientation":_vm.ori},on:{"onchangefile":_vm.gotchange}}),_vm._v("\n      Next image will be\n      "),_c('button',{on:{"click":function($event){_vm.ori = _vm.ori == 'landscape' ? 'portrait' : 'landscape'}}},[_vm._v(_vm._s(_vm.ori))])],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n      <template> <div> <vue-img-upload width=\"200px\" :orientation=\"ori\" legenda=\"Landscape\n      Only\" @onchangefile=\"gotchange\"></vue-img-upload> Next image will be <button\n      @click=\"ori = ori == 'landscape' ? 'portrait' : 'landscape'\">{ {ori}}</button>\n      </div> </template> <script> module.exports = { name: \"Orientation\",\n      data(){ return { ori:\"portrait\" } }, methods:{ gotchange(img){ console.log(img)\n      } } } </script>\n    ")])])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","orientation":_vm.ori},on:{"onchangefile":_vm.gotchange}}),_vm._v("\n      Next image will be\n      "),_c('button',{on:{"click":function($event){_vm.ori = _vm.ori == 'landscape' ? 'portrait' : 'landscape'}}},[_vm._v(_vm._s(_vm.ori))])],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n      <template> \n        <div> \n          <vue-img-upload width=\"200px\" :orientation=\"ori\" legenda=\"Landscape Only\" \n            @onchangefile=\"gotchange\"></vue-img-upload> \n          Next image will be \n          <button @click=\"ori = ori == 'landscape' ? 'portrait' : 'landscape'\">{ {ori}}</button>\n        </div> \n      </template> \n      <script> \n        module.exports = { \n          name: \"Orientation\",\n          data(){ \n            return { ori:\"portrait\" } \n          }, \n          methods:{ \n            gotchange(img){ console.log(img) } \n          } \n        } \n      </script>\n    ")])])],1)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image orientation")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -484,7 +522,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-20268b36", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],9:[function(require,module,exports){
+},{"vue":48,"vue-hot-reload-api":46}],10:[function(require,module,exports){
 ;(function(){
 //
 //
@@ -510,53 +548,17 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
-module.exports = {
-  name: "DefaultImg",
-  data() {
-    return {
-      oneimg: "imgs/star.png",
-      changed: false
-    };
-  },
-  methods: {
-    gotchange(img) {
-      console.log(img)
-      this.changed = true;
-    }
-  }
-};
+module.exports = { 
+  name: "DefaultImg", 
+  data: _ => ({ oneimg: "imgs/default1.jpg" }) 
+} 
 
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","img":_vm.oneimg},on:{"onchangefile":_vm.gotchange}}),_vm._v(" "),_c('span',{directives:[{name:"show",rawName:"v-show",value:(!_vm.changed),expression:"!changed"}]},[_vm._v("Default img is")]),_vm._v(" "),_c('button',{directives:[{name:"show",rawName:"v-show",value:(!_vm.changed),expression:"!changed"}],on:{"click":function($event){_vm.oneimg = _vm.oneimg == 'imgs/star.png' ? 'imgs/wolf-moon.png' : 'imgs/star.png'}}},[_vm._v(_vm._s(_vm.oneimg))]),_vm._v(" "),_c('span',{directives:[{name:"show",rawName:"v-show",value:(_vm.changed),expression:"changed"}]},[_vm._v("Once a file is selected, default image isn't needed anymore")])],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n      <template> \n        <vue-img-upload width=\"200px\" \n          :img=\"oneimg\" @onchangefile=\"gotchange\"></vue-img-upload>\n        <span v-show=\"!changed\">Default img is</span> \n        <button v-show=\"!changed\"\n          @click=\"oneimg = oneimg == 'imgs/star.png' ? 'imgs/wolf-moon.png' : 'imgs/star.png'\">\n            { {oneimg}}\n          </button> \n        <span v-show=\"changed\">\n          Once a file is selected, default image isn't needed anymore</span> \n      </template> \n      <script> \n      module.exports = { \n        name: \"DefaultImg\", \n        data() {\n          return {\n            oneimg: \"imgs/star.png\",\n            changed: false\n          };\n        },\n        methods:{ \n          gotchange(img){ \n            console.log(img)\n            this.changed = true;\n          } \n        } \n      } \n      </script>\n    ")])])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-upload',{attrs:{"width":"200px","img":_vm.oneimg,"legenda":""}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n      <template> \n        <vue-img-upload width=\"200px\" :img=\"oneimg\" legenda=\"\"></vue-img-upload> \n      </template> \n      <script> \n        module.exports = { \n          name: \"DefaultImg\", \n          data: _ => ({ oneimg: \"imgs/default1.jpg\" }) \n        } \n      </script>\n    ")])])],1)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Change default img")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -568,8 +570,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-60cc7bc4", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],10:[function(require,module,exports){
+},{"vue":48,"vue-hot-reload-api":46}],11:[function(require,module,exports){
 ;(function(){
+//
 //
 //
 //
@@ -622,7 +625,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-dialog-upload',{attrs:{"width":"200px"},on:{"onchangefile":_vm.gotchange,"onimagechange":_vm.gotnewimage}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-dialog-upload width=\"200px\"\n                        @onchangefile=\"gotchange\"\n                        @onimagechange=\"gotnewimage\"></vue-img-dialog-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"Dialog\",\n  methods: {\n    gotchange(ev) {\n      console.log(ev)\n    },\n    gotnewimage(ev) {\n      console.log(ev)\n    }\n  }\n};\n</script>\n      ")])])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('code-preview',{staticClass:"col-xs-12"},[_c('div',{slot:"example"},[_c('vue-img-dialog-upload',{attrs:{"width":"200px"},on:{"onchangefile":_vm.gotchange,"onimagechange":_vm.gotnewimage}})],1),_vm._v(" "),_c('div',{slot:"source"},[_vm._v("\n<template>\n  <vue-img-dialog-upload width=\"200px\"\n    @onchangefile=\"gotchange\"\n    @onimagechange=\"gotnewimage\">\n  </vue-img-dialog-upload>\n</template>\n<script>\nmodule.exports = {\n  name: \"Dialog\",\n  methods: {\n    gotchange(ev) {\n      console.log(ev)\n    },\n    gotnewimage(ev) {\n      console.log(ev)\n    }\n  }\n};\n</script>\n      ")])])],1)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-xs-12"},[_c('h3',[_vm._v("Image preview, dialog to crop/zoom/rotate")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -634,8 +637,36 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-f36879e0", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],11:[function(require,module,exports){
+},{"vue":48,"vue-hot-reload-api":46}],12:[function(require,module,exports){
 ;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -686,17 +717,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 
 module.exports = {
   name: "Roadmap",
-  created() {
-
-  },
+  created() {},
   data() {
-    return {
-
-    };
+    return {};
   },
-  methods: {
-
-  }
+  methods: {}
 };
 
 })()
@@ -704,7 +729,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Add import/export support (currently only require/exports supported)")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.5.4")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("added new events for dialog")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.4")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("fixed upload on dialog version")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.3")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("fixed buttons trying to submit form")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.2")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed another dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.1")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")])]),_vm._v(" "),_c('h2',[_vm._v("0.3.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Added 'default image' example")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h2',[_vm._v("1.0.0 (not released yet)")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Add import/export support (currently only require/exports supported)")]),_vm._v(" "),_c('li',[_vm._v("Improve mobile usability")])]),_vm._v(" "),_c('h2',[_vm._v("0.6.2")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("minor bugfix")])]),_vm._v(" "),_c('h2',[_vm._v("0.6.1")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("minor bugfix. since css are calculated later and browserify somehow fails to resolve it, the needed info to\n      properly configure croppie css was added to the docs.\n    ")])]),_vm._v(" "),_c('h2',[_vm._v("0.6.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Added "),_c('b',[_vm._v("croppie")]),_vm._v(" dependecy in order to offer better crop usage")]),_vm._v(" "),_c('li',[_vm._v("Added \"onremoveimage\" event when you click on the fancy delete button which appears when \n      you select an image.")]),_vm._v(" "),_c('li',[_vm._v("Due to a code improvement (it's a feature, not a bug. Trust me), the 'image' field on event parameter became \n      erratic. For example, if your code handles \"onchangefile\" and also \"onresizefile\", only \"onresizefile\" get all \n      stuff. the \"image\" field will be undefined on \"onchangefile\". I "),_c('i',[_vm._v("should")]),_vm._v(" bump major, \n      "),_c('b',[_vm._v("but i will not")]),_vm._v(". This isn't 1.x stuff yet.")])]),_vm._v(" "),_c('h2',[_vm._v("0.5.6")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("minor bugfix")])]),_vm._v(" "),_c('h2',[_vm._v("0.5.5")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("minor bugfix")])]),_vm._v(" "),_c('h2',[_vm._v("0.5.4")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("added new events for dialog")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.4")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("fixed upload on dialog version")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.3")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("fixed buttons trying to submit form")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.2")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed another dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.1")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Fixed dialog buttons positioning problem")])]),_vm._v(" "),_c('h2',[_vm._v("0.4.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Implement the crop/rotate dialog")])]),_vm._v(" "),_c('h2',[_vm._v("0.3.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Added 'default image' example")])]),_vm._v(" "),_c('h2',[_vm._v("0.2.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("Project docs under construction")]),_vm._v(" "),_c('li',[_vm._v("Added photo orientation")])]),_vm._v(" "),_c('h2',[_vm._v("0.1.0")]),_vm._v(" "),_c('ul',[_c('li',[_vm._v("First 'usable' version")])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -715,9 +740,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-3fa7993d", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44}],12:[function(require,module,exports){
-var css = "/* Uncomment and set these variables to customize the grid. */\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-right: 2rem;\n  padding-left: 2rem;\n}\n.row {\n  box-sizing: border-box;\n  display: -ms-flexbox;\n  display: -webkit-box;\n  display: flex;\n  -ms-flex: 0 1 auto;\n  -webkit-box-flex: 0;\n  flex: 0 1 auto;\n  -ms-flex-direction: row;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  flex-direction: row;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n  margin-right: -1rem;\n  margin-left: -1rem;\n}\n.row.reverse {\n  -ms-flex-direction: row-reverse;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: reverse;\n  flex-direction: row-reverse;\n}\n.col.reverse {\n  -ms-flex-direction: column-reverse;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n  flex-direction: column-reverse;\n}\n.col-xs,\n.col-xs-1,\n.col-xs-2,\n.col-xs-3,\n.col-xs-4,\n.col-xs-5,\n.col-xs-6,\n.col-xs-7,\n.col-xs-8,\n.col-xs-9,\n.col-xs-10,\n.col-xs-11,\n.col-xs-12 {\n  box-sizing: border-box;\n  -ms-flex: 0 0 auto;\n  -webkit-box-flex: 0;\n  flex: 0 0 auto;\n  padding-right: 1rem;\n  padding-left: 1rem;\n}\n.col-xs {\n  -webkit-flex-grow: 1;\n  -ms-flex-positive: 1;\n  -webkit-box-flex: 1;\n  flex-grow: 1;\n  -ms-flex-preferred-size: 0;\n  flex-basis: 0;\n  max-width: 100%;\n}\n.col-xs-1 {\n  -ms-flex-preferred-size: 8.333%;\n  flex-basis: 8.333%;\n  max-width: 8.333%;\n}\n.col-xs-2 {\n  -ms-flex-preferred-size: 16.667%;\n  flex-basis: 16.667%;\n  max-width: 16.667%;\n}\n.col-xs-3 {\n  -ms-flex-preferred-size: 25%;\n  flex-basis: 25%;\n  max-width: 25%;\n}\n.col-xs-4 {\n  -ms-flex-preferred-size: 33.333%;\n  flex-basis: 33.333%;\n  max-width: 33.333%;\n}\n.col-xs-5 {\n  -ms-flex-preferred-size: 41.667%;\n  flex-basis: 41.667%;\n  max-width: 41.667%;\n}\n.col-xs-6 {\n  -ms-flex-preferred-size: 50%;\n  flex-basis: 50%;\n  max-width: 50%;\n}\n.col-xs-7 {\n  -ms-flex-preferred-size: 58.333%;\n  flex-basis: 58.333%;\n  max-width: 58.333%;\n}\n.col-xs-8 {\n  -ms-flex-preferred-size: 66.667%;\n  flex-basis: 66.667%;\n  max-width: 66.667%;\n}\n.col-xs-9 {\n  -ms-flex-preferred-size: 75%;\n  flex-basis: 75%;\n  max-width: 75%;\n}\n.col-xs-10 {\n  -ms-flex-preferred-size: 83.333%;\n  flex-basis: 83.333%;\n  max-width: 83.333%;\n}\n.col-xs-11 {\n  -ms-flex-preferred-size: 91.667%;\n  flex-basis: 91.667%;\n  max-width: 91.667%;\n}\n.col-xs-12 {\n  -ms-flex-preferred-size: 100%;\n  flex-basis: 100%;\n  max-width: 100%;\n}\n.col-xs-offset-1 {\n  margin-left: 8.333%;\n}\n.col-xs-offset-2 {\n  margin-left: 16.667%;\n}\n.col-xs-offset-3 {\n  margin-left: 25%;\n}\n.col-xs-offset-4 {\n  margin-left: 33.333%;\n}\n.col-xs-offset-5 {\n  margin-left: 41.667%;\n}\n.col-xs-offset-6 {\n  margin-left: 50%;\n}\n.col-xs-offset-7 {\n  margin-left: 58.333%;\n}\n.col-xs-offset-8 {\n  margin-left: 66.667%;\n}\n.col-xs-offset-9 {\n  margin-left: 75%;\n}\n.col-xs-offset-10 {\n  margin-left: 83.333%;\n}\n.col-xs-offset-11 {\n  margin-left: 91.667%;\n}\n.start-xs {\n  -ms-flex-pack: start;\n  -webkit-box-pack: start;\n  justify-content: flex-start;\n  text-align: start;\n}\n.center-xs {\n  -ms-flex-pack: center;\n  -webkit-box-pack: center;\n  justify-content: center;\n  text-align: center;\n}\n.end-xs {\n  -ms-flex-pack: end;\n  -webkit-box-pack: end;\n  justify-content: flex-end;\n  text-align: end;\n}\n.top-xs {\n  -ms-flex-align: start;\n  -webkit-box-align: start;\n  align-items: flex-start;\n}\n.middle-xs {\n  -ms-flex-align: center;\n  -webkit-box-align: center;\n  align-items: center;\n}\n.bottom-xs {\n  -ms-flex-align: end;\n  -webkit-box-align: end;\n  align-items: flex-end;\n}\n.around-xs {\n  -ms-flex-pack: distribute;\n  justify-content: space-around;\n}\n.between-xs {\n  -ms-flex-pack: justify;\n  -webkit-box-pack: justify;\n  justify-content: space-between;\n}\n.first-xs {\n  -ms-flex-order: -1;\n  -webkit-box-ordinal-group: 0;\n  order: -1;\n}\n.last-xs {\n  -ms-flex-order: 1;\n  -webkit-box-ordinal-group: 2;\n  order: 1;\n}\n@media only screen and (min-width: 48em) {\n  .container {\n    width: 46rem;\n  }\n\n  .col-sm,\n  .col-sm-1,\n  .col-sm-2,\n  .col-sm-3,\n  .col-sm-4,\n  .col-sm-5,\n  .col-sm-6,\n  .col-sm-7,\n  .col-sm-8,\n  .col-sm-9,\n  .col-sm-10,\n  .col-sm-11,\n  .col-sm-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-sm {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-sm-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-sm-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-sm-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-sm-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-sm-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-sm-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-sm-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-sm-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-sm-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-sm-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-sm-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-sm-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-sm-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-sm-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-sm-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-sm-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-sm-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-sm-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-sm-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-sm-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-sm-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-sm-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-sm-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-sm {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-sm {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-sm {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-sm {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-sm {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-sm {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-sm {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-sm {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-sm {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-sm {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n@media only screen and (min-width: 62em) {\n  .container {\n    width: 61rem;\n  }\n\n  .col-md,\n  .col-md-1,\n  .col-md-2,\n  .col-md-3,\n  .col-md-4,\n  .col-md-5,\n  .col-md-6,\n  .col-md-7,\n  .col-md-8,\n  .col-md-9,\n  .col-md-10,\n  .col-md-11,\n  .col-md-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-md {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-md-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-md-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-md-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-md-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-md-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-md-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-md-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-md-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-md-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-md-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-md-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-md-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-md-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-md-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-md-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-md-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-md-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-md-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-md-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-md-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-md-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-md-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-md-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-md {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-md {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-md {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-md {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-md {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-md {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-md {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-md {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-md {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-md {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n@media only screen and (min-width: 75em) {\n  .container {\n    width: 71rem;\n  }\n\n  .col-lg,\n  .col-lg-1,\n  .col-lg-2,\n  .col-lg-3,\n  .col-lg-4,\n  .col-lg-5,\n  .col-lg-6,\n  .col-lg-7,\n  .col-lg-8,\n  .col-lg-9,\n  .col-lg-10,\n  .col-lg-11,\n  .col-lg-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-lg {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-lg-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-lg-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-lg-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-lg-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-lg-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-lg-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-lg-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-lg-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-lg-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-lg-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-lg-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-lg-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-lg-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-lg-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-lg-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-lg-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-lg-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-lg-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-lg-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-lg-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-lg-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-lg-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-lg-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-lg {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-lg {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-lg {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-lg {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-lg {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-lg {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-lg {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-lg {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-lg {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-lg {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n"; (require("browserify-css").createStyle(css, { "href": "docs/index.css" }, { "insertAt": "bottom" })); module.exports = css;
-},{"browserify-css":41}],13:[function(require,module,exports){
+},{"vue":48,"vue-hot-reload-api":46}],13:[function(require,module,exports){
+var css = "/* Uncomment and set these variables to customize the grid. */\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-right: 2rem;\n  padding-left: 2rem;\n}\n.row {\n  box-sizing: border-box;\n  display: -ms-flexbox;\n  display: -webkit-box;\n  display: flex;\n  -ms-flex: 0 1 auto;\n  -webkit-box-flex: 0;\n  flex: 0 1 auto;\n  -ms-flex-direction: row;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  flex-direction: row;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n  margin-right: -1rem;\n  margin-left: -1rem;\n}\n.row.reverse {\n  -ms-flex-direction: row-reverse;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: reverse;\n  flex-direction: row-reverse;\n}\n.col.reverse {\n  -ms-flex-direction: column-reverse;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n  flex-direction: column-reverse;\n}\n.col-xs,\n.col-xs-1,\n.col-xs-2,\n.col-xs-3,\n.col-xs-4,\n.col-xs-5,\n.col-xs-6,\n.col-xs-7,\n.col-xs-8,\n.col-xs-9,\n.col-xs-10,\n.col-xs-11,\n.col-xs-12 {\n  box-sizing: border-box;\n  -ms-flex: 0 0 auto;\n  -webkit-box-flex: 0;\n  flex: 0 0 auto;\n  padding-right: 1rem;\n  padding-left: 1rem;\n}\n.col-xs {\n  -webkit-flex-grow: 1;\n  -ms-flex-positive: 1;\n  -webkit-box-flex: 1;\n  flex-grow: 1;\n  -ms-flex-preferred-size: 0;\n  flex-basis: 0;\n  max-width: 100%;\n}\n.col-xs-1 {\n  -ms-flex-preferred-size: 8.333%;\n  flex-basis: 8.333%;\n  max-width: 8.333%;\n}\n.col-xs-2 {\n  -ms-flex-preferred-size: 16.667%;\n  flex-basis: 16.667%;\n  max-width: 16.667%;\n}\n.col-xs-3 {\n  -ms-flex-preferred-size: 25%;\n  flex-basis: 25%;\n  max-width: 25%;\n}\n.col-xs-4 {\n  -ms-flex-preferred-size: 33.333%;\n  flex-basis: 33.333%;\n  max-width: 33.333%;\n}\n.col-xs-5 {\n  -ms-flex-preferred-size: 41.667%;\n  flex-basis: 41.667%;\n  max-width: 41.667%;\n}\n.col-xs-6 {\n  -ms-flex-preferred-size: 50%;\n  flex-basis: 50%;\n  max-width: 50%;\n}\n.col-xs-7 {\n  -ms-flex-preferred-size: 58.333%;\n  flex-basis: 58.333%;\n  max-width: 58.333%;\n}\n.col-xs-8 {\n  -ms-flex-preferred-size: 66.667%;\n  flex-basis: 66.667%;\n  max-width: 66.667%;\n}\n.col-xs-9 {\n  -ms-flex-preferred-size: 75%;\n  flex-basis: 75%;\n  max-width: 75%;\n}\n.col-xs-10 {\n  -ms-flex-preferred-size: 83.333%;\n  flex-basis: 83.333%;\n  max-width: 83.333%;\n}\n.col-xs-11 {\n  -ms-flex-preferred-size: 91.667%;\n  flex-basis: 91.667%;\n  max-width: 91.667%;\n}\n.col-xs-12 {\n  -ms-flex-preferred-size: 100%;\n  flex-basis: 100%;\n  max-width: 100%;\n}\n.col-xs-offset-1 {\n  margin-left: 8.333%;\n}\n.col-xs-offset-2 {\n  margin-left: 16.667%;\n}\n.col-xs-offset-3 {\n  margin-left: 25%;\n}\n.col-xs-offset-4 {\n  margin-left: 33.333%;\n}\n.col-xs-offset-5 {\n  margin-left: 41.667%;\n}\n.col-xs-offset-6 {\n  margin-left: 50%;\n}\n.col-xs-offset-7 {\n  margin-left: 58.333%;\n}\n.col-xs-offset-8 {\n  margin-left: 66.667%;\n}\n.col-xs-offset-9 {\n  margin-left: 75%;\n}\n.col-xs-offset-10 {\n  margin-left: 83.333%;\n}\n.col-xs-offset-11 {\n  margin-left: 91.667%;\n}\n.start-xs {\n  -ms-flex-pack: start;\n  -webkit-box-pack: start;\n  justify-content: flex-start;\n  text-align: start;\n}\n.center-xs {\n  -ms-flex-pack: center;\n  -webkit-box-pack: center;\n  justify-content: center;\n  text-align: center;\n}\n.end-xs {\n  -ms-flex-pack: end;\n  -webkit-box-pack: end;\n  justify-content: flex-end;\n  text-align: end;\n}\n.top-xs {\n  -ms-flex-align: start;\n  -webkit-box-align: start;\n  align-items: flex-start;\n}\n.middle-xs {\n  -ms-flex-align: center;\n  -webkit-box-align: center;\n  align-items: center;\n}\n.bottom-xs {\n  -ms-flex-align: end;\n  -webkit-box-align: end;\n  align-items: flex-end;\n}\n.around-xs {\n  -ms-flex-pack: distribute;\n  justify-content: space-around;\n}\n.between-xs {\n  -ms-flex-pack: justify;\n  -webkit-box-pack: justify;\n  justify-content: space-between;\n}\n.first-xs {\n  -ms-flex-order: -1;\n  -webkit-box-ordinal-group: 0;\n  order: -1;\n}\n.last-xs {\n  -ms-flex-order: 1;\n  -webkit-box-ordinal-group: 2;\n  order: 1;\n}\n@media only screen and (min-width: 48em) {\n  .container {\n    width: 46rem;\n  }\n\n  .col-sm,\n  .col-sm-1,\n  .col-sm-2,\n  .col-sm-3,\n  .col-sm-4,\n  .col-sm-5,\n  .col-sm-6,\n  .col-sm-7,\n  .col-sm-8,\n  .col-sm-9,\n  .col-sm-10,\n  .col-sm-11,\n  .col-sm-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-sm {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-sm-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-sm-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-sm-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-sm-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-sm-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-sm-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-sm-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-sm-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-sm-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-sm-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-sm-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-sm-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-sm-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-sm-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-sm-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-sm-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-sm-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-sm-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-sm-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-sm-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-sm-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-sm-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-sm-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-sm {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-sm {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-sm {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-sm {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-sm {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-sm {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-sm {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-sm {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-sm {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-sm {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n@media only screen and (min-width: 62em) {\n  .container {\n    width: 61rem;\n  }\n\n  .col-md,\n  .col-md-1,\n  .col-md-2,\n  .col-md-3,\n  .col-md-4,\n  .col-md-5,\n  .col-md-6,\n  .col-md-7,\n  .col-md-8,\n  .col-md-9,\n  .col-md-10,\n  .col-md-11,\n  .col-md-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-md {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-md-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-md-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-md-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-md-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-md-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-md-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-md-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-md-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-md-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-md-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-md-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-md-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-md-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-md-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-md-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-md-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-md-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-md-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-md-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-md-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-md-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-md-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-md-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-md {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-md {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-md {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-md {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-md {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-md {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-md {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-md {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-md {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-md {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n@media only screen and (min-width: 75em) {\n  .container {\n    width: 71rem;\n  }\n\n  .col-lg,\n  .col-lg-1,\n  .col-lg-2,\n  .col-lg-3,\n  .col-lg-4,\n  .col-lg-5,\n  .col-lg-6,\n  .col-lg-7,\n  .col-lg-8,\n  .col-lg-9,\n  .col-lg-10,\n  .col-lg-11,\n  .col-lg-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-lg {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-lg-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-lg-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-lg-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-lg-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-lg-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-lg-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-lg-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-lg-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-lg-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-lg-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-lg-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-lg-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-lg-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-lg-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-lg-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-lg-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-lg-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-lg-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-lg-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-lg-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-lg-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-lg-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-lg-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-lg {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-lg {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-lg {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-lg {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-lg {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-lg {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-lg {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-lg {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-lg {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-lg {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n.croppie-container {\n  width: 100%;\n  height: 100%;\n}\n.croppie-container .cr-image {\n  z-index: -1;\n  position: absolute;\n  top: 0;\n  left: 0;\n  transform-origin: 0 0;\n  max-height: none;\n  max-width: none;\n}\n.croppie-container .cr-boundary {\n  position: relative;\n  overflow: hidden;\n  margin: 0 auto;\n  z-index: 1;\n  width: 100%;\n  height: 100%;\n}\n.croppie-container .cr-viewport,\n.croppie-container .cr-resizer {\n  position: absolute;\n  border: 2px solid #fff;\n  margin: auto;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, 0.5);\n  z-index: 0;\n}\n.croppie-container .cr-resizer {\n  z-index: 2;\n  box-shadow: none;\n  pointer-events: none;\n}\n.croppie-container .cr-resizer-vertical,\n.croppie-container .cr-resizer-horisontal {\n  position: absolute;\n  pointer-events: all;\n}\n.croppie-container .cr-resizer-vertical::after,\n.croppie-container .cr-resizer-horisontal::after {\n  display: block;\n  position: absolute;\n  box-sizing: border-box;\n  border: 1px solid black;\n  background: #fff;\n  width: 10px;\n  height: 10px;\n  content: '';\n}\n.croppie-container .cr-resizer-vertical {\n  bottom: -5px;\n  cursor: row-resize;\n  width: 100%;\n  height: 10px;\n}\n.croppie-container .cr-resizer-vertical::after {\n  left: 50%;\n  margin-left: -5px;\n}\n.croppie-container .cr-resizer-horisontal {\n  right: -5px;\n  cursor: col-resize;\n  width: 10px;\n  height: 100%;\n}\n.croppie-container .cr-resizer-horisontal::after {\n  top: 50%;\n  margin-top: -5px;\n}\n.croppie-container .cr-original-image {\n  display: none;\n}\n.croppie-container .cr-vp-circle {\n  border-radius: 50%;\n}\n.croppie-container .cr-overlay {\n  z-index: 1;\n  position: absolute;\n  cursor: move;\n  touch-action: none;\n}\n.croppie-container .cr-slider-wrap {\n  width: 75%;\n  margin: 15px auto;\n  text-align: center;\n}\n.croppie-result {\n  position: relative;\n  overflow: hidden;\n}\n.croppie-result img {\n  position: absolute;\n}\n.croppie-container .cr-image,\n.croppie-container .cr-overlay,\n.croppie-container .cr-viewport {\n  -webkit-transform: translateZ(0);\n  -moz-transform: translateZ(0);\n  -ms-transform: translateZ(0);\n  transform: translateZ(0);\n}\n/*************************************/\n/***** STYLING RANGE INPUT ***********/\n/*************************************/\n/*http://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html */\n/*************************************/\n.cr-slider {\n  -webkit-appearance: none;\n  /*removes default webkit styles*/\n  /*border: 1px solid white; */\n  /*fix for FF unable to apply focus style bug */\n  width: 300px;\n  /*required for proper track sizing in FF*/\n  max-width: 100%;\n  padding-top: 8px;\n  padding-bottom: 8px;\n  background-color: transparent;\n}\n.cr-slider::-webkit-slider-runnable-track {\n  width: 100%;\n  height: 3px;\n  background: rgba(0, 0, 0, 0.5);\n  border: 0;\n  border-radius: 3px;\n}\n.cr-slider::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  border: none;\n  height: 16px;\n  width: 16px;\n  border-radius: 50%;\n  background: #ddd;\n  margin-top: -6px;\n}\n.cr-slider:focus {\n  outline: none;\n}\n/*\n.cr-slider:focus::-webkit-slider-runnable-track {\nbackground: #ccc;\n}\n*/\n.cr-slider::-moz-range-track {\n  width: 100%;\n  height: 3px;\n  background: rgba(0, 0, 0, 0.5);\n  border: 0;\n  border-radius: 3px;\n}\n.cr-slider::-moz-range-thumb {\n  border: none;\n  height: 16px;\n  width: 16px;\n  border-radius: 50%;\n  background: #ddd;\n  margin-top: -6px;\n}\n/*hide the outline behind the border*/\n.cr-slider:-moz-focusring {\n  outline: 1px solid white;\n  outline-offset: -1px;\n}\n.cr-slider::-ms-track {\n  width: 100%;\n  height: 5px;\n  background: transparent;\n  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */\n  border-color: transparent;\n  /*leave room for the larger thumb to overflow with a transparent border */\n  border-width: 6px 0;\n  color: transparent;\n  /*remove default tick marks*/\n}\n.cr-slider::-ms-fill-lower {\n  background: rgba(0, 0, 0, 0.5);\n  border-radius: 10px;\n}\n.cr-slider::-ms-fill-upper {\n  background: rgba(0, 0, 0, 0.5);\n  border-radius: 10px;\n}\n.cr-slider::-ms-thumb {\n  border: none;\n  height: 16px;\n  width: 16px;\n  border-radius: 50%;\n  background: #ddd;\n  margin-top: 1px;\n}\n.cr-slider:focus::-ms-fill-lower {\n  background: rgba(0, 0, 0, 0.5);\n}\n.cr-slider:focus::-ms-fill-upper {\n  background: rgba(0, 0, 0, 0.5);\n}\n/*******************************************/\n/***********************************/\n/* Rotation Tools */\n/***********************************/\n.cr-rotate-controls {\n  position: absolute;\n  bottom: 5px;\n  left: 5px;\n  z-index: 1;\n}\n.cr-rotate-controls button {\n  border: 0;\n  background: none;\n}\n.cr-rotate-controls i:before {\n  display: inline-block;\n  font-style: normal;\n  font-weight: 900;\n  font-size: 22px;\n}\n.cr-rotate-l i:before {\n  content: '↺';\n}\n.cr-rotate-r i:before {\n  content: '↻';\n}\n"; (require("browserify-css").createStyle(css, { "href": "docs/index.css" }, { "insertAt": "bottom" })); module.exports = css;
+},{"browserify-css":42}],14:[function(require,module,exports){
 
 require("./index.css")
 
@@ -729,29 +754,15 @@ Vue.use(VueRouter)
 const VueImgUpload = require("../src/main")
 Vue.use(VueImgUpload)
 
-Vue.component("doc-menu", require("./components/menu.vue"))
+Vue.component("doc-menu", require("./components/doc-menu.vue"))
 Vue.component("code-preview", require("./components/code-preview.vue"))
 
 const vm = new Vue({
   el: "#mountpoint",
-  render: f => f(require("./index.vue")),
-  router: new VueRouter({
-    routes: [
-      { path: "/", redirect: "/00-start" },
-      { path: "/00-start", component: require("./features/00-start.vue") },
-      { path: "/01-basic", component: require("./features/01-basic.vue") },
-      { path: "/02-resize-px", component: require("./features/02-resize-px.vue") },
-      { path: "/03-resize-pct", component: require("./features/03-resize-pct.vue") },
-      { path: "/04-upload", component: require("./features/04-upload.vue") },
-      { path: "/05-orientation", component: require("./features/05-orientation.vue") },
-      { path: "/06-default-img", component: require("./features/06-default-img.vue") },
-      { path: "/07-dialog", component: require("./features/07-dialog.vue") },
-      { path: "/99-roadmap", component: require("./features/99-roadmap.vue") },
-    ]
-  }),
+  render: f => f(require("./index.vue"))
 })
 
-},{"../src/main":48,"./components/code-preview.vue":1,"./components/menu.vue":2,"./features/00-start.vue":3,"./features/01-basic.vue":4,"./features/02-resize-px.vue":5,"./features/03-resize-pct.vue":6,"./features/04-upload.vue":7,"./features/05-orientation.vue":8,"./features/06-default-img.vue":9,"./features/07-dialog.vue":10,"./features/99-roadmap.vue":11,"./index.css":12,"./index.vue":14,"vue":46,"vue-router":45}],14:[function(require,module,exports){
+},{"../src/main":50,"./components/code-preview.vue":1,"./components/doc-menu.vue":2,"./index.css":13,"./index.vue":15,"vue":48,"vue-router":47}],15:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#root[data-v-73e3f224] {\n  position: absolute;\n  top: 50px;\n  bottom: 0px;\n  left: 0px;\n  right: 0px;\n}")
 ;(function(){
 //
@@ -801,8 +812,15 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#root[da
 //
 //
 
+const VueRouter = require("vue-router")
 module.exports = {
-  name: "DocRoot"
+  name: "DocRoot",
+  router: new VueRouter({
+    routes: [
+      { path: "/", redirect: "/00-start" },
+      ... require("./components/routes")
+    ]
+  }),
 }
 
 })()
@@ -823,9 +841,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-73e3f224", __vue__options__)
   }
 })()}
-},{"vue":46,"vue-hot-reload-api":44,"vueify/lib/insert-css":47}],15:[function(require,module,exports){
+},{"./components/routes":3,"vue":48,"vue-hot-reload-api":46,"vue-router":47,"vueify/lib/insert-css":49}],16:[function(require,module,exports){
 module.exports = require('./lib/axios');
-},{"./lib/axios":17}],16:[function(require,module,exports){
+},{"./lib/axios":18}],17:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -1009,7 +1027,7 @@ module.exports = function xhrAdapter(config) {
 };
 
 }).call(this,require('_process'))
-},{"../core/createError":23,"./../core/settle":26,"./../helpers/btoa":30,"./../helpers/buildURL":31,"./../helpers/cookies":33,"./../helpers/isURLSameOrigin":35,"./../helpers/parseHeaders":37,"./../utils":39,"_process":43}],17:[function(require,module,exports){
+},{"../core/createError":24,"./../core/settle":27,"./../helpers/btoa":31,"./../helpers/buildURL":32,"./../helpers/cookies":34,"./../helpers/isURLSameOrigin":36,"./../helpers/parseHeaders":38,"./../utils":40,"_process":45}],18:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -1063,7 +1081,7 @@ module.exports = axios;
 // Allow use of default import syntax in TypeScript
 module.exports.default = axios;
 
-},{"./cancel/Cancel":18,"./cancel/CancelToken":19,"./cancel/isCancel":20,"./core/Axios":21,"./defaults":28,"./helpers/bind":29,"./helpers/spread":38,"./utils":39}],18:[function(require,module,exports){
+},{"./cancel/Cancel":19,"./cancel/CancelToken":20,"./cancel/isCancel":21,"./core/Axios":22,"./defaults":29,"./helpers/bind":30,"./helpers/spread":39,"./utils":40}],19:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1084,7 +1102,7 @@ Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 var Cancel = require('./Cancel');
@@ -1143,14 +1161,14 @@ CancelToken.source = function source() {
 
 module.exports = CancelToken;
 
-},{"./Cancel":18}],20:[function(require,module,exports){
+},{"./Cancel":19}],21:[function(require,module,exports){
 'use strict';
 
 module.exports = function isCancel(value) {
   return !!(value && value.__CANCEL__);
 };
 
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 'use strict';
 
 var defaults = require('./../defaults');
@@ -1238,7 +1256,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = Axios;
 
-},{"./../defaults":28,"./../helpers/combineURLs":32,"./../helpers/isAbsoluteURL":34,"./../utils":39,"./InterceptorManager":22,"./dispatchRequest":24}],22:[function(require,module,exports){
+},{"./../defaults":29,"./../helpers/combineURLs":33,"./../helpers/isAbsoluteURL":35,"./../utils":40,"./InterceptorManager":23,"./dispatchRequest":25}],23:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1292,7 +1310,7 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 
 module.exports = InterceptorManager;
 
-},{"./../utils":39}],23:[function(require,module,exports){
+},{"./../utils":40}],24:[function(require,module,exports){
 'use strict';
 
 var enhanceError = require('./enhanceError');
@@ -1312,7 +1330,7 @@ module.exports = function createError(message, config, code, request, response) 
   return enhanceError(error, config, code, request, response);
 };
 
-},{"./enhanceError":25}],24:[function(require,module,exports){
+},{"./enhanceError":26}],25:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1393,7 +1411,7 @@ module.exports = function dispatchRequest(config) {
   });
 };
 
-},{"../cancel/isCancel":20,"../defaults":28,"./../utils":39,"./transformData":27}],25:[function(require,module,exports){
+},{"../cancel/isCancel":21,"../defaults":29,"./../utils":40,"./transformData":28}],26:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1416,7 +1434,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
   return error;
 };
 
-},{}],26:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 'use strict';
 
 var createError = require('./createError');
@@ -1444,7 +1462,7 @@ module.exports = function settle(resolve, reject, response) {
   }
 };
 
-},{"./createError":23}],27:[function(require,module,exports){
+},{"./createError":24}],28:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1466,7 +1484,7 @@ module.exports = function transformData(data, headers, fns) {
   return data;
 };
 
-},{"./../utils":39}],28:[function(require,module,exports){
+},{"./../utils":40}],29:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -1562,7 +1580,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = defaults;
 
 }).call(this,require('_process'))
-},{"./adapters/http":16,"./adapters/xhr":16,"./helpers/normalizeHeaderName":36,"./utils":39,"_process":43}],29:[function(require,module,exports){
+},{"./adapters/http":17,"./adapters/xhr":17,"./helpers/normalizeHeaderName":37,"./utils":40,"_process":45}],30:[function(require,module,exports){
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -1575,7 +1593,7 @@ module.exports = function bind(fn, thisArg) {
   };
 };
 
-},{}],30:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 'use strict';
 
 // btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
@@ -1613,7 +1631,7 @@ function btoa(input) {
 
 module.exports = btoa;
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1683,7 +1701,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
   return url;
 };
 
-},{"./../utils":39}],32:[function(require,module,exports){
+},{"./../utils":40}],33:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1699,7 +1717,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
     : baseURL;
 };
 
-},{}],33:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1754,7 +1772,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":39}],34:[function(require,module,exports){
+},{"./../utils":40}],35:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1770,7 +1788,7 @@ module.exports = function isAbsoluteURL(url) {
   return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
 };
 
-},{}],35:[function(require,module,exports){
+},{}],36:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1840,7 +1858,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":39}],36:[function(require,module,exports){
+},{"./../utils":40}],37:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -1854,7 +1872,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
   });
 };
 
-},{"../utils":39}],37:[function(require,module,exports){
+},{"../utils":40}],38:[function(require,module,exports){
 'use strict';
 
 var utils = require('./../utils');
@@ -1893,7 +1911,7 @@ module.exports = function parseHeaders(headers) {
   return parsed;
 };
 
-},{"./../utils":39}],38:[function(require,module,exports){
+},{"./../utils":40}],39:[function(require,module,exports){
 'use strict';
 
 /**
@@ -1922,7 +1940,7 @@ module.exports = function spread(callback) {
   };
 };
 
-},{}],39:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 'use strict';
 
 var bind = require('./helpers/bind');
@@ -2227,7 +2245,7 @@ module.exports = {
   trim: trim
 };
 
-},{"./helpers/bind":29,"is-buffer":42}],40:[function(require,module,exports){
+},{"./helpers/bind":30,"is-buffer":44}],41:[function(require,module,exports){
 (function (process,global){
 /* @preserve
  * The MIT License (MIT)
@@ -7849,7 +7867,7 @@ module.exports = ret;
 },{"./es5":13}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":43}],41:[function(require,module,exports){
+},{"_process":45}],42:[function(require,module,exports){
 'use strict';
 // For more information about browser field, check out the browser field at https://github.com/substack/browserify-handbook#browser-field.
 
@@ -7926,7 +7944,1597 @@ module.exports = {
     }
 };
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
+/*************************
+ * Croppie
+ * Copyright 2017
+ * Foliotek
+ * Version: 2.5.1
+ *************************/
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['exports'], factory);
+    } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
+        // CommonJS
+        factory(exports);
+    } else {
+        // Browser globals
+        factory((root.commonJsStrict = {}));
+    }
+}(this, function (exports) {
+
+    /* Polyfills */
+    if (typeof Promise !== 'function') {
+        /*! promise-polyfill 3.1.0 */
+        !function(a){function b(a,b){return function(){a.apply(b,arguments)}}function c(a){if("object"!=typeof this)throw new TypeError("Promises must be constructed via new");if("function"!=typeof a)throw new TypeError("not a function");this._state=null,this._value=null,this._deferreds=[],i(a,b(e,this),b(f,this))}function d(a){var b=this;return null===this._state?void this._deferreds.push(a):void k(function(){var c=b._state?a.onFulfilled:a.onRejected;if(null===c)return void(b._state?a.resolve:a.reject)(b._value);var d;try{d=c(b._value)}catch(e){return void a.reject(e)}a.resolve(d)})}function e(a){try{if(a===this)throw new TypeError("A promise cannot be resolved with itself.");if(a&&("object"==typeof a||"function"==typeof a)){var c=a.then;if("function"==typeof c)return void i(b(c,a),b(e,this),b(f,this))}this._state=!0,this._value=a,g.call(this)}catch(d){f.call(this,d)}}function f(a){this._state=!1,this._value=a,g.call(this)}function g(){for(var a=0,b=this._deferreds.length;b>a;a++)d.call(this,this._deferreds[a]);this._deferreds=null}function h(a,b,c,d){this.onFulfilled="function"==typeof a?a:null,this.onRejected="function"==typeof b?b:null,this.resolve=c,this.reject=d}function i(a,b,c){var d=!1;try{a(function(a){d||(d=!0,b(a))},function(a){d||(d=!0,c(a))})}catch(e){if(d)return;d=!0,c(e)}}var j=setTimeout,k="function"==typeof setImmediate&&setImmediate||function(a){j(a,1)},l=Array.isArray||function(a){return"[object Array]"===Object.prototype.toString.call(a)};c.prototype["catch"]=function(a){return this.then(null,a)},c.prototype.then=function(a,b){var e=this;return new c(function(c,f){d.call(e,new h(a,b,c,f))})},c.all=function(){var a=Array.prototype.slice.call(1===arguments.length&&l(arguments[0])?arguments[0]:arguments);return new c(function(b,c){function d(f,g){try{if(g&&("object"==typeof g||"function"==typeof g)){var h=g.then;if("function"==typeof h)return void h.call(g,function(a){d(f,a)},c)}a[f]=g,0===--e&&b(a)}catch(i){c(i)}}if(0===a.length)return b([]);for(var e=a.length,f=0;f<a.length;f++)d(f,a[f])})},c.resolve=function(a){return a&&"object"==typeof a&&a.constructor===c?a:new c(function(b){b(a)})},c.reject=function(a){return new c(function(b,c){c(a)})},c.race=function(a){return new c(function(b,c){for(var d=0,e=a.length;e>d;d++)a[d].then(b,c)})},c._setImmediateFn=function(a){k=a},"undefined"!=typeof module&&module.exports?module.exports=c:a.Promise||(a.Promise=c)}(this);
+    }
+
+    if ( typeof window.CustomEvent !== "function" ) {
+        (function(){
+            function CustomEvent ( event, params ) {
+                params = params || { bubbles: false, cancelable: false, detail: undefined };
+                var evt = document.createEvent( 'CustomEvent' );
+                evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+                return evt;
+            }
+            CustomEvent.prototype = window.Event.prototype;
+            window.CustomEvent = CustomEvent;
+        }());
+    }
+
+    if (!HTMLCanvasElement.prototype.toBlob) {
+        Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+            value: function (callback, type, quality) {
+                var binStr = atob( this.toDataURL(type, quality).split(',')[1] ),
+                len = binStr.length,
+                arr = new Uint8Array(len);
+
+                for (var i=0; i<len; i++ ) {
+                    arr[i] = binStr.charCodeAt(i);
+                }
+
+                callback( new Blob( [arr], {type: type || 'image/png'} ) );
+            }
+        });
+    }
+    /* End Polyfills */
+
+    var cssPrefixes = ['Webkit', 'Moz', 'ms'],
+        emptyStyles = document.createElement('div').style,
+        CSS_TRANS_ORG,
+        CSS_TRANSFORM,
+        CSS_USERSELECT;
+
+    function vendorPrefix(prop) {
+        if (prop in emptyStyles) {
+            return prop;
+        }
+
+        var capProp = prop[0].toUpperCase() + prop.slice(1),
+            i = cssPrefixes.length;
+
+        while (i--) {
+            prop = cssPrefixes[i] + capProp;
+            if (prop in emptyStyles) {
+                return prop;
+            }
+        }
+    }
+
+    CSS_TRANSFORM = vendorPrefix('transform');
+    CSS_TRANS_ORG = vendorPrefix('transformOrigin');
+    CSS_USERSELECT = vendorPrefix('userSelect');
+
+    // Credits to : Andrew Dupont - http://andrewdupont.net/2009/08/28/deep-extending-objects-in-javascript/
+    function deepExtend(destination, source) {
+        destination = destination || {};
+        for (var property in source) {
+            if (source[property] && source[property].constructor && source[property].constructor === Object) {
+                destination[property] = destination[property] || {};
+                deepExtend(destination[property], source[property]);
+            } else {
+                destination[property] = source[property];
+            }
+        }
+        return destination;
+    }
+
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    }
+
+    function dispatchChange(element) {
+        if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("change", false, true);
+            element.dispatchEvent(evt);
+        }
+        else {
+            element.fireEvent("onchange");
+        }
+    }
+
+    //http://jsperf.com/vanilla-css
+    function css(el, styles, val) {
+        if (typeof (styles) === 'string') {
+            var tmp = styles;
+            styles = {};
+            styles[tmp] = val;
+        }
+
+        for (var prop in styles) {
+            el.style[prop] = styles[prop];
+        }
+    }
+
+    function addClass(el, c) {
+        if (el.classList) {
+            el.classList.add(c);
+        }
+        else {
+            el.className += ' ' + c;
+        }
+    }
+
+    function removeClass(el, c) {
+        if (el.classList) {
+            el.classList.remove(c);
+        }
+        else {
+            el.className = el.className.replace(c, '');
+        }
+    }
+
+    function setAttributes(el, attrs) {
+        for (var key in attrs) {
+            el.setAttribute(key, attrs[key]);
+        }
+    }
+
+    function num(v) {
+        return parseInt(v, 10);
+    }
+
+    /* Utilities */
+    function loadImage(src, imageEl, doExif) {
+        var img = imageEl || new Image();
+        img.style.opacity = 0;
+
+        return new Promise(function (resolve) {
+            function _resolve() {
+                setTimeout(function(){
+                    resolve(img);
+                }, 1);
+            }
+
+            if (img.src === src) {// If image source hasn't changed resolve immediately
+                _resolve();
+                return;
+            }
+
+            img.exifdata = null;
+            img.removeAttribute('crossOrigin');
+            if (src.match(/^https?:\/\/|^\/\//)) {
+                img.setAttribute('crossOrigin', 'anonymous');
+            }
+            img.onload = function () {
+                if (doExif) {
+                    EXIF.getData(img, function () {
+                        _resolve();
+                    });
+                }
+                else {
+                    _resolve();
+                }
+            };
+            img.src = src;
+        });
+    }
+
+    function naturalImageDimensions(img) {
+        var w = img.naturalWidth;
+        var h = img.naturalHeight;
+        if (img.exifdata && img.exifdata.Orientation >= 5) {
+            var x= w;
+            w = h;
+            h = x;
+        }
+        return { width: w, height: h };
+    }
+
+    /* CSS Transform Prototype */
+    var TRANSLATE_OPTS = {
+        'translate3d': {
+            suffix: ', 0px'
+        },
+        'translate': {
+            suffix: ''
+        }
+    };
+    var Transform = function (x, y, scale) {
+        this.x = parseFloat(x);
+        this.y = parseFloat(y);
+        this.scale = parseFloat(scale);
+    };
+
+    Transform.parse = function (v) {
+        if (v.style) {
+            return Transform.parse(v.style[CSS_TRANSFORM]);
+        }
+        else if (v.indexOf('matrix') > -1 || v.indexOf('none') > -1) {
+            return Transform.fromMatrix(v);
+        }
+        else {
+            return Transform.fromString(v);
+        }
+    };
+
+    Transform.fromMatrix = function (v) {
+        var vals = v.substring(7).split(',');
+        if (!vals.length || v === 'none') {
+            vals = [1, 0, 0, 1, 0, 0];
+        }
+
+        return new Transform(num(vals[4]), num(vals[5]), parseFloat(vals[0]));
+    };
+
+    Transform.fromString = function (v) {
+        var values = v.split(') '),
+            translate = values[0].substring(Croppie.globals.translate.length + 1).split(','),
+            scale = values.length > 1 ? values[1].substring(6) : 1,
+            x = translate.length > 1 ? translate[0] : 0,
+            y = translate.length > 1 ? translate[1] : 0;
+
+        return new Transform(x, y, scale);
+    };
+
+    Transform.prototype.toString = function () {
+        var suffix = TRANSLATE_OPTS[Croppie.globals.translate].suffix || '';
+        return Croppie.globals.translate + '(' + this.x + 'px, ' + this.y + 'px' + suffix + ') scale(' + this.scale + ')';
+    };
+
+    var TransformOrigin = function (el) {
+        if (!el || !el.style[CSS_TRANS_ORG]) {
+            this.x = 0;
+            this.y = 0;
+            return;
+        }
+        var css = el.style[CSS_TRANS_ORG].split(' ');
+        this.x = parseFloat(css[0]);
+        this.y = parseFloat(css[1]);
+    };
+
+    TransformOrigin.prototype.toString = function () {
+        return this.x + 'px ' + this.y + 'px';
+    };
+
+    function getExifOrientation (img) {
+        return img.exifdata.Orientation;
+    }
+
+    function drawCanvas(canvas, img, orientation) {
+        var width = img.width,
+            height = img.height,
+            ctx = canvas.getContext('2d');
+
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        ctx.save();
+        switch (orientation) {
+          case 2:
+             ctx.translate(width, 0);
+             ctx.scale(-1, 1);
+             break;
+
+          case 3:
+              ctx.translate(width, height);
+              ctx.rotate(180*Math.PI/180);
+              break;
+
+          case 4:
+              ctx.translate(0, height);
+              ctx.scale(1, -1);
+              break;
+
+          case 5:
+              canvas.width = height;
+              canvas.height = width;
+              ctx.rotate(90*Math.PI/180);
+              ctx.scale(1, -1);
+              break;
+
+          case 6:
+              canvas.width = height;
+              canvas.height = width;
+              ctx.rotate(90*Math.PI/180);
+              ctx.translate(0, -height);
+              break;
+
+          case 7:
+              canvas.width = height;
+              canvas.height = width;
+              ctx.rotate(-90*Math.PI/180);
+              ctx.translate(-width, height);
+              ctx.scale(1, -1);
+              break;
+
+          case 8:
+              canvas.width = height;
+              canvas.height = width;
+              ctx.translate(0, width);
+              ctx.rotate(-90*Math.PI/180);
+              break;
+        }
+        ctx.drawImage(img, 0,0, width, height);
+        ctx.restore();
+    }
+
+    /* Private Methods */
+    function _create() {
+        var self = this,
+            contClass = 'croppie-container',
+            customViewportClass = self.options.viewport.type ? 'cr-vp-' + self.options.viewport.type : null,
+            boundary, img, viewport, overlay, bw, bh;
+
+        self.options.useCanvas = self.options.enableOrientation || _hasExif.call(self);
+        // Properties on class
+        self.data = {};
+        self.elements = {};
+
+        boundary = self.elements.boundary = document.createElement('div');
+        viewport = self.elements.viewport = document.createElement('div');
+        img = self.elements.img = document.createElement('img');
+        overlay = self.elements.overlay = document.createElement('div');
+
+        if (self.options.useCanvas) {
+            self.elements.canvas = document.createElement('canvas');
+            self.elements.preview = self.elements.canvas;
+        }
+        else {
+            self.elements.preview = self.elements.img;
+        }
+
+        addClass(boundary, 'cr-boundary');
+        boundary.setAttribute('aria-dropeffect', 'none');
+        bw = self.options.boundary.width;
+        bh = self.options.boundary.height;
+        css(boundary, {
+            width: (bw + (isNaN(bw) ? '' : 'px')),
+            height: (bh + (isNaN(bh) ? '' : 'px'))
+        });
+
+        addClass(viewport, 'cr-viewport');
+        if (customViewportClass) {
+            addClass(viewport, customViewportClass);
+        }
+        css(viewport, {
+            width: self.options.viewport.width + 'px',
+            height: self.options.viewport.height + 'px'
+        });
+        viewport.setAttribute('tabindex', 0);
+
+        addClass(self.elements.preview, 'cr-image');
+        setAttributes(self.elements.preview, { 'alt': 'preview', 'aria-grabbed': 'false' });
+        addClass(overlay, 'cr-overlay');
+
+        self.element.appendChild(boundary);
+        boundary.appendChild(self.elements.preview);
+        boundary.appendChild(viewport);
+        boundary.appendChild(overlay);
+
+        addClass(self.element, contClass);
+        if (self.options.customClass) {
+            addClass(self.element, self.options.customClass);
+        }
+
+        _initDraggable.call(this);
+
+        if (self.options.enableZoom) {
+            _initializeZoom.call(self);
+        }
+
+        // if (self.options.enableOrientation) {
+        //     _initRotationControls.call(self);
+        // }
+
+        if (self.options.enableResize) {
+            _initializeResize.call(self);
+        }
+    }
+
+    // function _initRotationControls () {
+    //     var self = this,
+    //         wrap, btnLeft, btnRight, iLeft, iRight;
+
+    //     wrap = document.createElement('div');
+    //     self.elements.orientationBtnLeft = btnLeft = document.createElement('button');
+    //     self.elements.orientationBtnRight = btnRight = document.createElement('button');
+
+    //     wrap.appendChild(btnLeft);
+    //     wrap.appendChild(btnRight);
+
+    //     iLeft = document.createElement('i');
+    //     iRight = document.createElement('i');
+    //     btnLeft.appendChild(iLeft);
+    //     btnRight.appendChild(iRight);
+
+    //     addClass(wrap, 'cr-rotate-controls');
+    //     addClass(btnLeft, 'cr-rotate-l');
+    //     addClass(btnRight, 'cr-rotate-r');
+
+    //     self.elements.boundary.appendChild(wrap);
+
+    //     btnLeft.addEventListener('click', function () {
+    //         self.rotate(-90);
+    //     });
+    //     btnRight.addEventListener('click', function () {
+    //         self.rotate(90);
+    //     });
+    // }
+
+    function _hasExif() {
+        return this.options.enableExif && window.EXIF;
+    }
+
+    function _initializeResize () {
+        var self = this;
+        var wrap = document.createElement('div');
+        var isDragging = false;
+        var direction;
+        var originalX;
+        var originalY;
+        var minSize = 50;
+        var maxWidth;
+        var maxHeight;
+        var vr;
+        var hr;
+
+        addClass(wrap, 'cr-resizer');
+        css(wrap, {
+            width: this.options.viewport.width + 'px',
+            height: this.options.viewport.height + 'px'
+        });
+
+        if (this.options.resizeControls.height) {
+            vr = document.createElement('div');
+            addClass(vr, 'cr-resizer-vertical');
+            wrap.appendChild(vr);
+        }
+
+        if (this.options.resizeControls.width) {
+            hr = document.createElement('div');
+            addClass(hr, 'cr-resizer-horisontal');
+            wrap.appendChild(hr);
+        }
+
+        function mouseDown(ev) {
+            if (ev.button !== undefined && ev.button !== 0) return;
+
+            ev.preventDefault();
+            if (isDragging) {
+                return;
+            }
+
+            var overlayRect = self.elements.overlay.getBoundingClientRect();
+
+            isDragging = true;
+            originalX = ev.pageX;
+            originalY = ev.pageY;
+            direction = ev.currentTarget.className.indexOf('vertical') !== -1 ? 'v' : 'h';
+            maxWidth = overlayRect.width;
+            maxHeight = overlayRect.height;
+
+            if (ev.touches) {
+                var touches = ev.touches[0];
+                originalX = touches.pageX;
+                originalY = touches.pageY;
+            }
+
+            window.addEventListener('mousemove', mouseMove);
+            window.addEventListener('touchmove', mouseMove);
+            window.addEventListener('mouseup', mouseUp);
+            window.addEventListener('touchend', mouseUp);
+            document.body.style[CSS_USERSELECT] = 'none';
+        }
+
+        function mouseMove(ev) {
+            var pageX = ev.pageX;
+            var pageY = ev.pageY;
+
+            ev.preventDefault();
+
+            if (ev.touches) {
+                var touches = ev.touches[0];
+                pageX = touches.pageX;
+                pageY = touches.pageY;
+            }
+
+            var deltaX = pageX - originalX;
+            var deltaY = pageY - originalY;
+            var newHeight = self.options.viewport.height + deltaY;
+            var newWidth = self.options.viewport.width + deltaX;
+
+            if (direction === 'v' && newHeight >= minSize && newHeight <= maxHeight) {
+                css(wrap, {
+                    height: newHeight + 'px'
+                });
+
+                self.options.boundary.height += deltaY;
+                css(self.elements.boundary, {
+                    height: self.options.boundary.height + 'px'
+                });
+
+                self.options.viewport.height += deltaY;
+                css(self.elements.viewport, {
+                    height: self.options.viewport.height + 'px'
+                });
+            }
+            else if (direction === 'h' && newWidth >= minSize && newWidth <= maxWidth) {
+                css(wrap, {
+                    width: newWidth + 'px'
+                });
+
+                self.options.boundary.width += deltaX;
+                css(self.elements.boundary, {
+                    width: self.options.boundary.width + 'px'
+                });
+
+                self.options.viewport.width += deltaX;
+                css(self.elements.viewport, {
+                    width: self.options.viewport.width + 'px'
+                });
+            }
+
+            _updateOverlay.call(self);
+            _updateZoomLimits.call(self);
+            _updateCenterPoint.call(self);
+            _triggerUpdate.call(self);
+            originalY = pageY;
+            originalX = pageX;
+        }
+
+        function mouseUp() {
+            isDragging = false;
+            window.removeEventListener('mousemove', mouseMove);
+            window.removeEventListener('touchmove', mouseMove);
+            window.removeEventListener('mouseup', mouseUp);
+            window.removeEventListener('touchend', mouseUp);
+            document.body.style[CSS_USERSELECT] = '';
+        }
+
+        if (vr) {
+            vr.addEventListener('mousedown', mouseDown);
+        }
+
+        if (hr) {
+            hr.addEventListener('mousedown', mouseDown);
+        }
+
+        this.elements.boundary.appendChild(wrap);
+    }
+
+    function _setZoomerVal(v) {
+        if (this.options.enableZoom) {
+            var z = this.elements.zoomer,
+                val = fix(v, 4);
+
+            z.value = Math.max(z.min, Math.min(z.max, val));
+        }
+    }
+
+    function _initializeZoom() {
+        var self = this,
+            wrap = self.elements.zoomerWrap = document.createElement('div'),
+            zoomer = self.elements.zoomer = document.createElement('input');
+
+        addClass(wrap, 'cr-slider-wrap');
+        addClass(zoomer, 'cr-slider');
+        zoomer.type = 'range';
+        zoomer.step = '0.0001';
+        zoomer.value = 1;
+        zoomer.style.display = self.options.showZoomer ? '' : 'none';
+        zoomer.setAttribute('aria-label', 'zoom');
+
+        self.element.appendChild(wrap);
+        wrap.appendChild(zoomer);
+
+        self._currentZoom = 1;
+
+        function change() {
+            _onZoom.call(self, {
+                value: parseFloat(zoomer.value),
+                origin: new TransformOrigin(self.elements.preview),
+                viewportRect: self.elements.viewport.getBoundingClientRect(),
+                transform: Transform.parse(self.elements.preview)
+            });
+        }
+
+        function scroll(ev) {
+            var delta, targetZoom;
+
+            if (ev.wheelDelta) {
+                delta = ev.wheelDelta / 1200; //wheelDelta min: -120 max: 120 // max x 10 x 2
+            } else if (ev.deltaY) {
+                delta = ev.deltaY / 1060; //deltaY min: -53 max: 53 // max x 10 x 2
+            } else if (ev.detail) {
+                delta = ev.detail / -60; //delta min: -3 max: 3 // max x 10 x 2
+            } else {
+                delta = 0;
+            }
+
+            targetZoom = self._currentZoom + (delta * self._currentZoom);
+
+            ev.preventDefault();
+            _setZoomerVal.call(self, targetZoom);
+            change.call(self);
+        }
+
+        self.elements.zoomer.addEventListener('input', change);// this is being fired twice on keypress
+        self.elements.zoomer.addEventListener('change', change);
+
+        if (self.options.mouseWheelZoom) {
+            self.elements.boundary.addEventListener('mousewheel', scroll);
+            self.elements.boundary.addEventListener('DOMMouseScroll', scroll);
+        }
+    }
+
+    function _onZoom(ui) {
+        var self = this,
+            transform = ui ? ui.transform : Transform.parse(self.elements.preview),
+            vpRect = ui ? ui.viewportRect : self.elements.viewport.getBoundingClientRect(),
+            origin = ui ? ui.origin : new TransformOrigin(self.elements.preview);
+
+        function applyCss() {
+            var transCss = {};
+            transCss[CSS_TRANSFORM] = transform.toString();
+            transCss[CSS_TRANS_ORG] = origin.toString();
+            css(self.elements.preview, transCss);
+        }
+
+        self._currentZoom = ui ? ui.value : self._currentZoom;
+        transform.scale = self._currentZoom;
+        self.elements.zoomer.setAttribute('aria-valuenow', self._currentZoom);
+        applyCss();
+
+        if (self.options.enforceBoundary) {
+            var boundaries = _getVirtualBoundaries.call(self, vpRect),
+                transBoundaries = boundaries.translate,
+                oBoundaries = boundaries.origin;
+
+            if (transform.x >= transBoundaries.maxX) {
+                origin.x = oBoundaries.minX;
+                transform.x = transBoundaries.maxX;
+            }
+
+            if (transform.x <= transBoundaries.minX) {
+                origin.x = oBoundaries.maxX;
+                transform.x = transBoundaries.minX;
+            }
+
+            if (transform.y >= transBoundaries.maxY) {
+                origin.y = oBoundaries.minY;
+                transform.y = transBoundaries.maxY;
+            }
+
+            if (transform.y <= transBoundaries.minY) {
+                origin.y = oBoundaries.maxY;
+                transform.y = transBoundaries.minY;
+            }
+        }
+        applyCss();
+        _debouncedOverlay.call(self);
+        _triggerUpdate.call(self);
+    }
+
+    function _getVirtualBoundaries(viewport) {
+        var self = this,
+            scale = self._currentZoom,
+            vpWidth = viewport.width,
+            vpHeight = viewport.height,
+            centerFromBoundaryX = self.elements.boundary.clientWidth / 2,
+            centerFromBoundaryY = self.elements.boundary.clientHeight / 2,
+            imgRect = self.elements.preview.getBoundingClientRect(),
+            curImgWidth = imgRect.width,
+            curImgHeight = imgRect.height,
+            halfWidth = vpWidth / 2,
+            halfHeight = vpHeight / 2;
+
+        var maxX = ((halfWidth / scale) - centerFromBoundaryX) * -1;
+        var minX = maxX - ((curImgWidth * (1 / scale)) - (vpWidth * (1 / scale)));
+
+        var maxY = ((halfHeight / scale) - centerFromBoundaryY) * -1;
+        var minY = maxY - ((curImgHeight * (1 / scale)) - (vpHeight * (1 / scale)));
+
+        var originMinX = (1 / scale) * halfWidth;
+        var originMaxX = (curImgWidth * (1 / scale)) - originMinX;
+
+        var originMinY = (1 / scale) * halfHeight;
+        var originMaxY = (curImgHeight * (1 / scale)) - originMinY;
+
+        return {
+            translate: {
+                maxX: maxX,
+                minX: minX,
+                maxY: maxY,
+                minY: minY
+            },
+            origin: {
+                maxX: originMaxX,
+                minX: originMinX,
+                maxY: originMaxY,
+                minY: originMinY
+            }
+        };
+    }
+
+    function _updateCenterPoint() {
+        var self = this,
+            scale = self._currentZoom,
+            data = self.elements.preview.getBoundingClientRect(),
+            vpData = self.elements.viewport.getBoundingClientRect(),
+            transform = Transform.parse(self.elements.preview.style[CSS_TRANSFORM]),
+            pc = new TransformOrigin(self.elements.preview),
+            top = (vpData.top - data.top) + (vpData.height / 2),
+            left = (vpData.left - data.left) + (vpData.width / 2),
+            center = {},
+            adj = {};
+
+        center.y = top / scale;
+        center.x = left / scale;
+
+        adj.y = (center.y - pc.y) * (1 - scale);
+        adj.x = (center.x - pc.x) * (1 - scale);
+
+        transform.x -= adj.x;
+        transform.y -= adj.y;
+
+        var newCss = {};
+        newCss[CSS_TRANS_ORG] = center.x + 'px ' + center.y + 'px';
+        newCss[CSS_TRANSFORM] = transform.toString();
+        css(self.elements.preview, newCss);
+    }
+
+    function _initDraggable() {
+        var self = this,
+            isDragging = false,
+            originalX,
+            originalY,
+            originalDistance,
+            vpRect,
+            transform;
+
+        function assignTransformCoordinates(deltaX, deltaY) {
+            var imgRect = self.elements.preview.getBoundingClientRect(),
+                top = transform.y + deltaY,
+                left = transform.x + deltaX;
+
+            if (self.options.enforceBoundary) {
+                if (vpRect.top > imgRect.top + deltaY && vpRect.bottom < imgRect.bottom + deltaY) {
+                    transform.y = top;
+                }
+
+                if (vpRect.left > imgRect.left + deltaX && vpRect.right < imgRect.right + deltaX) {
+                    transform.x = left;
+                }
+            }
+            else {
+                transform.y = top;
+                transform.x = left;
+            }
+        }
+
+        function toggleGrabState(isDragging) {
+          self.elements.preview.setAttribute('aria-grabbed', isDragging);
+          self.elements.boundary.setAttribute('aria-dropeffect', isDragging? 'move': 'none');
+        }
+
+        function keyDown(ev) {
+            var LEFT_ARROW  = 37,
+                UP_ARROW    = 38,
+                RIGHT_ARROW = 39,
+                DOWN_ARROW  = 40;
+
+            if (ev.shiftKey && (ev.keyCode == UP_ARROW || ev.keyCode == DOWN_ARROW)) {
+                var zoom = 0.0;
+                if (ev.keyCode == UP_ARROW) {
+                    zoom = parseFloat(self.elements.zoomer.value, 10) + parseFloat(self.elements.zoomer.step, 10)
+                }
+                else {
+                    zoom = parseFloat(self.elements.zoomer.value, 10) - parseFloat(self.elements.zoomer.step, 10)
+                }
+                self.setZoom(zoom);
+            }
+            else if (self.options.enableKeyMovement && (ev.keyCode >= 37 && ev.keyCode <= 40)) {
+                ev.preventDefault();
+                var movement = parseKeyDown(ev.keyCode);
+
+                transform = Transform.parse(self.elements.preview);
+                document.body.style[CSS_USERSELECT] = 'none';
+                vpRect = self.elements.viewport.getBoundingClientRect();
+                keyMove(movement);
+            };
+
+            function parseKeyDown(key) {
+                switch (key) {
+                    case LEFT_ARROW:
+                        return [1, 0];
+                    case UP_ARROW:
+                        return [0, 1];
+                    case RIGHT_ARROW:
+                        return [-1, 0];
+                    case DOWN_ARROW:
+                        return [0, -1];
+                };
+            };
+        }
+
+        function keyMove(movement) {
+            var deltaX = movement[0],
+                deltaY = movement[1],
+                newCss = {};
+
+            assignTransformCoordinates(deltaX, deltaY);
+
+            newCss[CSS_TRANSFORM] = transform.toString();
+            css(self.elements.preview, newCss);
+            _updateOverlay.call(self);
+            document.body.style[CSS_USERSELECT] = '';
+            _updateCenterPoint.call(self);
+            _triggerUpdate.call(self);
+            originalDistance = 0;
+        }
+
+        function mouseDown(ev) {
+            if (ev.button !== undefined && ev.button !== 0) return;
+
+            ev.preventDefault();
+            if (isDragging) return;
+            isDragging = true;
+            originalX = ev.pageX;
+            originalY = ev.pageY;
+
+            if (ev.touches) {
+                var touches = ev.touches[0];
+                originalX = touches.pageX;
+                originalY = touches.pageY;
+            }
+            toggleGrabState(isDragging);
+            transform = Transform.parse(self.elements.preview);
+            window.addEventListener('mousemove', mouseMove);
+            window.addEventListener('touchmove', mouseMove);
+            window.addEventListener('mouseup', mouseUp);
+            window.addEventListener('touchend', mouseUp);
+            document.body.style[CSS_USERSELECT] = 'none';
+            vpRect = self.elements.viewport.getBoundingClientRect();
+        }
+
+        function mouseMove(ev) {
+            ev.preventDefault();
+            var pageX = ev.pageX,
+                pageY = ev.pageY;
+
+            if (ev.touches) {
+                var touches = ev.touches[0];
+                pageX = touches.pageX;
+                pageY = touches.pageY;
+            }
+
+            var deltaX = pageX - originalX,
+                deltaY = pageY - originalY,
+                newCss = {};
+
+            if (ev.type == 'touchmove') {
+                if (ev.touches.length > 1) {
+                    var touch1 = ev.touches[0];
+                    var touch2 = ev.touches[1];
+                    var dist = Math.sqrt((touch1.pageX - touch2.pageX) * (touch1.pageX - touch2.pageX) + (touch1.pageY - touch2.pageY) * (touch1.pageY - touch2.pageY));
+
+                    if (!originalDistance) {
+                        originalDistance = dist / self._currentZoom;
+                    }
+
+                    var scale = dist / originalDistance;
+
+                    _setZoomerVal.call(self, scale);
+                    dispatchChange(self.elements.zoomer);
+                    return;
+                }
+            }
+
+            assignTransformCoordinates(deltaX, deltaY);
+
+            newCss[CSS_TRANSFORM] = transform.toString();
+            css(self.elements.preview, newCss);
+            _updateOverlay.call(self);
+            originalY = pageY;
+            originalX = pageX;
+        }
+
+        function mouseUp() {
+            isDragging = false;
+            toggleGrabState(isDragging);
+            window.removeEventListener('mousemove', mouseMove);
+            window.removeEventListener('touchmove', mouseMove);
+            window.removeEventListener('mouseup', mouseUp);
+            window.removeEventListener('touchend', mouseUp);
+            document.body.style[CSS_USERSELECT] = '';
+            _updateCenterPoint.call(self);
+            _triggerUpdate.call(self);
+            originalDistance = 0;
+        }
+
+        self.elements.overlay.addEventListener('mousedown', mouseDown);
+        self.elements.viewport.addEventListener('keydown', keyDown);
+        self.elements.overlay.addEventListener('touchstart', mouseDown);
+    }
+
+    function _updateOverlay() {
+        var self = this,
+            boundRect = self.elements.boundary.getBoundingClientRect(),
+            imgData = self.elements.preview.getBoundingClientRect();
+
+        css(self.elements.overlay, {
+            width: imgData.width + 'px',
+            height: imgData.height + 'px',
+            top: (imgData.top - boundRect.top) + 'px',
+            left: (imgData.left - boundRect.left) + 'px'
+        });
+    }
+    var _debouncedOverlay = debounce(_updateOverlay, 500);
+
+    function _triggerUpdate() {
+        var self = this,
+            data = self.get(),
+            ev;
+
+        if (!_isVisible.call(self)) {
+            return;
+        }
+
+        self.options.update.call(self, data);
+        if (self.$ && typeof Prototype == 'undefined') {
+            self.$(self.element).trigger('update', data);
+        }
+        else {
+            var ev;
+            if (window.CustomEvent) {
+                ev = new CustomEvent('update', { detail: data });
+            } else {
+                ev = document.createEvent('CustomEvent');
+                ev.initCustomEvent('update', true, true, data);
+            }
+
+            self.element.dispatchEvent(ev);
+        }
+    }
+
+    function _isVisible() {
+        return this.elements.preview.offsetHeight > 0 && this.elements.preview.offsetWidth > 0;
+    }
+
+    function _updatePropertiesFromImage() {
+        var self = this,
+            initialZoom = 1,
+            cssReset = {},
+            img = self.elements.preview,
+            imgData = self.elements.preview.getBoundingClientRect(),
+            transformReset = new Transform(0, 0, initialZoom),
+            originReset = new TransformOrigin(),
+            isVisible = _isVisible.call(self);
+
+        if (!isVisible || self.data.bound) {
+            // if the croppie isn't visible or it doesn't need binding
+            return;
+        }
+
+        self.data.bound = true;
+        cssReset[CSS_TRANSFORM] = transformReset.toString();
+        cssReset[CSS_TRANS_ORG] = originReset.toString();
+        cssReset['opacity'] = 1;
+        css(img, cssReset);
+
+        self._originalImageWidth = imgData.width;
+        self._originalImageHeight = imgData.height;
+
+        if (self.options.enableZoom) {
+            _updateZoomLimits.call(self, true);
+        }
+        else {
+            self._currentZoom = initialZoom;
+        }
+
+        transformReset.scale = self._currentZoom;
+        cssReset[CSS_TRANSFORM] = transformReset.toString();
+        css(img, cssReset);
+
+        if (self.data.points.length) {
+            _bindPoints.call(self, self.data.points);
+        }
+        else {
+            _centerImage.call(self);
+        }
+
+        _updateCenterPoint.call(self);
+        _updateOverlay.call(self);
+    }
+
+    function _updateZoomLimits (initial) {
+        var self = this,
+            minZoom = 0,
+            maxZoom = 1.5,
+            initialZoom,
+            defaultInitialZoom,
+            zoomer = self.elements.zoomer,
+            scale = parseFloat(zoomer.value),
+            boundaryData = self.elements.boundary.getBoundingClientRect(),
+            imgData = self.elements.preview.getBoundingClientRect(),
+            vpData = self.elements.viewport.getBoundingClientRect(),
+            minW,
+            minH;
+
+        if (self.options.enforceBoundary) {
+            minW = vpData.width / (initial ? imgData.width : imgData.width / scale);
+            minH = vpData.height / (initial ? imgData.height : imgData.height / scale);
+            minZoom = Math.max(minW, minH);
+        }
+
+        if (minZoom >= maxZoom) {
+            maxZoom = minZoom + 1;
+        }
+
+        zoomer.min = fix(minZoom, 4);
+        zoomer.max = fix(maxZoom, 4);
+
+        if (initial) {
+            defaultInitialZoom = Math.max((boundaryData.width / imgData.width), (boundaryData.height / imgData.height));
+            initialZoom = self.data.boundZoom !== null ? self.data.boundZoom : defaultInitialZoom;
+            _setZoomerVal.call(self, initialZoom);
+        }
+
+        dispatchChange(zoomer);
+    }
+
+    function _bindPoints(points) {
+        if (points.length != 4) {
+            throw "Croppie - Invalid number of points supplied: " + points;
+        }
+        var self = this,
+            pointsWidth = points[2] - points[0],
+            // pointsHeight = points[3] - points[1],
+            vpData = self.elements.viewport.getBoundingClientRect(),
+            boundRect = self.elements.boundary.getBoundingClientRect(),
+            vpOffset = {
+                left: vpData.left - boundRect.left,
+                top: vpData.top - boundRect.top
+            },
+            scale = vpData.width / pointsWidth,
+            originTop = points[1],
+            originLeft = points[0],
+            transformTop = (-1 * points[1]) + vpOffset.top,
+            transformLeft = (-1 * points[0]) + vpOffset.left,
+            newCss = {};
+
+        newCss[CSS_TRANS_ORG] = originLeft + 'px ' + originTop + 'px';
+        newCss[CSS_TRANSFORM] = new Transform(transformLeft, transformTop, scale).toString();
+        css(self.elements.preview, newCss);
+
+        _setZoomerVal.call(self, scale);
+        self._currentZoom = scale;
+    }
+
+    function _centerImage() {
+        var self = this,
+            imgDim = self.elements.preview.getBoundingClientRect(),
+            vpDim = self.elements.viewport.getBoundingClientRect(),
+            boundDim = self.elements.boundary.getBoundingClientRect(),
+            vpLeft = vpDim.left - boundDim.left,
+            vpTop = vpDim.top - boundDim.top,
+            w = vpLeft - ((imgDim.width - vpDim.width) / 2),
+            h = vpTop - ((imgDim.height - vpDim.height) / 2),
+            transform = new Transform(w, h, self._currentZoom);
+
+        css(self.elements.preview, CSS_TRANSFORM, transform.toString());
+    }
+
+    function _transferImageToCanvas(customOrientation) {
+        var self = this,
+            canvas = self.elements.canvas,
+            img = self.elements.img,
+            ctx = canvas.getContext('2d'),
+            exif = _hasExif.call(self),
+            customOrientation = self.options.enableOrientation && customOrientation;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        if (exif && !customOrientation) {
+            var orientation = getExifOrientation(img);
+            drawCanvas(canvas, img, num(orientation || 0, 10));
+        }
+        else if (customOrientation) {
+            drawCanvas(canvas, img, customOrientation);
+        }
+    }
+
+    function _getCanvas(data) {
+        var self = this,
+            points = data.points,
+            left = num(points[0]),
+            top = num(points[1]),
+            right = num(points[2]),
+            bottom = num(points[3]),
+            width = right-left,
+            height = bottom-top,
+            circle = data.circle,
+            canvas = document.createElement('canvas'),
+            ctx = canvas.getContext('2d'),
+            outWidth = width,
+            outHeight = height,
+            startX = 0,
+            startY = 0,
+            canvasWidth = outWidth,
+            canvasHeight = outHeight,
+            customDimensions = (data.outputWidth && data.outputHeight),
+            outputRatio = 1;
+
+        if (customDimensions) {
+            canvasWidth = data.outputWidth;
+            canvasHeight = data.outputHeight;
+            outputRatio = canvasWidth / outWidth;
+        }
+
+        canvas.width = canvasWidth;
+        canvas.height = canvasHeight;
+
+        if (data.backgroundColor) {
+            ctx.fillStyle = data.backgroundColor;
+            ctx.fillRect(0, 0, outWidth, outHeight);
+        }
+
+        // start fixing data to send to draw image for enforceBoundary: false
+        if (!self.options.enforceBoundary) {
+            if (left < 0) {
+                startX = Math.abs(left);
+                left = 0;
+            }
+            if (top < 0) {
+                startY = Math.abs(top);
+                top = 0;
+            }
+            if (right > self._originalImageWidth) {
+                width = self._originalImageWidth - left;
+                outWidth = width;
+            }
+            if (bottom > self._originalImageHeight) {
+                height = self._originalImageHeight - top;
+                outHeight = height;
+            }
+        }
+
+        if (outputRatio !== 1) {
+            startX *= outputRatio;
+            startY *= outputRatio;
+            outWidth *= outputRatio;
+            outHeight *= outputRatio;
+        }
+
+        ctx.drawImage(this.elements.preview, left, top, Math.min(width, self._originalImageWidth), Math.min(height, self._originalImageHeight), startX, startY, outWidth, outHeight);
+        if (circle) {
+            ctx.fillStyle = '#fff';
+            ctx.globalCompositeOperation = 'destination-in';
+            ctx.beginPath();
+            ctx.arc(outWidth / 2, outHeight / 2, outWidth / 2, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
+        }
+        return canvas;
+    }
+
+    function _getHtmlResult(data) {
+        var points = data.points,
+            div = document.createElement('div'),
+            img = document.createElement('img'),
+            width = points[2] - points[0],
+            height = points[3] - points[1];
+
+        addClass(div, 'croppie-result');
+        div.appendChild(img);
+        css(img, {
+            left: (-1 * points[0]) + 'px',
+            top: (-1 * points[1]) + 'px'
+        });
+        img.src = data.url;
+        css(div, {
+            width: width + 'px',
+            height: height + 'px'
+        });
+
+        return div;
+    }
+
+    function _getBase64Result(data) {
+        return _getCanvas.call(this, data).toDataURL(data.format, data.quality);
+    }
+
+    function _getBlobResult(data) {
+        var self = this;
+        return new Promise(function (resolve, reject) {
+            _getCanvas.call(self, data).toBlob(function (blob) {
+                resolve(blob);
+            }, data.format, data.quality);
+        });
+    }
+
+    function _bind(options, cb) {
+        var self = this,
+            url,
+            points = [],
+            zoom = null,
+            hasExif = _hasExif.call(self);;
+
+        if (typeof (options) === 'string') {
+            url = options;
+            options = {};
+        }
+        else if (Array.isArray(options)) {
+            points = options.slice();
+        }
+        else if (typeof (options) == 'undefined' && self.data.url) { //refreshing
+            _updatePropertiesFromImage.call(self);
+            _triggerUpdate.call(self);
+            return null;
+        }
+        else {
+            url = options.url;
+            points = options.points || [];
+            zoom = typeof(options.zoom) === 'undefined' ? null : options.zoom;
+        }
+
+        self.data.bound = false;
+        self.data.url = url || self.data.url;
+        self.data.boundZoom = zoom;
+
+        return loadImage(url, self.elements.img, hasExif).then(function (img) {
+            if (!points.length) {
+                var natDim = naturalImageDimensions(img);
+                var rect = self.elements.viewport.getBoundingClientRect();
+                var aspectRatio = rect.width / rect.height;
+                var imgAspectRatio = natDim.width / natDim.height;
+                var width, height;
+
+                if (imgAspectRatio > aspectRatio) {
+                    height = natDim.height;
+                    width = height * aspectRatio;
+                }
+                else {
+                    width = natDim.width;
+                    height = width / aspectRatio;
+                }
+
+                var x0 = (natDim.width - width) / 2;
+                var y0 = (natDim.height - height) / 2;
+                var x1 = x0 + width;
+                var y1 = y0 + height;
+
+                self.data.points = [x0, y0, x1, y1];
+            }
+            else if (self.options.relative) {
+                points = [
+                    points[0] * img.naturalWidth / 100,
+                    points[1] * img.naturalHeight / 100,
+                    points[2] * img.naturalWidth / 100,
+                    points[3] * img.naturalHeight / 100
+                ];
+            }
+
+            self.data.points = points.map(function (p) {
+                return parseFloat(p);
+            });
+            if (self.options.useCanvas) {
+                _transferImageToCanvas.call(self, options.orientation || 1);
+            }
+            _updatePropertiesFromImage.call(self);
+            _triggerUpdate.call(self);
+            cb && cb();
+        });
+    }
+
+    function fix(v, decimalPoints) {
+        return parseFloat(v).toFixed(decimalPoints || 0);
+    }
+
+    function _get() {
+        var self = this,
+            imgData = self.elements.preview.getBoundingClientRect(),
+            vpData = self.elements.viewport.getBoundingClientRect(),
+            x1 = vpData.left - imgData.left,
+            y1 = vpData.top - imgData.top,
+            widthDiff = (vpData.width - self.elements.viewport.offsetWidth) / 2, //border
+            heightDiff = (vpData.height - self.elements.viewport.offsetHeight) / 2,
+            x2 = x1 + self.elements.viewport.offsetWidth + widthDiff,
+            y2 = y1 + self.elements.viewport.offsetHeight + heightDiff,
+            scale = self._currentZoom;
+
+        if (scale === Infinity || isNaN(scale)) {
+            scale = 1;
+        }
+
+        var max = self.options.enforceBoundary ? 0 : Number.NEGATIVE_INFINITY;
+        x1 = Math.max(max, x1 / scale);
+        y1 = Math.max(max, y1 / scale);
+        x2 = Math.max(max, x2 / scale);
+        y2 = Math.max(max, y2 / scale);
+
+        return {
+            points: [fix(x1), fix(y1), fix(x2), fix(y2)],
+            zoom: scale
+        };
+    }
+
+    var RESULT_DEFAULTS = {
+            type: 'canvas',
+            format: 'png',
+            quality: 1
+        },
+        RESULT_FORMATS = ['jpeg', 'webp', 'png'];
+
+    function _result(options) {
+        var self = this,
+            data = _get.call(self),
+            opts = deepExtend(RESULT_DEFAULTS, deepExtend({}, options)),
+            resultType = (typeof (options) === 'string' ? options : (opts.type || 'base64')),
+            size = opts.size || 'viewport',
+            format = opts.format,
+            quality = opts.quality,
+            backgroundColor = opts.backgroundColor,
+            circle = typeof opts.circle === 'boolean' ? opts.circle : (self.options.viewport.type === 'circle'),
+            vpRect = self.elements.viewport.getBoundingClientRect(),
+            ratio = vpRect.width / vpRect.height,
+            prom;
+
+        if (size === 'viewport') {
+            data.outputWidth = vpRect.width;
+            data.outputHeight = vpRect.height;
+        } else if (typeof size === 'object') {
+            if (size.width && size.height) {
+                data.outputWidth = size.width;
+                data.outputHeight = size.height;
+            } else if (size.width) {
+                data.outputWidth = size.width;
+                data.outputHeight = size.width / ratio;
+            } else if (size.height) {
+                data.outputWidth = size.height * ratio;
+                data.outputHeight = size.height;
+            }
+        }
+
+        if (RESULT_FORMATS.indexOf(format) > -1) {
+            data.format = 'image/' + format;
+            data.quality = quality;
+        }
+
+        data.circle = circle;
+        data.url = self.data.url;
+        data.backgroundColor = backgroundColor;
+
+        prom = new Promise(function (resolve, reject) {
+            switch(resultType.toLowerCase())
+            {
+                case 'rawcanvas':
+                    resolve(_getCanvas.call(self, data));
+                    break;
+                case 'canvas':
+                case 'base64':
+                    resolve(_getBase64Result.call(self, data));
+                    break;
+                case 'blob':
+                    _getBlobResult.call(self, data).then(resolve);
+                    break;
+                default:
+                    resolve(_getHtmlResult.call(self, data));
+                    break;
+            }
+        });
+        return prom;
+    }
+
+    function _refresh() {
+        _updatePropertiesFromImage.call(this);
+    }
+
+    function _rotate(deg) {
+        if (!this.options.useCanvas) {
+            throw 'Croppie: Cannot rotate without enableOrientation';
+        }
+
+        var self = this,
+            canvas = self.elements.canvas,
+            copy = document.createElement('canvas'),
+            ornt = 1;
+
+        copy.width = canvas.width;
+        copy.height = canvas.height;
+        var ctx = copy.getContext('2d');
+        ctx.drawImage(canvas, 0, 0);
+
+        if (deg === 90 || deg === -270) ornt = 6;
+        if (deg === -90 || deg === 270) ornt = 8;
+        if (deg === 180 || deg === -180) ornt = 3;
+
+        drawCanvas(canvas, copy, ornt);
+        _onZoom.call(self);
+        copy = null;
+    }
+
+    function _destroy() {
+        var self = this;
+        self.element.removeChild(self.elements.boundary);
+        removeClass(self.element, 'croppie-container');
+        if (self.options.enableZoom) {
+            self.element.removeChild(self.elements.zoomerWrap);
+        }
+        delete self.elements;
+    }
+
+    if (window.jQuery) {
+        var $ = window.jQuery;
+        $.fn.croppie = function (opts) {
+            var ot = typeof opts;
+
+            if (ot === 'string') {
+                var args = Array.prototype.slice.call(arguments, 1);
+                var singleInst = $(this).data('croppie');
+
+                if (opts === 'get') {
+                    return singleInst.get();
+                }
+                else if (opts === 'result') {
+                    return singleInst.result.apply(singleInst, args);
+                }
+                else if (opts === 'bind') {
+                    return singleInst.bind.apply(singleInst, args);
+                }
+
+                return this.each(function () {
+                    var i = $(this).data('croppie');
+                    if (!i) return;
+
+                    var method = i[opts];
+                    if ($.isFunction(method)) {
+                        method.apply(i, args);
+                        if (opts === 'destroy') {
+                            $(this).removeData('croppie');
+                        }
+                    }
+                    else {
+                        throw 'Croppie ' + opts + ' method not found';
+                    }
+                });
+            }
+            else {
+                return this.each(function () {
+                    var i = new Croppie(this, opts);
+                    i.$ = $;
+                    $(this).data('croppie', i);
+                });
+            }
+        };
+    }
+
+    function Croppie(element, opts) {
+        this.element = element;
+        this.options = deepExtend(deepExtend({}, Croppie.defaults), opts);
+
+        if (this.element.tagName.toLowerCase() === 'img') {
+            var origImage = this.element;
+            addClass(origImage, 'cr-original-image');
+            setAttributes(origImage, {'aria-hidden' : 'true', 'alt' : '' });
+            var replacementDiv = document.createElement('div');
+            this.element.parentNode.appendChild(replacementDiv);
+            replacementDiv.appendChild(origImage);
+            this.element = replacementDiv;
+            this.options.url = this.options.url || origImage.src;
+        }
+
+        _create.call(this);
+        if (this.options.url) {
+            var bindOpts = {
+                url: this.options.url,
+                points: this.options.points
+            };
+            delete this.options['url'];
+            delete this.options['points'];
+            _bind.call(this, bindOpts);
+        }
+    }
+
+    Croppie.defaults = {
+        viewport: {
+            width: 100,
+            height: 100,
+            type: 'square'
+        },
+        boundary: { },
+        orientationControls: {
+            enabled: true,
+            leftClass: '',
+            rightClass: ''
+        },
+        resizeControls: {
+            width: true,
+            height: true
+        },
+        customClass: '',
+        showZoomer: true,
+        enableZoom: true,
+        enableResize: false,
+        mouseWheelZoom: true,
+        enableExif: false,
+        enforceBoundary: true,
+        enableOrientation: false,
+        enableKeyMovement: true,
+        update: function () { }
+    };
+
+    Croppie.globals = {
+        translate: 'translate3d'
+    };
+
+    deepExtend(Croppie.prototype, {
+        bind: function (options, cb) {
+            return _bind.call(this, options, cb);
+        },
+        get: function () {
+            var data = _get.call(this);
+            var points = data.points;
+            if (this.options.relative) {
+                points[0] /= this.elements.img.naturalWidth / 100;
+                points[1] /= this.elements.img.naturalHeight / 100;
+                points[2] /= this.elements.img.naturalWidth / 100;
+                points[3] /= this.elements.img.naturalHeight / 100;
+            }
+            return data;
+        },
+        result: function (type) {
+            return _result.call(this, type);
+        },
+        refresh: function () {
+            return _refresh.call(this);
+        },
+        setZoom: function (v) {
+            _setZoomerVal.call(this, v);
+            dispatchChange(this.elements.zoomer);
+        },
+        rotate: function (deg) {
+            _rotate.call(this, deg);
+        },
+        destroy: function () {
+            return _destroy.call(this);
+        }
+    });
+
+    exports.Croppie = window.Croppie = Croppie;
+
+    if (typeof module === 'object' && !!module.exports) {
+        module.exports = Croppie;
+    }
+}));
+
+},{}],44:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -7949,7 +9557,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],43:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -8135,7 +9743,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],44:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = window.__VUE_HOT_MAP__ = Object.create(null)
@@ -8281,7 +9889,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],45:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 (function (process){
 /**
   * vue-router v2.7.0
@@ -10792,7 +12400,7 @@ if (inBrowser && window.Vue) {
 module.exports = VueRouter;
 
 }).call(this,require('_process'))
-},{"_process":43}],46:[function(require,module,exports){
+},{"_process":45}],48:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.4.2
@@ -18225,7 +19833,7 @@ setTimeout(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":43}],47:[function(require,module,exports){
+},{"_process":45}],49:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -18250,14 +19858,14 @@ exports.insert = function (css) {
   }
 }
 
-},{}],48:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 // component installation entry point
 exports.install = (Vue, opts) => {
   Vue.component("vue-img-upload", require("./vue-img-upload.vue"))
   Vue.component("vue-img-dialog-upload", require("./vue-img-dialog-upload.vue"))
 };
 
-},{"./vue-img-dialog-upload.vue":50,"./vue-img-upload.vue":51}],49:[function(require,module,exports){
+},{"./vue-img-dialog-upload.vue":52,"./vue-img-upload.vue":53}],51:[function(require,module,exports){
 // resizetool.js
 const Promise = require("bluebird")
 
@@ -18440,8 +20048,8 @@ exports.doportrait = dataimg => new Promise((resolve, reject) => {
   else
     img.src = dataimg
 })
-},{"bluebird":40}],50:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".thedialog[data-v-dc5feb2c] {\n  position: fixed;\n  display: none;\n  background-color: white;\n  top: 0px;\n  bottom: 0px;\n  left: 0px;\n  right: 0px;\n  z-index: 99999;\n  overflow: hidden;\n}\n\n.thedialog>canvas.thecanvas[data-v-dc5feb2c] {\n  position: fixed;\n  border: 1px groove black;\n}\n\n.thedialog>div.toolbox[data-v-dc5feb2c] {\n  position: fixed;\n}\n\n.thedialog>div.toolbox>button[data-v-dc5feb2c] {\n  width: 15%;\n}\n\ninput.theinput[data-v-dc5feb2c] {\n  display: none\n}")
+},{"bluebird":41}],52:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".theimgcontainer[data-v-dc5feb2c] {\n  position: relative;\n}\n.theimg[data-v-dc5feb2c] {\n  min-height: 100px;\n}\ninput.theinput[data-v-dc5feb2c] {\n  display: none;\n}\n.legenda[data-v-dc5feb2c] {\n  position: absolute;\n  top: 50%;\n  width: 100%;\n  text-align: center;\n}\n.cancelimg[data-v-dc5feb2c],\n.dialogokimg[data-v-dc5feb2c],\n.dialogcancelimg[data-v-dc5feb2c] {\n  position: absolute;\n  max-width: 40px;\n  max-height: 40px;\n  top: -20px;\n  right: -20px;\n  /* background-color:white; */\n}\n.dialogcancelimg[data-v-dc5feb2c] {\n  top: 0px;\n  right: 30px;\n  z-index: 999999;\n}\n.dialogokimg[data-v-dc5feb2c] {\n  top: 0px;\n  left: 30px;\n  z-index: 999999;\n}\n.thedialog[data-v-dc5feb2c] {\n  display: none;\n  z-index: 999998;\n  position: absolute;\n  background-color: white;\n  top: 0px;\n  bottom: 0px;\n  left: 0px;\n  right: 0px;\n}\n.dialogpane[data-v-dc5feb2c] {\n  width: 100%;\n  height: 100%;\n}\n.imgpane[data-v-dc5feb2c] {\n  /* position: absolute; */\n  /* top: 40px; */\n  /* left: 40px; */\n  /* right: 40px; */\n  border: 1px groove black;\n}")
 ;(function(){
 //
 //
@@ -18466,46 +20074,12 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".thedial
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
-const axios = require("axios")
-const resizetool = require("./resizetool")
+const axios = require("axios");
+const resizetool = require("./resizetool");
+const Croppie = require("croppie");
+
 module.exports = {
   name: "VueImgDialogUpload",
   props: {
@@ -18532,251 +20106,125 @@ module.exports = {
       default: this.noimg
     }
   },
-  data() {
-    return {
-      sx: 0,
-      sy: 0,
-      rot: 0,
-      zoom: 1,
-      name: "",
-      dragging: false,
-      dataimg: undefined,
-      lastmouse: undefined,
-      lasttouch1: undefined,
-      lasttouch2: undefined,
-      noimg: "data:image/svg+xml;base64," + "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiICB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMyw5SDE4LjVMMTMsMy41VjlNNiwySDE0TDIwLDhWMjBBMiwyIDAgMCwxIDE4LDIySDZDNC44OSwyMiA0LDIxLjEgNCwyMFY0QzQsMi44OSA0Ljg5LDIgNiwyTTYsMjBIMTVMMTgsMjBWMTJMMTQsMTZMMTIsMTRMNiwyME04LDlBMiwyIDAgMCwwIDYsMTFBMiwyIDAgMCwwIDgsMTNBMiwyIDAgMCwwIDEwLDExQTIsMiAwIDAsMCA4LDlaIiAvPgo8L3N2Zz4="
-    }
-  },
+  data: _ => ({
+    imx: 0,
+    imy: 0,
+    cwidth: 240,
+    cheight: 320,
+    file: undefined,
+    dataimg: undefined,
+    cropper: undefined,
+    dialogdata: undefined,
+    noimg:
+      "data:image/svg+xml;base64," +
+      "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc5NDMiCiAgIHdpZHRoPSI3NTUuOTA1NTIiCiAgIGhlaWdodD0iNzU1LjkwNTUyIj4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGE5NDkiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxkZWZzCiAgICAgaWQ9ImRlZnM5NDciIC8+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxIgogICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSI2NDAiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNDgwIgogICAgIGlkPSJuYW1lZHZpZXc5NDUiIC8+CiAgPGlua3NjYXBlOmNsaXBib2FyZAogICAgIHN0eWxlPSJmb250LXZhcmlhbnQtZWFzdF9hc2lhbjpub3JtYWw7b3BhY2l0eToxO3ZlY3Rvci1lZmZlY3Q6bm9uZTtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlLXdpZHRoOjMuNzc5NTI3NTY7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIgogICAgIG1pbj0iMTcuMDcxNDI0LDMzNC4yMTQzMyIKICAgICBtYXg9Ijc3Mi45NzY5MiwxMDkwLjExOTgiIC8+CiAgPGcKICAgICBpZD0iZzk0MSIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCgzLjc3OTUyNzYsMCwwLDMuNzc5NTI3NiwtMTcuMDcxNDI0LC0zMi4zOTk4NjMpIj4KICAgIDxyZWN0CiAgICAgICBzdHlsZT0ib3BhY2l0eTowLjM1NDk5OTk4O2ZpbGw6I2VjZWNlYztmaWxsLW9wYWNpdHk6MTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MS43MjEyNDc1NTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6MjAuNjU0OTcwODcsIDEuNzIxMjQ3NTc7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIgogICAgICAgaWQ9InJlY3Q4MTUiCiAgICAgICB3aWR0aD0iMTk4LjI3ODc1IgogICAgICAgaGVpZ2h0PSIxOTguMjc4NzUiCiAgICAgICB4PSI1LjM3NzQzODEiCiAgICAgICB5PSI5LjQzMzA4NzMiCiAgICAgICByeD0iNC44NDUxNTU3IgogICAgICAgcnk9IjcuNjYwNzk3NiIgLz4KICAgIDxnCiAgICAgICBpZD0iZzkxOSIKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuNjExMzIwMjksMCwwLDAuNjExMzIwMjksMjUyLjA1MTQ5LDE5Ljc4NTkyMSkiPgogICAgICA8cmVjdAogICAgICAgICByeT0iMi4yNjc4NTc2IgogICAgICAgICByeD0iMi40NTY4NDQxIgogICAgICAgICB5PSI3Ny43NjE2NTgiCiAgICAgICAgIHg9Ii0zMDcuODIxNTMiCiAgICAgICAgIGhlaWdodD0iMTIzLjQ3ODUyIgogICAgICAgICB3aWR0aD0iMTIzLjQ3ODUyIgogICAgICAgICBpZD0icmVjdDg2NCIKICAgICAgICAgc3R5bGU9Im9wYWNpdHk6MC4zNTQ5OTk5ODtmaWxsOiNlY2VjZWM7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjAuNzkzNzQ5OTk7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5OjkuNTI0OTk5ODgsIDAuNzkzNzQ5OTk7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIiAvPgogICAgICA8cGF0aAogICAgICAgICBpZD0icGF0aDg2NiIKICAgICAgICAgdHJhbnNmb3JtPSJzY2FsZSgwLjI2NDU4MzMzKSIKICAgICAgICAgZD0ibSAtMTE1NS40MTk5LDI5My45MDIzNCBjIC01LjE0NDMsMCAtOS4yODUyLDEuOTYzNDIgLTkuMjg1Miw0LjQwMjM1IHYgMjMwLjg5NDUzIGMgMCwyLjQzODkyIDQuMTQwOSw0LjQwMjM0IDkuMjg1Miw0LjQwMjM0IGggMTAzLjUxMTcgYSAxMTUuNjc1ODUsMTE1LjY3NTg1IDAgMCAwIDExNC40ODYzMiwxMDAuMDc2MTcgMTE1LjY3NTg1LDExNS42NzU4NSAwIDAgMCAxMTQuNDg2MzMsLTEwMC4wNzYxNyBoIDExNS42MzQ3NyBjIDUuMTQ0MjgsMCA5LjI4NTE2LC0xLjk2MzQyIDkuMjg1MTYsLTQuNDAyMzQgViAyOTguMzA0NjkgYyAwLC0yLjQzODkzIC00LjE0MDg4LC00LjQwMjM1IC05LjI4NTE2LC00LjQwMjM1IHoiCiAgICAgICAgIHN0eWxlPSJvcGFjaXR5OjAuMzU0OTk5OTg7ZmlsbDojZWNlY2VjO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxLjk2MzA4NDE7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5OjIzLjU1NzAxMDQ5LCAxLjk2MzA4NDI7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiAvPgogICAgICA8Y2lyY2xlCiAgICAgICAgIHI9IjI2Ljg5NTYxMSIKICAgICAgICAgY3k9IjEzNy4xNTY2OCIKICAgICAgICAgY3g9Ii0yNDguMDI2MTEiCiAgICAgICAgIGlkPSJwYXRoODY2LTYiCiAgICAgICAgIHN0eWxlPSJvcGFjaXR5OjAuMzU0OTk5OTg7ZmlsbDojZWNlY2VjO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDowLjQ1NjQzMzYyO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTo1LjQ3NzIwMzgyLCAwLjQ1NjQzMzY1O3N0cm9rZS1kYXNob2Zmc2V0OjA7c3Ryb2tlLW9wYWNpdHk6MSIgLz4KICAgICAgPHJlY3QKICAgICAgICAgcnk9IjIuMjY3ODU3NiIKICAgICAgICAgcng9IjIuNDU2ODQ0MSIKICAgICAgICAgeT0iODEuMDgxMTIzIgogICAgICAgICB4PSItMjA3LjYxMzM3IgogICAgICAgICBoZWlnaHQ9IjE0LjQzMjU1NCIKICAgICAgICAgd2lkdGg9IjE3LjEwNTI0OSIKICAgICAgICAgaWQ9InJlY3Q5MTMiCiAgICAgICAgIHN0eWxlPSJvcGFjaXR5OjAuMzU0OTk5OTg7ZmlsbDojZWNlY2VjO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDowLjc5Mzc0OTk5O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTo5LjUyNDk5OTg4LCAwLjc5Mzc0OTk5O3N0cm9rZS1kYXNob2Zmc2V0OjA7c3Ryb2tlLW9wYWNpdHk6MSIgLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=",
+    cancelimg:
+      "data:image/svg+xml;base64," +
+      "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmcxMjIyIgogICB3aWR0aD0iMzU2LjU1MjczIgogICBoZWlnaHQ9IjM1Ni41NTI3MyIKICAgc29kaXBvZGk6ZG9jbmFtZT0iY2FuY2VsLWltZy5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuMiAoNWMzZTgwZCwgMjAxNy0wOC0wNikiPgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTEyMjgiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMxMjI2IiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBvYmplY3R0b2xlcmFuY2U9IjEwIgogICAgIGdyaWR0b2xlcmFuY2U9IjEwIgogICAgIGd1aWRldG9sZXJhbmNlPSIxMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIxMDE2IgogICAgIGlkPSJuYW1lZHZpZXcxMjI0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp6b29tPSIwLjY2MTg5MzY4IgogICAgIGlua3NjYXBlOmN4PSIxNzguMjc2MzciCiAgICAgaW5rc2NhcGU6Y3k9IjE3OC4yNzYzNyIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMCIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iMjciCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJzdmcxMjIyIiAvPgogIDxpbmtzY2FwZTpjbGlwYm9hcmQKICAgICBzdHlsZT0iZm9udC12YXJpYW50LWVhc3RfYXNpYW46bm9ybWFsO29wYWNpdHk6MC4zNTQ5OTk5ODt2ZWN0b3ItZWZmZWN0Om5vbmU7ZmlsbDojZmYwMDAwO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyLjk5OTk5OTk2O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTozNS45OTk5OTkxLDIuOTk5OTk5OTI7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIgogICAgIG1pbj0iMjA3LjYwMTU2LDM4MS4zNDc4MSIKICAgICBtYXg9IjU2NC4xNTQyOSw3MzcuOTAwNTUiIC8+CiAgPHBhdGgKICAgICBpZD0icGF0aDExNjQiCiAgICAgZD0iTSAxNzguMjc3MzUsMS41IEEgMTc2Ljc3NjY5LDE3Ni43NzY2OSAwIDAgMCAxLjUsMTc4LjI3NTM5IDE3Ni43NzY2OSwxNzYuNzc2NjkgMCAwIDAgMTc4LjI3NzM1LDM1NS4wNTI3NCAxNzYuNzc2NjksMTc2Ljc3NjY5IDAgMCAwIDM1NS4wNTI3NCwxNzguMjc1MzkgMTc2Ljc3NjY5LDE3Ni43NzY2OSAwIDAgMCAxNzguMjc3MzUsMS41IFogbSA0Ni4yNTE5NSw5OS41NDY4OCBjIDYuMjY1MzIsMC4xNTQzNSAxNS4xOTU3Myw0Ljg3NzMxIDIzLjE0NDUzLDEyLjgxMDU0IDExLjA1OTMxLDExLjAzNzU1IDE1LjkwNzMzLDIzLjk4NzE1IDEwLjg2OTE0LDI5LjAzNTE2IGwgLTQwLjgxNjQxLDQwLjg5NDUzIDQwLjg5NDU0LDQwLjgxNjQxIGMgNS4wNDgwMSw1LjAzODIyIDAuMjI2OTksMTcuOTk1NDUgLTEwLjgxMDU1LDI5LjA1NDY4IC0xMS4wMzc1MSwxMS4wNTkyOCAtMjMuOTg3MTEsMTUuOTA3MzMgLTI5LjAzNTE2LDEwLjg2OTE0IGwgLTQwLjg5NDUzLC00MC44MTQ0NSAtNDAuODE2NCw0MC44OTQ1MyBjIC01LjAzODI0LDUuMDQ4MDIgLTE3Ljk5NzQzLDAuMjI1MDUgLTI5LjA1NjY0LC0xMC44MTI1IC0xMS4wNTkyMiwtMTEuMDM3NSAtMTUuOTA1NCwtMjMuOTg3MSAtMTAuODY3MTksLTI5LjAzNTE1IGwgNDAuODE0NDUsLTQwLjg5NDUzIC00MC44OTQ1MywtNDAuODE0NDYgYyAtNS4wNDgwMiwtNS4wMzgxOCAtMC4yMjY5OSwtMTcuOTk3NDQgMTAuODEwNTUsLTI5LjA1NjY0IDExLjAzNzUzLC0xMS4wNTkyNyAyMy45ODcxNCwtMTUuOTA3MzYgMjkuMDM1MTUsLTEwLjg2OTE0IGwgNDAuODk2NDksNDAuODE2NDEgNDAuODE0NDUsLTQwLjg5NjQ5IGMgMS40MTY5OCwtMS40MTk3NCAzLjQ2MDQ0LC0yLjA1ODUyIDUuOTEyMTEsLTEuOTk4MDQgeiIKICAgICBzdHlsZT0ib3BhY2l0eTowLjY7ZmlsbDojZmYwMDAwO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDozO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTozNS45OTk5OTk1NSwgMi45OTk5OTk5NTk5OTk5OTk4MDtzdHJva2UtZGFzaG9mZnNldDowO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIgLz4KPC9zdmc+Cg==",
+    okimg:
+      "data:image/svg+xml;base64," +
+      "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmcxMTM1IgogICB3aWR0aD0iMzExLjU3MjI3IgogICBoZWlnaHQ9IjMxMS41NzIzIgogICBzb2RpcG9kaTpkb2NuYW1lPSJvay1pbWcuc3ZnIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkyLjIgKDVjM2U4MGQsIDIwMTctMDgtMDYpIj4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGExMTQxIj4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZGVmcwogICAgIGlkPSJkZWZzMTEzOSIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNpdHk9IjEiCiAgICAgb2JqZWN0dG9sZXJhbmNlPSIxMCIKICAgICBncmlkdG9sZXJhbmNlPSIxMCIKICAgICBndWlkZXRvbGVyYW5jZT0iMTAiCiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjE5MjAiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iMTAxNiIKICAgICBpZD0ibmFtZWR2aWV3MTEzNyIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaW5rc2NhcGU6em9vbT0iMi42NDE0NDE1IgogICAgIGlua3NjYXBlOmN4PSIxNTUuNzg2MTMiCiAgICAgaW5rc2NhcGU6Y3k9IjE1NS43ODYxNSIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMCIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iMjciCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJzdmcxMTM1IiAvPgogIDxpbmtzY2FwZTpjbGlwYm9hcmQKICAgICBzdHlsZT0iZm9udC12YXJpYW50LWVhc3RfYXNpYW46bm9ybWFsO29wYWNpdHk6MC4zNTQ5OTk5ODt2ZWN0b3ItZWZmZWN0Om5vbmU7ZmlsbDojMDBmZjAwO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyLjk5OTk5OTk2O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTozNS45OTk5OTkwOSwyLjk5OTk5OTkyO3N0cm9rZS1kYXNob2Zmc2V0OjA7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICBtaW49IjIxMC42MjE4Myw1NzEuMzY5MDQiCiAgICAgbWF4PSI1MjIuMTk0MSw4ODIuOTQxMzIiIC8+CiAgPHBhdGgKICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgIGlkPSJwYXRoOTYwIgogICAgIGQ9Ik0gMTU1Ljc4NTE2LDEuNSBBIDE1NC4yODU3MiwxNTQuMjg1NzIgMCAwIDAgMS41LDE1NS43ODUxNyAxNTQuMjg1NzIsMTU0LjI4NTcyIDAgMCAwIDE1NS43ODUxNiwzMTAuMDcyMjkgMTU0LjI4NTcyLDE1NC4yODU3MiAwIDAgMCAzMTAuMDcyMjcsMTU1Ljc4NTE3IDE1NC4yODU3MiwxNTQuMjg1NzIgMCAwIDAgMTU1Ljc4NTE2LDEuNSBaIG0gOTIuMjcxNDksOTAuODA2NjM5IDAuMzI0MjgsMC44NTkzNyBjIC0wLjQwOTMyLDAuMjA3OTEyIC0wLjc0NDIyLDAuNDU0Mzc5IC0wLjkzMzU4LDAuNzM2MzI4IGwgLTEuMjI4NTMsMS44MzIwMzEgLTk5LjUzNzEsMTE4LjI4NzEyMiAtNjkuNDg0Mzc0LC02OS42MzA4OCAwLjY0MDYxOSwtMC41OTc2NiBjIDAuMjQxNzM5LDAuMzIwODggMC41MDIxMjIsMC41NTUyMSAwLjc2NTYzLDAuNjQwNjMgbCA2Mi4xNjQwNjUsMjAuMTkzMzcgeiIKICAgICBzdHlsZT0ib3BhY2l0eTowLjY7ZmlsbDojMDBmZjAwO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDozO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTozNS45OTk5OTk0OCwgMi45OTk5OTk5NTk5OTk5OTk4MDtzdHJva2UtZGFzaG9mZnNldDowO3N0cm9rZS1vcGFjaXR5OjEiIC8+Cjwvc3ZnPgo="
+  }),
   mounted() {
-    this.dataimg = this.img
-    if (this.dataimg == null)
-      this.dataimg = this.noimg
-    const cnv = this.$refs["thecanvas"]
-    cnv.addEventListener("touchstart", this.touchstart)
-    cnv.addEventListener("touchmove", this.touchmove)
-    cnv.addEventListener("touchend", this.touchend)
-    cnv.addEventListener("mousedown", this.touchstart)
-    cnv.addEventListener("mousemove", this.mousemove)
-    cnv.addEventListener("wheel", this.wheel)
-    cnv.addEventListener("mouseup", this.touchend)
-    this.ajustaimagem()
+    let attr = document.createAttribute("style");
+    attr.value = `width:${this.width};height:${this.height};`;
+    this.$refs["imgconainer"].setAttributeNode(attr);
+    this.checkcnvsize();
   },
   methods: {
-    touchstart(ev) {
-      this.dragging = true
-    },
-    touchmove(ev) {
-      if (this.dragging) {
-        if (!this.lasttouch2)
-          this.lasttouch2 = ev.touches[1]
-        if (!this.lasttouch1) {
-          this.lasttouch1 = ev.touches[0]
-        } else {
-          console.log(ev)
-          const dx = this.lasttouch1.clientX - ev.touches[0].clientX
-          const dy = this.lasttouch1.clientY - ev.touches[0].clientY
-          this.dothemove(dx, dy)
-          if (ev.touches[1]) {
-            const ex = this.lasttouch2.clientX - ev.touches[1].clientX
-            const ey = this.lasttouch2.clientY - ev.touches[1].clientY
-            this.dothepinch(ex, ey)
-          }
-          this.lasttouch1 = ev.touches[0]
-          this.lasttouch2 = ev.touches[1]
-          this.desenhaimg()
-        }
+    resetfile() {
+      this.file = null;
+      this.dataimg = null;
+      this.dialogdata = null;
+      if (this.cropper) {
+        this.cropper.destroy();
+        this.cropper = null;
       }
-    },
-    mousemove(ev) {
-      if (this.dragging) {
-        if (!this.lastmouse) {
-          this.lastmouse = ev
-        } else {
-          const dx = this.lastmouse.clientX - ev.clientX
-          const dy = this.lastmouse.clientY - ev.clientY
-          this.dothemove(dx, dy)
-          this.lastmouse = ev
-          this.desenhaimg()
-        }
-      }
-    },
-    dothemove(dx, dy) {
-      // then we check rot, since it's very important thing to check
-      if (this.rot == 0) {
-        this.sx += dx
-        this.sy += dy
-      } else if (this.rot == 0.5) {
-        this.sx += dy
-        this.sy -= dx
-      } else if (this.rot == 1) {
-        this.sx -= dx
-        this.sy -= dy
-      } else if (this.rot == 1.5) {
-        this.sx -= dy
-        this.sy += dx
-      }
-    },
-    dothepinch(ex, ey) {
-      if (ex > 0 || ey < 0)
-        this.afasta()
-      else if (ex < 0 || ey > 0)
-        this.aproxima()
-    },
-    wheel(ev) {
-      console.log(ev)
-      if (ev.deltaY < 0)
-        this.aproxima()
-      if (ev.deltaY > 0)
-        this.afasta()
-    },
-    touchend(ev) {
-      this.dragging = false
-      this.lastmouse = null
-      this.lasttouch1 = null
-      this.lasttouch2 = null
-    },
-    ajustaimagem() {
-      const attr = document.createAttribute("style")
-      attr.value = `width:${this.width};height:${this.height};`
-      this.$refs["imgconainer"].setAttributeNode(attr)
-      this.$refs["image"].src = this.dataimg
+      this.$refs["input"].type = "";
+      this.$refs["input"].type = "file";
     },
     loadimg() {
-      this.$refs["input"].click()
+      this.resetfile();
+      this.$refs["input"].click();
+    },
+    checkcnvsize() {
+      let w = window.innerWidth;
+      let h = window.innerHeight;
+      // we need a square
+      let portrait = w > h;
+      let landscape = h >= w;
+      if (landscape) h = w;
+      if (portrait) w = h;
+      this.cwidth = w;
+      this.cheight = h;
     },
     changefile() {
-      let file = this.$refs["input"].files[0]
+      this.file = this.$refs["input"].files[0];
+      let file = this.file;
       if (!file) {
         // silent french exit
-        return
+        return;
       }
-      this.name = file.name
-      this.dataimg = URL.createObjectURL(file)
-      this.ajustaimagem()
-      this.$emit("onchangefile", { file, image: this.$refs["image"] })
-      this.preparedialog()
+      this.$nextTick(_ => {
+        this.$emit("onchangefile", { file, image: this.$refs["image"] });
+      });
+      resizetool.resize(file, this.cwidth + "px").then(ret => {
+        this.dialogdata = ret;
+        let imgpane = this.$refs["imgpane"];
+        this.cropper = new Croppie(imgpane, {
+          url: this.dialogdata,
+          viewport: { width: this.cwidth * 0.55, height: this.cheight * 0.55 },
+          showZoomer: true,
+          enableExif: true,
+          maxZoom: 3
+        });
+        this.$refs["thedialog"].style.display = "block";
+      });
     },
-    preparedialog() {
-
-      this.$refs["updialog"].style.display = "block"
-      const cnv = this.$refs["thecanvas"];
-      const w = window.innerWidth
-      const h = window.innerHeight
-      const cw = document.createAttribute("width")
-      const ch = document.createAttribute("height")
-      const isportrait = w < h
-      // always draw a square
-      cw.value = ch.value = isportrait ? w : h
-      cnv.setAttributeNode(cw)
-      cnv.setAttributeNode(ch)
-      cnv.style[isportrait ? "top" : "left"] = (isportrait ? (h - w) / 2 : (w - h) / 2) + "px"
-      cnv.style[isportrait ? "left" : "top"] = "0px"
-      const box = this.$refs["toolbox"]
-      box.style[isportrait ? "top" : "left"] = (isportrait ? (h - w) / 2 : (w - h) / 2) + "px"
-      box.style[isportrait ? "left" : "top"] = "0px"
-      box.style.width = (isportrait ? w : h) + "px"
-      box.style.height = "3em"
-
-      this.desenhaimg()
-
-      this.$emit("onopendialog", { file: this.$refs["input"].files[0], image: this.dataimg })
+    closedialog() {
+      this.$refs["thedialog"].style.display = "none";
+      this.resetfile();
+      // rootcanvas.innerHTML = "";;
     },
-    desenhaimg() {
-      const theimg = new Image()
-      theimg.onload = _ => {
-        const cnv = this.$refs["thecanvas"]
-        const ctx = cnv.getContext("2d")
-        const cw2 = cnv.width / 2
-        const ch2 = cnv.height / 2
-        ctx.fillStyle = "white"
-        ctx.save()
-        ctx.translate(cw2, ch2)
-        ctx.rotate(this.rot * Math.PI)
-        ctx.fillRect(-cw2, -ch2, cnv.width, cnv.height)
-        // let's blit the canvas! https://en.wikipedia.org/wiki/Blitter
-        ctx.drawImage(
-          theimg, // data data data
-          this.sx + cw2, // source coords on data
-          this.sy + ch2,
-          cnv.width * this.zoom, // size obeys destiny to avoid deformatons
-          cnv.height * this.zoom,
-          -cw2, // destiny coords to land data data data
-          -ch2,
-          cnv.width, // destiny area to paint
-          cnv.height
-        )
-        ctx.restore()
-      }
-      theimg.src = this.dataimg
-    },
-    aproxima() {
-      this.zoom -= 0.1
-      this.desenhaimg()
-    },
-    afasta() {
-      this.zoom += 0.1
-      this.desenhaimg()
-    },
-    giraesquerda() {
-      this.rot = (this.rot + 1.5) % 2;
-      this.desenhaimg()
-    },
-    giradireita() {
-      this.rot = (this.rot + 0.5) % 2;
-      this.desenhaimg()
-    },
-    aceita() {
-      // Só salva e vai embora
-      this.dataimg = this.$refs["thecanvas"].toDataURL("image/jpeg", 0.75)
-      this.$refs['updialog'].style.display = 'none'
-      this.$refs["image"].src = this.dataimg
-      this.$emit("onimagechange", { file: this.$refs["input"].files[0], image: this.dataimg })
-      this.$emit("onclosedialog", { file: this.$refs["input"].files[0], image: this.dataimg })
-      if (this.resize) 
-        this.resizeimage()
-      else
-        this.dotheupload()
-    },
-    canceladialog() {
-      this.$emit("oncanceladialog", { image: this.$refs["image"] })
-      this.$refs['updialog'].style.display = 'none'
-      this.dataimg = this.noimg
-      this.ajustaimagem()
-    },
-    resizeimage() {
-      resizetool.resizedataimg(this.dataimg, this.resize).then(ret => {
-        this.dataimg = ret // preview
-        this.$refs["image"].src = this.dataimg
-        this.$emit("resizeimage", { file: this.file[0], image: this.$refs["image"] })
-        this.dotheupload()
-      })
+    savecrop() {
+      this.cropper.result("base64").then(ret => {
+        this.cropper.destroy();
+        this.cropper = null;
+        this.dataimg = ret;
+        this.$refs["thedialog"].style.display = "none";
+        this.$emit("onimagechange", { file: this.file, dataimg: this.dataimg });
+        this.dotheupload();
+      });
     },
     dotheupload() {
       if (this.url) {
         // le's trust the image, not the file
-        let img = this.$refs["image"]
-        let file = this.$refs["input"].files[0]
+        let img = this.$refs["image"];
+        let file = this.file;
         const headers = {
           "Content-Type": file.type || "image/jpeg",
           "X-Filename": file.name
-        }
+        };
         if (this.headers) {
-          for (let k in this.headers)
-            headers[k] = this.headers[k]
+          for (let k in this.headers) headers[k] = this.headers[k];
         }
-        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
-          this.$emit("onupload", { file, image: this.$refs["image"], ret })
-        }).catch(err => {
-          this.$emit("onuploaderror", { file, image: this.$refs["image"], err })
+        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), {
+          headers
         })
-      }
-    }
-  },
-  watch: {
-    img(val) {
-      if (!this.dataimg) {
-        this.$refs["image"].src = val
-        this.$emit("onchangeimg", val)
+          .then(ret =>
+            this.$nextTick(_ =>
+              this.$emit("onupload", { file, image: this.$refs["image"], ret })
+            )
+          )
+          .catch(err => {
+            this.$nextTick(_ =>
+              this.$emit("onuploaderror", {
+                file,
+                image: this.$refs["image"],
+                err
+              })
+            );
+          });
       }
     }
   }
@@ -18786,7 +20234,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"imgconainer"},[_c('img',{ref:"image",attrs:{"width":"100%","height":"100%"},on:{"click":_vm.loadimg}}),_vm._v(" "),_c('input',{ref:"input",staticClass:"theinput",attrs:{"type":"file","accept":"image/*"},on:{"change":_vm.changefile}}),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.name))])]),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.legenda))])]),_vm._v(" "),_c('div',{ref:"updialog",staticClass:"thedialog"},[_c('canvas',{ref:"thecanvas",staticClass:"thecanvas"}),_vm._v(" "),_c('div',{ref:"toolbox",staticClass:"toolbox"},[_c('button',{staticClass:"fecha",attrs:{"type":"button"},on:{"click":_vm.canceladialog}},[_vm._v("\n        X\n      ")]),_vm._v(" "),_c('button',{staticClass:"aproxima",attrs:{"type":"button"},on:{"click":_vm.aproxima}},[_vm._v("\n        +\n      ")]),_vm._v(" "),_c('button',{staticClass:"afasta",attrs:{"type":"button"},on:{"click":_vm.afasta}},[_vm._v("\n        -\n      ")]),_vm._v(" "),_c('button',{staticClass:"giraesquerda",attrs:{"type":"button"},on:{"click":_vm.giraesquerda}},[_vm._v("\n        ↺\n      ")]),_vm._v(" "),_c('button',{staticClass:"giradireita",attrs:{"type":"button"},on:{"click":_vm.giradireita}},[_vm._v("\n        ↻\n      ")]),_vm._v(" "),_c('button',{staticClass:"aceita",attrs:{"type":"button"},on:{"click":_vm.aceita}},[_vm._v("\n        ✓\n      ")])])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"imgconainer"},[_c('div',{staticClass:"theimgcontainer"},[(!_vm.dataimg)?_c('img',{staticClass:"theimg",attrs:{"src":_vm.img ? _vm.img : _vm.noimg,"width":"100%","height":"100%"},on:{"click":_vm.loadimg}}):_vm._e(),_vm._v(" "),(_vm.dataimg)?_c('img',{ref:"image",staticClass:"theimg",attrs:{"src":_vm.dataimg,"width":"100%","height":"100%"}}):_vm._e(),_vm._v(" "),(_vm.dataimg)?_c('img',{staticClass:"cancelimg",attrs:{"src":_vm.cancelimg},on:{"click":_vm.resetfile}}):_vm._e(),_vm._v(" "),_c('input',{ref:"input",staticClass:"theinput",attrs:{"type":"file","accept":"image/*"},on:{"change":_vm.changefile}}),_vm._v(" "),(!_vm.dataimg)?_c('div',{staticClass:"legenda",on:{"click":_vm.loadimg}},[_c('small',[_vm._v(_vm._s(_vm.legenda))])]):_vm._e(),_vm._v(" "),(_vm.file)?_c('div',[_c('small',{on:{"click":_vm.loadimg}},[_vm._v(_vm._s(_vm.file.name))])]):_vm._e()]),_vm._v(" "),_c('div',{ref:"thedialog",staticClass:"thedialog"},[_c('div',{staticClass:"dialogpane"},[_c('div',{ref:"imgpane",staticClass:"imgpane"})]),_vm._v(" "),_c('img',{staticClass:"dialogcancelimg",attrs:{"src":_vm.cancelimg},on:{"click":_vm.closedialog}}),_vm._v(" "),_c('img',{staticClass:"dialogokimg",attrs:{"src":_vm.okimg},on:{"click":_vm.savecrop}})])])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-dc5feb2c"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -18800,8 +20248,8 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-dc5feb2c", __vue__options__)
   }
 })()}
-},{"./resizetool":49,"axios":15,"vue":46,"vue-hot-reload-api":44,"vueify/lib/insert-css":47}],51:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("input.theinput[data-v-16dba0ed] {\n  display: none\n}")
+},{"./resizetool":51,"axios":16,"croppie":43,"vue":48,"vue-hot-reload-api":46,"vueify/lib/insert-css":49}],53:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".theimgcontainer[data-v-16dba0ed] {\n  position: relative;\n}\n.theimg[data-v-16dba0ed] {\n  min-height: 100px;\n}\ninput.theinput[data-v-16dba0ed] {\n  display: none;\n}\n.legenda[data-v-16dba0ed] {\n  position: absolute;\n  top: 50%;\n  width: 100%;\n  text-align: center;\n}\n.cancelimg[data-v-16dba0ed] {\n  position: absolute;\n  max-width: 40px;\n  max-height: 40px;\n  top: -20px;\n  right: -20px;\n}")
 ;(function(){
 //
 //
@@ -18817,24 +20265,16 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("input.th
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
-const axios = require("axios")
-const resizetool = require("./resizetool")
+const axios = require("axios");
+const resizetool = require("./resizetool");
 module.exports = {
-  // vue-img-upload
   name: "VueImgUpload",
   props: {
+    url: String,
+    headers: Object,
+    resize: String,
     width: {
       type: String,
       default: "auto"
@@ -18851,9 +20291,6 @@ module.exports = {
       type: String,
       default: "post"
     },
-    url: String,
-    headers: Object,
-    resize: String,
     orientation: {
       type: String,
       default: "any"
@@ -18865,107 +20302,123 @@ module.exports = {
   },
   data() {
     return {
-      name: "",
       dataimg: undefined,
-      noimg: "data:image/svg+xml;base64," + "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiICB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgIDxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMyw5SDE4LjVMMTMsMy41VjlNNiwySDE0TDIwLDhWMjBBMiwyIDAgMCwxIDE4LDIySDZDNC44OSwyMiA0LDIxLjEgNCwyMFY0QzQsMi44OSA0Ljg5LDIgNiwyTTYsMjBIMTVMMTgsMjBWMTJMMTQsMTZMMTIsMTRMNiwyME04LDlBMiwyIDAgMCwwIDYsMTFBMiwyIDAgMCwwIDgsMTNBMiwyIDAgMCwwIDEwLDExQTIsMiAwIDAsMCA4LDlaIiAvPgo8L3N2Zz4="
-    }
+      file: undefined,
+      noimg:
+        "data:image/svg+xml;base64," +
+        "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc5NDMiCiAgIHdpZHRoPSI3NTUuOTA1NTIiCiAgIGhlaWdodD0iNzU1LjkwNTUyIj4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGE5NDkiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxkZWZzCiAgICAgaWQ9ImRlZnM5NDciIC8+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxIgogICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSI2NDAiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNDgwIgogICAgIGlkPSJuYW1lZHZpZXc5NDUiIC8+CiAgPGlua3NjYXBlOmNsaXBib2FyZAogICAgIHN0eWxlPSJmb250LXZhcmlhbnQtZWFzdF9hc2lhbjpub3JtYWw7b3BhY2l0eToxO3ZlY3Rvci1lZmZlY3Q6bm9uZTtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlLXdpZHRoOjMuNzc5NTI3NTY7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIgogICAgIG1pbj0iMTcuMDcxNDI0LDMzNC4yMTQzMyIKICAgICBtYXg9Ijc3Mi45NzY5MiwxMDkwLjExOTgiIC8+CiAgPGcKICAgICBpZD0iZzk0MSIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCgzLjc3OTUyNzYsMCwwLDMuNzc5NTI3NiwtMTcuMDcxNDI0LC0zMi4zOTk4NjMpIj4KICAgIDxyZWN0CiAgICAgICBzdHlsZT0ib3BhY2l0eTowLjM1NDk5OTk4O2ZpbGw6I2VjZWNlYztmaWxsLW9wYWNpdHk6MTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MS43MjEyNDc1NTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6MjAuNjU0OTcwODcsIDEuNzIxMjQ3NTc7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIgogICAgICAgaWQ9InJlY3Q4MTUiCiAgICAgICB3aWR0aD0iMTk4LjI3ODc1IgogICAgICAgaGVpZ2h0PSIxOTguMjc4NzUiCiAgICAgICB4PSI1LjM3NzQzODEiCiAgICAgICB5PSI5LjQzMzA4NzMiCiAgICAgICByeD0iNC44NDUxNTU3IgogICAgICAgcnk9IjcuNjYwNzk3NiIgLz4KICAgIDxnCiAgICAgICBpZD0iZzkxOSIKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuNjExMzIwMjksMCwwLDAuNjExMzIwMjksMjUyLjA1MTQ5LDE5Ljc4NTkyMSkiPgogICAgICA8cmVjdAogICAgICAgICByeT0iMi4yNjc4NTc2IgogICAgICAgICByeD0iMi40NTY4NDQxIgogICAgICAgICB5PSI3Ny43NjE2NTgiCiAgICAgICAgIHg9Ii0zMDcuODIxNTMiCiAgICAgICAgIGhlaWdodD0iMTIzLjQ3ODUyIgogICAgICAgICB3aWR0aD0iMTIzLjQ3ODUyIgogICAgICAgICBpZD0icmVjdDg2NCIKICAgICAgICAgc3R5bGU9Im9wYWNpdHk6MC4zNTQ5OTk5ODtmaWxsOiNlY2VjZWM7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjAuNzkzNzQ5OTk7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5OjkuNTI0OTk5ODgsIDAuNzkzNzQ5OTk7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIiAvPgogICAgICA8cGF0aAogICAgICAgICBpZD0icGF0aDg2NiIKICAgICAgICAgdHJhbnNmb3JtPSJzY2FsZSgwLjI2NDU4MzMzKSIKICAgICAgICAgZD0ibSAtMTE1NS40MTk5LDI5My45MDIzNCBjIC01LjE0NDMsMCAtOS4yODUyLDEuOTYzNDIgLTkuMjg1Miw0LjQwMjM1IHYgMjMwLjg5NDUzIGMgMCwyLjQzODkyIDQuMTQwOSw0LjQwMjM0IDkuMjg1Miw0LjQwMjM0IGggMTAzLjUxMTcgYSAxMTUuNjc1ODUsMTE1LjY3NTg1IDAgMCAwIDExNC40ODYzMiwxMDAuMDc2MTcgMTE1LjY3NTg1LDExNS42NzU4NSAwIDAgMCAxMTQuNDg2MzMsLTEwMC4wNzYxNyBoIDExNS42MzQ3NyBjIDUuMTQ0MjgsMCA5LjI4NTE2LC0xLjk2MzQyIDkuMjg1MTYsLTQuNDAyMzQgViAyOTguMzA0NjkgYyAwLC0yLjQzODkzIC00LjE0MDg4LC00LjQwMjM1IC05LjI4NTE2LC00LjQwMjM1IHoiCiAgICAgICAgIHN0eWxlPSJvcGFjaXR5OjAuMzU0OTk5OTg7ZmlsbDojZWNlY2VjO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxLjk2MzA4NDE7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5OjIzLjU1NzAxMDQ5LCAxLjk2MzA4NDI7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiAvPgogICAgICA8Y2lyY2xlCiAgICAgICAgIHI9IjI2Ljg5NTYxMSIKICAgICAgICAgY3k9IjEzNy4xNTY2OCIKICAgICAgICAgY3g9Ii0yNDguMDI2MTEiCiAgICAgICAgIGlkPSJwYXRoODY2LTYiCiAgICAgICAgIHN0eWxlPSJvcGFjaXR5OjAuMzU0OTk5OTg7ZmlsbDojZWNlY2VjO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDowLjQ1NjQzMzYyO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTo1LjQ3NzIwMzgyLCAwLjQ1NjQzMzY1O3N0cm9rZS1kYXNob2Zmc2V0OjA7c3Ryb2tlLW9wYWNpdHk6MSIgLz4KICAgICAgPHJlY3QKICAgICAgICAgcnk9IjIuMjY3ODU3NiIKICAgICAgICAgcng9IjIuNDU2ODQ0MSIKICAgICAgICAgeT0iODEuMDgxMTIzIgogICAgICAgICB4PSItMjA3LjYxMzM3IgogICAgICAgICBoZWlnaHQ9IjE0LjQzMjU1NCIKICAgICAgICAgd2lkdGg9IjE3LjEwNTI0OSIKICAgICAgICAgaWQ9InJlY3Q5MTMiCiAgICAgICAgIHN0eWxlPSJvcGFjaXR5OjAuMzU0OTk5OTg7ZmlsbDojZWNlY2VjO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDowLjc5Mzc0OTk5O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTo5LjUyNDk5OTg4LCAwLjc5Mzc0OTk5O3N0cm9rZS1kYXNob2Zmc2V0OjA7c3Ryb2tlLW9wYWNpdHk6MSIgLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=",
+      cancelimg:
+        "data:image/svg+xml;base64," +
+        "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmcxMjIyIgogICB3aWR0aD0iMzU2LjU1MjczIgogICBoZWlnaHQ9IjM1Ni41NTI3MyIKICAgc29kaXBvZGk6ZG9jbmFtZT0iY2FuY2VsLWltZy5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuMiAoNWMzZTgwZCwgMjAxNy0wOC0wNikiPgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTEyMjgiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMxMjI2IiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBvYmplY3R0b2xlcmFuY2U9IjEwIgogICAgIGdyaWR0b2xlcmFuY2U9IjEwIgogICAgIGd1aWRldG9sZXJhbmNlPSIxMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIxMDE2IgogICAgIGlkPSJuYW1lZHZpZXcxMjI0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp6b29tPSIwLjY2MTg5MzY4IgogICAgIGlua3NjYXBlOmN4PSIxNzguMjc2MzciCiAgICAgaW5rc2NhcGU6Y3k9IjE3OC4yNzYzNyIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMCIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iMjciCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJzdmcxMjIyIiAvPgogIDxpbmtzY2FwZTpjbGlwYm9hcmQKICAgICBzdHlsZT0iZm9udC12YXJpYW50LWVhc3RfYXNpYW46bm9ybWFsO29wYWNpdHk6MC4zNTQ5OTk5ODt2ZWN0b3ItZWZmZWN0Om5vbmU7ZmlsbDojZmYwMDAwO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyLjk5OTk5OTk2O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTozNS45OTk5OTkxLDIuOTk5OTk5OTI7c3Ryb2tlLWRhc2hvZmZzZXQ6MDtzdHJva2Utb3BhY2l0eToxIgogICAgIG1pbj0iMjA3LjYwMTU2LDM4MS4zNDc4MSIKICAgICBtYXg9IjU2NC4xNTQyOSw3MzcuOTAwNTUiIC8+CiAgPHBhdGgKICAgICBpZD0icGF0aDExNjQiCiAgICAgZD0iTSAxNzguMjc3MzUsMS41IEEgMTc2Ljc3NjY5LDE3Ni43NzY2OSAwIDAgMCAxLjUsMTc4LjI3NTM5IDE3Ni43NzY2OSwxNzYuNzc2NjkgMCAwIDAgMTc4LjI3NzM1LDM1NS4wNTI3NCAxNzYuNzc2NjksMTc2Ljc3NjY5IDAgMCAwIDM1NS4wNTI3NCwxNzguMjc1MzkgMTc2Ljc3NjY5LDE3Ni43NzY2OSAwIDAgMCAxNzguMjc3MzUsMS41IFogbSA0Ni4yNTE5NSw5OS41NDY4OCBjIDYuMjY1MzIsMC4xNTQzNSAxNS4xOTU3Myw0Ljg3NzMxIDIzLjE0NDUzLDEyLjgxMDU0IDExLjA1OTMxLDExLjAzNzU1IDE1LjkwNzMzLDIzLjk4NzE1IDEwLjg2OTE0LDI5LjAzNTE2IGwgLTQwLjgxNjQxLDQwLjg5NDUzIDQwLjg5NDU0LDQwLjgxNjQxIGMgNS4wNDgwMSw1LjAzODIyIDAuMjI2OTksMTcuOTk1NDUgLTEwLjgxMDU1LDI5LjA1NDY4IC0xMS4wMzc1MSwxMS4wNTkyOCAtMjMuOTg3MTEsMTUuOTA3MzMgLTI5LjAzNTE2LDEwLjg2OTE0IGwgLTQwLjg5NDUzLC00MC44MTQ0NSAtNDAuODE2NCw0MC44OTQ1MyBjIC01LjAzODI0LDUuMDQ4MDIgLTE3Ljk5NzQzLDAuMjI1MDUgLTI5LjA1NjY0LC0xMC44MTI1IC0xMS4wNTkyMiwtMTEuMDM3NSAtMTUuOTA1NCwtMjMuOTg3MSAtMTAuODY3MTksLTI5LjAzNTE1IGwgNDAuODE0NDUsLTQwLjg5NDUzIC00MC44OTQ1MywtNDAuODE0NDYgYyAtNS4wNDgwMiwtNS4wMzgxOCAtMC4yMjY5OSwtMTcuOTk3NDQgMTAuODEwNTUsLTI5LjA1NjY0IDExLjAzNzUzLC0xMS4wNTkyNyAyMy45ODcxNCwtMTUuOTA3MzYgMjkuMDM1MTUsLTEwLjg2OTE0IGwgNDAuODk2NDksNDAuODE2NDEgNDAuODE0NDUsLTQwLjg5NjQ5IGMgMS40MTY5OCwtMS40MTk3NCAzLjQ2MDQ0LC0yLjA1ODUyIDUuOTEyMTEsLTEuOTk4MDQgeiIKICAgICBzdHlsZT0ib3BhY2l0eTowLjY7ZmlsbDojZmYwMDAwO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDozO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTozNS45OTk5OTk1NSwgMi45OTk5OTk5NTk5OTk5OTk4MDtzdHJva2UtZGFzaG9mZnNldDowO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIgLz4KPC9zdmc+Cg=="
+    };
   },
   mounted() {
-    let attr = document.createAttribute("style")
-    attr.value = `width:${this.width};height:${this.height};`
-    this.$refs["imgconainer"].setAttributeNode(attr)
-    if (this.img != null)
-      this.$refs["image"].src = this.img
-    else
-      this.$refs["image"].src = this.noimg
+    let attr = document.createAttribute("style");
+    attr.value = `width:${this.width};height:${this.height};`;
+    this.$refs["imgconainer"].setAttributeNode(attr);
   },
   methods: {
     loadimg() {
-      this.$refs["input"].click()
+      this.file = null;
+      this.$refs["input"].type = "";
+      this.$refs["input"].type = "file";
+      this.$refs["input"].click();
     },
     changefile() {
-      let file = this.$refs["input"].files[0]
+      this.file = this.$refs["input"].files[0];
+      let file = this.file;
       if (!file) {
         // silent french exit
-        return
+        return;
       }
-      this.name = file.name
-      this.$emit("onchangefile", { file, image: this.$refs["image"] })
-      if (this.resize)
-        this.resizefile()
-      else
-        this.previewimg()
+      this.$nextTick(_ => {
+        this.$emit("onchangefile", { file, image: this.$refs["image"] });
+      });
+      if (this.resize) this.resizefile();
+      else this.previewimg();
     },
     resizefile() {
-      let file = this.$refs["input"].files[0]
-      resizetool.resize(file, this.resize).then((ret) => {
-        this.dataimg = ret // preview
-        this.checkorientation()
-        this.$emit("onresizefile", { file, image: this.$refs["image"] })
-      })
+      let file = this.file; //this.$refs["input"].files[0];
+      resizetool.resize(file, this.resize).then(ret => {
+        this.dataimg = ret; // preview
+        this.$nextTick(_ =>
+          this.$emit("onresizefile", { file, image: this.$refs["image"] })
+        );
+        this.checkorientation();
+      });
     },
     previewimg() {
-      let file = this.$refs["input"].files[0]
-      this.dataimg = URL.createObjectURL(file)
-      this.checkorientation()
+      this.dataimg = URL.createObjectURL(this.file);
+      this.checkorientation();
     },
     checkorientation() {
-      let file = this.$refs["input"].files[0]
+      let file = this.file;
       if (this.orientation == "landscape") {
         resizetool.dolandscape(this.dataimg).then(dataimg => {
-          this.dataimg = dataimg
-          this.$refs["image"].src = this.dataimg
-          this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
-          this.dotheupload()
-        })
+          this.dataimg = dataimg;
+          this.$emit("onchangeorientation", {
+            file,
+            image: this.$refs["image"]
+          });
+          this.dotheupload();
+        });
       } else if (this.orientation == "portrait") {
         resizetool.doportrait(this.dataimg).then(dataimg => {
           this.dataimg = dataimg;
-          this.$refs["image"].src = this.dataimg
-          this.$emit("onchangeorientation", { file, image: this.$refs["image"] })
-          this.dotheupload()
-        })
+          this.$emit("onchangeorientation", {
+            file,
+            image: this.$refs["image"]
+          });
+          this.dotheupload();
+        });
       } else {
-        this.$refs["image"].src = this.dataimg
-        this.dotheupload()
+        this.dotheupload();
       }
     },
     dotheupload() {
       if (this.url) {
         // le's trust the image, not the file
-        let img = this.$refs["image"]
-        let file = this.$refs["input"].files[0]
+        let img = this.$refs["image"];
+        let file = this.file;
         const headers = {
           "Content-Type": file.type || "image/jpeg",
           "X-Filename": file.name
-        }
+        };
         if (this.headers) {
-          for (let k in this.headers)
-            headers[k] = this.headers[k]
+          for (let k in this.headers) headers[k] = this.headers[k];
         }
-        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), { headers }).then((ret) => {
-          this.$emit("onupload", { file, image: this.$refs["image"], ret })
-        }).catch(err => {
-          this.$emit("onuploaderror", { file, image: this.$refs["image"], err })
+        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), {
+          headers
         })
+          .then(ret =>
+            this.$nextTick(_ =>
+              this.$emit("onupload", { file, image: this.$refs["image"], ret })
+            )
+          )
+          .catch(err => {
+            this.$nextTick(_ =>
+              this.$emit("onuploaderror", {
+                file,
+                image: this.$refs["image"], 
+                err
+              })
+            );
+          });
       }
-    }
-  },
-  watch: {
-    img(val) {
-      if (!this.dataimg) {
-        this.$refs["image"].src = val
-        this.$emit("onchangeimg", val)
-      }
+    },
+    removeimg() {
+      this.dataimg = null;
+      this.file = null;
+      this.$emit("onremoveimage");
     }
   }
-}
+};
 
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"imgconainer"},[_c('img',{ref:"image",attrs:{"width":"100%","height":"100%"},on:{"click":_vm.loadimg}}),_vm._v(" "),_c('input',{ref:"input",staticClass:"theinput",attrs:{"type":"file","accept":"image/*"},on:{"change":_vm.changefile}}),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.name))])]),_vm._v(" "),_c('div',[_c('small',[_vm._v(_vm._s(_vm.legenda))])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"imgconainer",staticClass:"theimgcontainer"},[(!_vm.dataimg)?_c('img',{staticClass:"theimg",attrs:{"src":_vm.img ? _vm.img : _vm.noimg,"width":"100%","height":"100%"},on:{"click":_vm.loadimg}}):_vm._e(),_vm._v(" "),(_vm.dataimg)?_c('img',{ref:"image",staticClass:"theimg",attrs:{"src":_vm.dataimg,"width":"100%","height":"100%"}}):_vm._e(),_vm._v(" "),(_vm.dataimg)?_c('img',{staticClass:"cancelimg",attrs:{"src":_vm.cancelimg},on:{"click":_vm.removeimg}}):_vm._e(),_vm._v(" "),_c('input',{ref:"input",staticClass:"theinput",attrs:{"type":"file","accept":"image/*"},on:{"change":_vm.changefile}}),_vm._v(" "),(!_vm.dataimg)?_c('div',{staticClass:"legenda",on:{"click":_vm.loadimg}},[_c('small',[_vm._v(_vm._s(_vm.legenda))])]):_vm._e(),_vm._v(" "),(_vm.file)?_c('div',[_c('small',{on:{"click":_vm.loadimg}},[_vm._v(_vm._s(_vm.file.name))])]):_vm._e()])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-16dba0ed"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -18979,4 +20432,4 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-16dba0ed", __vue__options__)
   }
 })()}
-},{"./resizetool":49,"axios":15,"vue":46,"vue-hot-reload-api":44,"vueify/lib/insert-css":47}]},{},[13]);
+},{"./resizetool":51,"axios":16,"vue":48,"vue-hot-reload-api":46,"vueify/lib/insert-css":49}]},{},[14]);
