@@ -1,6 +1,6 @@
 {
   "name": "vue-img-upload",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "yet another vue image upload component",
   "main": "src/main.js",
   "scripts": {

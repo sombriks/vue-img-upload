@@ -182,7 +182,7 @@ input.theinput {
   position: absolute;
   max-width: 40px;
   max-height: 40px;
-  top: -20px;
-  right: -20px;
+  top: 0px;
+  right: 0px;
 }
 </style>
