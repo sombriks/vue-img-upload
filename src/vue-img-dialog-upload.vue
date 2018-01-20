@@ -112,13 +112,18 @@ module.exports = {
         // silent french exit
         return;
       }
+      this.$nextTick(_ => {
+        this.$emit("onchangefile", { file, image: this.$refs["image"] });
+      });
       resizetool.resize(file, this.cwidth + "px").then(ret => {
         this.dialogdata = ret;
         let imgpane = this.$refs["imgpane"];
         this.cropper = new Croppie(imgpane, {
           url: this.dialogdata,
-          viewport: { width: this.cwidth * 0.7, height: this.cheight * 0.7 },
-          showZoomer: true
+          viewport: { width: this.cwidth * 0.55, height: this.cheight * 0.55 },
+          showZoomer: true,
+          enableExif: true,
+          maxZoom: 3
         });
         this.$refs["thedialog"].style.display = "block";
       });
@@ -128,7 +133,47 @@ module.exports = {
       this.resetfile();
       // rootcanvas.innerHTML = "";;
     },
-    savecrop() {}
+    savecrop() {
+      this.cropper.result("base64").then(ret => {
+        this.cropper.destroy();
+        this.cropper = null;
+        this.dataimg = ret;
+        this.$refs["thedialog"].style.display = "none";
+        this.$emit("onimagechange", { file: this.file, dataimg: this.dataimg });
+        this.dotheupload();
+      });
+    },
+    dotheupload() {
+      if (this.url) {
+        // le's trust the image, not the file
+        let img = this.$refs["image"];
+        let file = this.file;
+        const headers = {
+          "Content-Type": file.type || "image/jpeg",
+          "X-Filename": file.name
+        };
+        if (this.headers) {
+          for (let k in this.headers) headers[k] = this.headers[k];
+        }
+        axios[this.method](this.url, resizetool.mkjpeg(this.dataimg), {
+          headers
+        })
+          .then(ret =>
+            this.$nextTick(_ =>
+              this.$emit("onupload", { file, image: this.$refs["image"], ret })
+            )
+          )
+          .catch(err => {
+            this.$nextTick(_ =>
+              this.$emit("onuploaderror", {
+                file,
+                image: this.$refs["image"],
+                err
+              })
+            );
+          });
+      }
+    }
   }
 };
 </script>
