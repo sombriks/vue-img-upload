@@ -12,7 +12,9 @@
    version="1.1"
    id="svg1135"
    width="311.57227"
-   height="311.5723">
+   height="311.5723"
+   sodipodi:docname="ok-img.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <metadata
      id="metadata1141">
     <rdf:RDF>
@@ -35,9 +37,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="640"
-     inkscape:window-height="480"
-     id="namedview1137" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     id="namedview1137"
+     showgrid="false"
+     inkscape:zoom="2.6414415"
+     inkscape:cx="155.78613"
+     inkscape:cy="155.78615"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1135" />
   <inkscape:clipboard
      style="font-variant-east_asian:normal;opacity:0.35499998;vector-effect:none;fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:2.99999996;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:35.99999909,2.99999992;stroke-dashoffset:0;stroke-opacity:1"
      min="210.62183,571.36904"
@@ -46,5 +56,5 @@
      inkscape:connector-curvature="0"
      id="path960"
      d="M 155.78516,1.5 A 154.28572,154.28572 0 0 0 1.5,155.78517 154.28572,154.28572 0 0 0 155.78516,310.07229 154.28572,154.28572 0 0 0 310.07227,155.78517 154.28572,154.28572 0 0 0 155.78516,1.5 Z m 92.27149,90.806639 0.32428,0.85937 c -0.40932,0.207912 -0.74422,0.454379 -0.93358,0.736328 l -1.22853,1.832031 -99.5371,118.287122 -69.484374,-69.63088 0.640619,-0.59766 c 0.241739,0.32088 0.502122,0.55521 0.76563,0.64063 l 62.164065,20.19337 z"
-     style="opacity:0.35499998;fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:35.99999948, 2.99999996;stroke-dashoffset:0;stroke-opacity:1" />
+     style="opacity:0.6;fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:35.99999948, 2.99999995999999980;stroke-dashoffset:0;stroke-opacity:1" />
 </svg>

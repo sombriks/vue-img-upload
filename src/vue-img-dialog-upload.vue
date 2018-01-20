@@ -15,8 +15,9 @@
     <div ref="thedialog" class="thedialog">
       <div class="dialogpane">
         <div ref="imgpane" class="imgpane"></div>
-        <img :src="cancelimg" class="dialogcancelimg" @click="closedialog" />
       </div>
+      <img :src="cancelimg" class="dialogcancelimg" @click="closedialog" />
+      <img :src="okimg" class="dialogokimg" @click="savecrop" />
     </div>
   </div>
 </template>
@@ -59,6 +60,8 @@ module.exports = {
     cheight: 320,
     file: undefined,
     dataimg: undefined,
+    cropper: undefined,
+    dialogdata: undefined,
     noimg:
       "data:image/svg+xml;base64," +
       fs.readFileSync(__dirname + "/no-img.svg", "base64"),
@@ -79,6 +82,11 @@ module.exports = {
     resetfile() {
       this.file = null;
       this.dataimg = null;
+      this.dialogdata = null;
+      if (this.cropper) {
+        this.cropper.destroy();
+        this.cropper = null;
+      }
       this.$refs["input"].type = "";
       this.$refs["input"].type = "file";
     },
@@ -105,9 +113,13 @@ module.exports = {
         return;
       }
       resizetool.resize(file, this.cwidth + "px").then(ret => {
-        this.dataimg = ret;
+        this.dialogdata = ret;
         let imgpane = this.$refs["imgpane"];
-        new Croppie(imgpane, { url: this.dataimg });
+        this.cropper = new Croppie(imgpane, {
+          url: this.dialogdata,
+          viewport: { width: this.cwidth * 0.7, height: this.cheight * 0.7 },
+          showZoomer: true
+        });
         this.$refs["thedialog"].style.display = "block";
       });
     },
@@ -115,7 +127,8 @@ module.exports = {
       this.$refs["thedialog"].style.display = "none";
       this.resetfile();
       // rootcanvas.innerHTML = "";;
-    }
+    },
+    savecrop() {}
   }
 };
 </script>
@@ -136,20 +149,28 @@ input.theinput {
   text-align: center;
 }
 .cancelimg,
+.dialogokimg,
 .dialogcancelimg {
   position: absolute;
   max-width: 40px;
   max-height: 40px;
   top: -20px;
   right: -20px;
+  /* background-color:white; */
 }
 .dialogcancelimg {
   top: 0px;
   right: 30px;
+  z-index: 999999;
+}
+.dialogokimg {
+  top: 0px;
+  left: 30px;
+  z-index: 999999;
 }
 .thedialog {
   display: none;
-  z-index: 999999;
+  z-index: 999998;
   position: absolute;
   background-color: white;
   top: 0px;
@@ -157,11 +178,15 @@ input.theinput {
   left: 0px;
   right: 0px;
 }
+.dialogpane {
+  width: 100%;
+  height: 100%;
+}
 .imgpane {
-  position: absolute;
-  top: 35px;
-  left: 20%;
-  right: 20%;
+  /* position: absolute; */
+  /* top: 40px; */
+  /* left: 40px; */
+  /* right: 40px; */
   border: 1px groove black;
 }
 </style>
