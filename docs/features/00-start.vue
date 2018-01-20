@@ -11,7 +11,7 @@
       <li>Bluebird 3.5+</li>
       <li>Brfs 1.4.3+</li>
     </ul>
-    <p>Your project <b>must</> provide that in order to get things working.</p>
+    <p>Your project <b>must</b> provide that in order to get things working.</p>
     <h3>Installation</h3>
     <pre>
       npm install croppie --save
