@@ -9,17 +9,23 @@
       <li>Axios 0.16+</li>
       <li>Croppie 2.5.1+</li>
       <li>Bluebird 3.5+</li>
-      <li>brfs 1.4.3+</li>
+      <li>Brfs 1.4.3+</li>
     </ul>
-    <p>Your project must provide that in order to get things working.</p>
+    <p>Your project <b>must</> provide that in order to get things working.</p>
     <h3>Installation</h3>
     <pre>
+      npm install croppie --save
+      // all othe dependecies
       npm install vue-img-upload --save
     </pre>
     <p>After that you have to register it with Vue:</p>
     <pre>
-      const VueImgUpload = require("vue-img-upload")
-      Vue.use(VueImgUpload)</pre>
+require("../node_modules/croppie/croppie.css")
+
+const VueImgUpload = require("vue-img-upload")
+Vue.use(VueImgUpload)
+// now you can use either vue-img-ipload or vue-img-dialog-upload
+    </pre>
     <h3>Roadmap</h3>
     <p>See
       <router-link to="/99-roadmap">here</router-link>.</p>

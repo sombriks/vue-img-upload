@@ -5,6 +5,12 @@
       <li>Add import/export support (currently only require/exports supported)</li>
       <li>Improve mobile usability</li>
     </ul>
+    <h2>0.6.1</h2>
+    <ul>
+      <li>minor bugfix. since css are calculated later and browserify somehow fails to resolve it, the needed info to
+        properly configure croppie css was added to the docs.
+      </li>
+    </ul>
     <h2>0.6.0</h2>
     <ul>
       <li>Added <b>croppie</b> dependecy in order to offer better crop usage</li>
