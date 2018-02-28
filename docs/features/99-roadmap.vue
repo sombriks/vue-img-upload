@@ -5,6 +5,10 @@
       <li>Add import/export support (currently only require/exports supported)</li>
       <li>Improve mobile usability</li>
     </ul>
+    <h2>0.6.4</h2>
+    <ul>
+      <li>updated to a newver version of croppie since there was a bug on apple-specific platforms</li>
+    </ul>
     <h2>0.6.3</h2>
     <ul>
       <li>minor bugfix</li>

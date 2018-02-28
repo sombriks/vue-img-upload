@@ -1,6 +1,6 @@
 {
   "name": "vue-img-upload",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "yet another vue image upload component",
   "main": "src/main.js",
   "scripts": {
@@ -39,7 +39,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "bluebird": "^3.5.0",
-    "croppie": "^2.5.1",
+    "croppie": "^2.6.1",
     "vue": "^2.2.6",
     "vue-router": "^2.7.0"
   },

@@ -10,9 +10,26 @@ yet another vue image upload component
 - offer direct upload options
 - **accepting PR's**
 
+## Installation
+
+```bash
+ npm install croppie --save
+// all othe dependecies
+npm install vue-img-upload --save
+```
+
+## Basic usage
+
+```javascript
+require("../node_modules/croppie/croppie.css")
+
+const VueImgUpload = require("vue-img-upload")
+Vue.use(VueImgUpload)
+// now you can use either vue-img-ipload or vue-img-dialog-upload components on your application
+```
+
 ## TODO 
 
-- understand why the dist/build.js seems useless
 - see how to make it dance well with browserify and webpack. just browserify for the moment
 - make it even simpler
 - ~server side project to test upload capabilities~ see https://github.com/sombriks/viu-up-tester

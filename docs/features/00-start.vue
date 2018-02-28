@@ -7,7 +7,7 @@
     <ul>
       <li>Vue.js 2.2+</li>
       <li>Axios 0.16+</li>
-      <li>Croppie 2.5.1+</li>
+      <li>Croppie 2.6.1+</li>
       <li>Bluebird 3.5+</li>
       <li>Brfs 1.4.3+</li>
     </ul>
@@ -24,7 +24,7 @@ require("../node_modules/croppie/croppie.css")
 
 const VueImgUpload = require("vue-img-upload")
 Vue.use(VueImgUpload)
-// now you can use either vue-img-ipload or vue-img-dialog-upload
+// now you can use either vue-img-ipload or vue-img-dialog-upload components on your application
     </pre>
     <h3>Roadmap</h3>
     <p>See
@@ -37,17 +37,6 @@ Vue.use(VueImgUpload)
 <script>
 module.exports = {
   name: "Start",
-  created() {
-
-  },
-  data() {
-    return {
-
-    };
-  },
-  methods: {
-
-  }
 };
 </script>
 

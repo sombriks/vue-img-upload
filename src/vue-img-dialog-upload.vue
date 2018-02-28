@@ -25,7 +25,7 @@
 const fs = require("fs");
 const axios = require("axios");
 const resizetool = require("./resizetool");
-const Croppie = require("croppie");
+const {Croppie} = require("croppie");
 
 module.exports = {
   name: "VueImgDialogUpload",
