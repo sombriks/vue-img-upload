@@ -2,12 +2,15 @@
   <div>
     <h2>1.0.0 (not released yet)</h2>
     <ul>
-      <li>Add import/export support (currently only require/exports supported)</li>
       <li>Improve mobile usability</li>
+    </ul>
+    <h2>0.7.0</h2>
+    <ul>
+      <li>added rotate button on dialog version</li>
     </ul>
     <h2>0.6.4</h2>
     <ul>
-      <li>updated to a newver version of croppie since there was a bug on apple-specific platforms</li>
+      <li>updated to a newer version of croppie since there was a bug on apple-specific platforms</li>
     </ul>
     <h2>0.6.3</h2>
     <ul>

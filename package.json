@@ -1,6 +1,6 @@
 {
   "name": "vue-img-upload",
-  "version": "0.6.4",
+  "version": "0.7.0",
   "description": "yet another vue image upload component",
   "main": "src/main.js",
   "scripts": {
@@ -33,7 +33,6 @@
     "budo": "^9.4.7",
     "flexboxgrid": "^6.3.1",
     "http-server": "^0.9.0",
-    "make": "^0.8.1",
     "vueify": "^9.4.1"
   },
   "dependencies": {

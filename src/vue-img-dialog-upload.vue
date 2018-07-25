@@ -17,6 +17,7 @@
         <div ref="imgpane" class="imgpane"></div>
       </div>
       <img :src="cancelimg" class="dialogcancelimg" @click="closedialog" />
+      <img :src="rotateimg" class="dialogrotateimg" @click="rotatecrop" />
       <img :src="okimg" class="dialogokimg" @click="savecrop" />
     </div>
   </div>
@@ -25,7 +26,7 @@
 const fs = require("fs");
 const axios = require("axios");
 const resizetool = require("./resizetool");
-const {Croppie} = require("croppie");
+const { Croppie } = require("croppie");
 
 module.exports = {
   name: "VueImgDialogUpload",
@@ -68,6 +69,9 @@ module.exports = {
     cancelimg:
       "data:image/svg+xml;base64," +
       fs.readFileSync(__dirname + "/cancel-img.svg", "base64"),
+    rotateimg:
+      "data:image/svg+xml;base64," +
+      fs.readFileSync(__dirname + "/rotate-img.svg", "base64"),
     okimg:
       "data:image/svg+xml;base64," +
       fs.readFileSync(__dirname + "/ok-img.svg", "base64")
@@ -119,6 +123,7 @@ module.exports = {
         this.dialogdata = ret;
         let imgpane = this.$refs["imgpane"];
         this.cropper = new Croppie(imgpane, {
+          enableOrientation:true,
           url: this.dialogdata,
           viewport: { width: this.cwidth * 0.55, height: this.cheight * 0.55 },
           showZoomer: true,
@@ -132,6 +137,12 @@ module.exports = {
       this.$refs["thedialog"].style.display = "none";
       this.resetfile();
       // rootcanvas.innerHTML = "";;
+    },
+    rotatecrop(){
+      console.log("rotate")
+      if(this.cropper){
+        this.cropper.rotate(90);
+      }
     },
     savecrop() {
       this.cropper.result("base64").then(ret => {
@@ -195,6 +206,7 @@ input.theinput {
 }
 .cancelimg,
 .dialogokimg,
+.dialogrotateimg,
 .dialogcancelimg {
   position: absolute;
   max-width: 40px;
@@ -204,12 +216,17 @@ input.theinput {
   /* background-color:white; */
 }
 .dialogcancelimg {
-  top: 0px;
+  top: 30px;
   right: 30px;
   z-index: 999999;
 }
+.dialogrotateimg {
+  top: 30px;
+  left: 50%;
+  z-index: 999999;
+}
 .dialogokimg {
-  top: 0px;
+  top: 30px;
   left: 30px;
   z-index: 999999;
 }
