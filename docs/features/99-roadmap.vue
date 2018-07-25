@@ -3,6 +3,7 @@
     <h2>1.0.0 (not released yet)</h2>
     <ul>
       <li>Improve mobile usability</li>
+      <li>add drag/drop support</li>
     </ul>
     <h2>0.7.0</h2>
     <ul>
